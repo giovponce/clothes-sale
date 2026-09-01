@@ -475,13 +475,13 @@ export default function App() {
             <div>
               <h3 className="font-bold text-gray-900 text-sm md:text-base">¿Cómo reservar o comprar prendas?</h3>
               <p className="text-xs text-stone-600 max-w-xl mt-0.5">
-                ¡Es súper fácil! Navega por el catálogo, haz clic en tu prenda preferida para ver sus fotos completas y pulsa el botón de WhatsApp para contactar directamente a {SELLER_NAME}. Así de fácil coordinas pago y envío.
+                Navega por el catálogo, haz clic en lo que te guste para ver sus fotos completas y pulsa el botón de WhatsApp para mandarme un mensajito. Así nos ponemos de acuerdo para entrega.
               </p>
             </div>
           </div>
           <div className="w-full md:w-auto flex-shrink-0">
             <span className="inline-flex items-center gap-1 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold px-3 py-1.5 rounded-xl">
-              🤝 Mandame whatsapp para apartarte
+              🤝 Mandame whatsapp para apartarte y coordinarnos
             </span>
           </div>
         </section>
@@ -570,7 +570,6 @@ export default function App() {
                 {/* Precio */}
                 <div className="text-3xl font-extrabold text-forest-green-900 mb-6 flex items-baseline gap-1.5">
                   ${selectedItem.precio}
-                  <span className="text-xs text-stone-400 font-sans font-normal">Súper rebajado</span>
                 </div>
 
                 {/* Separador */}
