@@ -24,7 +24,7 @@ Abre el archivo [`src/App.jsx`](src/App.jsx) y edita estas dos constantes que es
 
 ```javascript
 const WHATSAPP_NUMBER = "34600000000"; // Tu número con código de país (sin '+' ni espacios)
-const SELLER_NAME = "Sofía";           // Tu nombre
+const SELLER_NAME = "Giov";           // Tu nombre
 ```
 
 ---

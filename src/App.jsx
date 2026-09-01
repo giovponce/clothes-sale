@@ -18,10 +18,8 @@ import {
 } from 'lucide-react';
 import { items } from './data/items.js';
 
-// Configura tu número de WhatsApp aquí (con código de país, sin '+' ni espacios)
-// Ejemplo: "34612345678" para España, "5215512345678" para México, "56912345678" para Chile.
-const WHATSAPP_NUMBER = "34600000000"; 
-const SELLER_NAME = "Sofía";
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "34600000000";
+const SELLER_NAME = import.meta.env.VITE_SELLER_NAME || "Giov";
 
 function ProductCard({ item, onSelect }) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
@@ -276,7 +274,7 @@ export default function App() {
           style={{ backgroundColor: '#242b1a' }}
           className="bg-forest-green-800 text-warm-beige-50 px-4 py-2 text-xs md:text-sm font-medium text-center relative flex justify-center items-center gap-2"
         >
-          <span>✨ Venta especial de garaje: Prendas de alta calidad, cuidadas al máximo y precios de remate.</span>
+          <span>✨ Limpieza de clóset.</span>
           <button
             onClick={() => setShowInfoBanner(false)}
             className="hover:bg-[#414833] p-1 rounded-full absolute right-2 transition-colors focus:outline-none"
@@ -307,10 +305,10 @@ export default function App() {
             <Heart size={12} className="fill-current text-rose-400" /> VENTA DE CLÓSET DE {SELLER_NAME.toUpperCase()}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight text-white mb-4 drop-shadow-xs">
-            Mi Clóset Sostenible
+            Venta Clóset
           </h1>
           <p className="text-base md:text-lg text-stone-100 max-w-xl mx-auto font-light leading-relaxed mb-6">
-            Dale una segunda vida a estas prendas exclusivas en impecable estado. Súper fáciles de comprar, ecológicas y con estilo.
+            Ropa que ya no me pongo pero sigue en excelente estado. Échale un ojo.
           </p>
 
           {/* Estadísticas en la cabecera */}
@@ -483,7 +481,7 @@ export default function App() {
           </div>
           <div className="w-full md:w-auto flex-shrink-0">
             <span className="inline-flex items-center gap-1 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold px-3 py-1.5 rounded-xl">
-              🤝 Sin comisiones ni registros obligatorios
+              🤝 Mandame whatsapp para apartarte
             </span>
           </div>
         </section>
@@ -652,10 +650,10 @@ export default function App() {
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-center gap-1 text-forest-green-700 font-semibold mb-2">
             <Shirt size={16} />
-            <span>Mi Clóset Sostenible</span>
+            <span>Clóset Sale</span>
           </div>
           <p className="mb-4">
-            Venta de clóset personal. Promoviendo el consumo ético y la moda circular.
+            Viva la moda circular.
           </p>
           <div className="h-px bg-warm-beige-200 w-16 mx-auto mb-4" />
           <p className="text-[10px] text-stone-400">
