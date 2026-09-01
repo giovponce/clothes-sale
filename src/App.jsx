@@ -480,9 +480,12 @@ export default function App() {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-auto flex-shrink-0">
-            <span className="inline-flex items-center gap-1 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold px-3 py-1.5 rounded-xl">
-              🤝 Entrega/Translado CasaBlanca sucursal de tu preferencia en compras mayores a $200
+          <div className="w-full md:max-w-[320px] flex-shrink-0">
+            <span className="inline-flex items-start gap-2 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold p-3 rounded-xl leading-relaxed">
+              <span className="text-sm select-none">🤝</span>
+              <span>
+                Entrega/Translado CasaBlanca sucursal de tu preferencia <br className="hidden md:inline" />en compras mayores a $200
+              </span>
             </span>
           </div>
         </section>
