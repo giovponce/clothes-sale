@@ -19,7 +19,7 @@ import {
 import { items } from './data/items.js';
 import mushroomBanner1 from './assets/mushroom-banner.webp';
 import mushroomBanner2 from './assets/mushroom-banner-2.png';
-import mushroomBanner3 from './assets/mushroom-banner-3.png';
+import mushroomBanner3 from './assets/mushroom-banner-3.webp';
 import mushroomBanner4 from './assets/mushroom-banner-4.jpg';
 
 const BANNERS = [mushroomBanner1, mushroomBanner2, mushroomBanner3, mushroomBanner4];
@@ -141,18 +141,27 @@ function ProductCard({ item, onSelect }) {
           </span>
         </div>
 
-        {/* Nombre */}
-        <h3 className="font-semibold text-gray-900 text-sm md:text-base line-clamp-1 mb-2 group-hover:text-forest-green-700 transition-colors">
-          {item.nombre}
-        </h3>
+        {/* Nombre y Label de Estado */}
+        <div className="flex items-center gap-2 mb-2">
+          <h3 className="font-semibold text-gray-900 text-sm md:text-base line-clamp-1 group-hover:text-forest-green-700 transition-colors flex-1">
+            {item.nombre}
+          </h3>
+          <span className={`inline-flex items-center text-[9px] font-bold px-1.5 py-0.5 rounded-md uppercase tracking-wider flex-shrink-0 border ${
+            item.new
+              ? 'bg-[#e3ebe4] text-forest-green-700 border-forest-green-300'
+              : 'bg-warm-beige-100 text-warm-beige-700 border-warm-beige-300'
+          }`}>
+            {item.new ? 'Nuevo' : 'Seminuevo'}
+          </span>
+        </div>
 
         {/* Características Rápidas */}
         <div className="flex flex-wrap gap-1.5 mb-3">
           <span className="inline-flex items-center gap-1 bg-warm-beige-100 text-forest-green-900 text-xs px-2.5 py-0.5 rounded-sm font-medium border border-warm-beige-200">
-            <span className="text-stone-400 font-normal">Talla:</span> {item.talla}
+            <span className="text-stone-400 font-normal">Talla:</span> {Array.isArray(item.talla) ? item.talla.join(', ') : item.talla}
           </span>
           <span className="inline-flex items-center gap-1 bg-warm-beige-100 text-forest-green-900 text-xs px-2.5 py-0.5 rounded-sm font-medium border border-warm-beige-200">
-            <span className="text-stone-400 font-normal">Color:</span> {item.color}
+            <span className="text-stone-400 font-normal">Color:</span> {Array.isArray(item.color) ? item.color.join(', ') : item.color}
           </span>
         </div>
 
@@ -208,14 +217,26 @@ export default function App() {
     const categorias = new Set();
 
     items.forEach(item => {
-      if (item.talla) tallas.add(item.talla);
-      if (item.color) colores.add(item.color);
+      if (item.talla) {
+        if (Array.isArray(item.talla)) {
+          item.talla.forEach(t => tallas.add(t));
+        } else {
+          tallas.add(item.talla);
+        }
+      }
+      if (item.color) {
+        if (Array.isArray(item.color)) {
+          item.color.forEach(c => colores.add(c));
+        } else {
+          colores.add(item.color);
+        }
+      }
       if (item.marca) marcas.add(item.marca);
       if (item.categoria) categorias.add(item.categoria);
     });
 
     return {
-      tallas: Array.from(tallas).sort(),
+      tallas: Array.from(tallas).sort((a, b) => String(a).localeCompare(String(b), undefined, {numeric: true})),
       colores: Array.from(colores).sort(),
       marcas: Array.from(marcas).sort(),
       categorias: Array.from(categorias).sort(),
@@ -225,10 +246,20 @@ export default function App() {
   // --- LÓGICA DE FILTRADO COMBINADO (AND) ---
   const filteredItems = useMemo(() => {
     return items.filter(item => {
-      // Filtro Talla
-      if (talla && item.talla !== talla) return false;
-      // Filtro Color
-      if (color && item.color !== color) return false;
+      // Filtro Talla (Soporta strings y arrays)
+      if (talla) {
+        const hasTalla = Array.isArray(item.talla)
+          ? item.talla.includes(talla)
+          : item.talla === talla;
+        if (!hasTalla) return false;
+      }
+      // Filtro Color (Soporta strings y arrays)
+      if (color) {
+        const hasColor = Array.isArray(item.color)
+          ? item.color.includes(color)
+          : item.color === color;
+        if (!hasColor) return false;
+      }
       // Filtro Marca
       if (marca && item.marca !== marca) return false;
       // Filtro Categoría
@@ -575,10 +606,19 @@ export default function App() {
                   {selectedItem.marca}
                 </div>
 
-                {/* Nombre de la Prenda */}
-                <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-stone-900 leading-tight mb-3">
-                  {selectedItem.nombre}
-                </h2>
+                {/* Nombre de la Prenda y Label de Estado */}
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-stone-900 leading-tight">
+                    {selectedItem.nombre}
+                  </h2>
+                  <span className={`inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider border ${
+                    selectedItem.new
+                      ? 'bg-[#e3ebe4] text-forest-green-700 border-forest-green-300'
+                      : 'bg-warm-beige-100 text-warm-beige-700 border-warm-beige-300'
+                  }`}>
+                    {selectedItem.new ? 'Nuevo' : 'Seminuevo'}
+                  </span>
+                </div>
 
                 {/* Precio */}
                 <div className="text-3xl font-extrabold text-forest-green-900 mb-6 flex items-baseline gap-1.5">
@@ -592,11 +632,15 @@ export default function App() {
                 <div className="grid grid-cols-3 gap-3 mb-6 bg-warm-beige-50 p-3.5 rounded-2xl border border-warm-beige-100">
                   <div className="text-center">
                     <span className="block text-[10px] uppercase font-semibold text-stone-400 tracking-wider mb-0.5">Talla</span>
-                    <span className="text-sm font-bold text-stone-800">{selectedItem.talla}</span>
+                    <span className="text-sm font-bold text-stone-800">
+                      {Array.isArray(selectedItem.talla) ? selectedItem.talla.join(', ') : selectedItem.talla}
+                    </span>
                   </div>
                   <div className="text-center border-x border-warm-beige-200">
                     <span className="block text-[10px] uppercase font-semibold text-stone-400 tracking-wider mb-0.5">Color</span>
-                    <span className="text-sm font-bold text-stone-800">{selectedItem.color}</span>
+                    <span className="text-sm font-bold text-stone-800">
+                      {Array.isArray(selectedItem.color) ? selectedItem.color.join(', ') : selectedItem.color}
+                    </span>
                   </div>
                   <div className="text-center">
                     <span className="block text-[10px] uppercase font-semibold text-stone-400 tracking-wider mb-0.5">Categoría</span>
