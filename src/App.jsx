@@ -308,7 +308,8 @@ export default function App() {
             Venta Clóset
           </h1>
           <p className="text-base md:text-lg text-stone-100 max-w-xl mx-auto font-light leading-relaxed mb-6">
-            Ropa que ya no me pongo pero sigue en excelente estado. Échale un ojo.
+            Ropa que ya no me pongo pero sigue en excelente estado.
+            Échale un ojo 👀.
           </p>
 
           {/* Estadísticas en la cabecera */}
@@ -481,7 +482,7 @@ export default function App() {
           </div>
           <div className="w-full md:w-auto flex-shrink-0">
             <span className="inline-flex items-center gap-1 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold px-3 py-1.5 rounded-xl">
-              🤝 Mandame whatsapp para apartarte y coordinarnos
+              🤝 Entrega/Translado CasaBlanca sucursal de tu preferencia en compras mayores a $200
             </span>
           </div>
         </section>
