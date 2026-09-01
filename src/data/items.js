@@ -1,0 +1,122 @@
+export const items = [
+  {
+    id: 1,
+    nombre: "Abrigo de Lana Cruzado",
+    marca: "Massimo Dutti",
+    talla: "M",
+    color: "Beige",
+    categoria: "Abrigos",
+    precio: 85,
+    descripcion: "Abrigo cruzado de lana premium en tono beige arena. Súper abrigador, elegante y en perfecto estado (usado solo dos veces). Forro interior satinado.",
+    vendido: false,
+    imagenes: ["abrigo-lana-1.svg", "abrigo-lana-2.svg"]
+  },
+  {
+    id: 2,
+    nombre: "Chaqueta Cortavientos Retro",
+    marca: "Patagonia",
+    talla: "S",
+    color: "Verde Olivo",
+    categoria: "Abrigos",
+    precio: 65,
+    descripcion: "Chaqueta impermeable ligera, ideal para senderismo o estilo urbano. Ajustable en puños y cintura. Bolsillos con cremallera termosellada.",
+    vendido: false,
+    imagenes: ["chaqueta-patagonia-1.svg"]
+  },
+  {
+    id: 3,
+    nombre: "Vestido Midi de Lino",
+    marca: "Zara",
+    talla: "S",
+    color: "Blanco Roto",
+    categoria: "Vestidos",
+    precio: 35,
+    descripcion: "Vestido midi confeccionado en 100% lino. Escote recto y tirantes finos ajustables. Espalda descubierta con lazada súper femenina. Fresco e ideal para el verano.",
+    vendido: false,
+    imagenes: ["vestido-lino-1.svg", "vestido-lino-2.svg", "vestido-lino-3.svg"]
+  },
+  {
+    id: 4,
+    nombre: "Jeans de Tiro Alto 501",
+    marca: "Levi's",
+    talla: "36",
+    color: "Azul Marino",
+    categoria: "Pantalones",
+    precio: 45,
+    descripcion: "Los clásicos Levi's 501 de corte recto y tiro alto. Mezclilla rígida de excelente calidad que horma espectacular. Sin desgastes ni roturas.",
+    vendido: true,
+    imagenes: ["jeans-levis-1.svg"]
+  },
+  {
+    id: 5,
+    nombre: "Jersey de Punto Oversize",
+    marca: "Mango",
+    talla: "L",
+    color: "Terracota",
+    categoria: "Tops",
+    precio: 28,
+    descripcion: "Jersey de punto grueso y cuello redondo. Tacto súper suave que no pica. Silueta holgada tipo oversize perfecta para usar con jeans.",
+    vendido: false,
+    imagenes: ["jersey-mango-1.svg", "jersey-mango-2.svg"]
+  },
+  {
+    id: 6,
+    nombre: "Camisa Oxford Clásica",
+    marca: "Uniqlo",
+    talla: "M",
+    color: "Blanco Roto",
+    categoria: "Tops",
+    precio: 20,
+    descripcion: "Camisa blanca oxford de algodón de fibra larga. Tela resistente y suave, fácil de planchar. Un básico imprescindible para cualquier fondo de armario.",
+    vendido: false,
+    imagenes: ["camisa-uniqlo-1.svg"]
+  },
+  {
+    id: 7,
+    nombre: "Sandalias Arizona de Ante",
+    marca: "Birkenstock",
+    talla: "38",
+    color: "Beige",
+    categoria: "Calzado",
+    precio: 55,
+    descripcion: "Sandalias clásicas de dos correas en cuero de ante súper suave. Plantilla blanda ergonómica original. Tienen muy poco uso y la suela está impecable.",
+    vendido: false,
+    imagenes: ["sandalias-birkenstock-1.svg"]
+  },
+  {
+    id: 8,
+    nombre: "Bolso de Hombro de Piel",
+    marca: "Zara",
+    talla: "Única",
+    color: "Negro",
+    categoria: "Accesorios",
+    precio: 30,
+    descripcion: "Bolso de hombro estilo baguette en piel sintética negra con efecto cocodrilo. Cierre de cremallera y herrajes plateados. Tamaño perfecto para el día a día.",
+    vendido: true,
+    imagenes: ["bolso-zara-1.svg"]
+  },
+  {
+    id: 9,
+    nombre: "Pantalón Cargo Ajustable",
+    marca: "Mango",
+    talla: "38",
+    color: "Verde Olivo",
+    categoria: "Pantalones",
+    precio: 25,
+    descripcion: "Pantalón cargo de tiro medio-alto con múltiples bolsillos funcionales. Puños ajustables con cordón para llevarlos rectos o tipo jogger.",
+    vendido: false,
+    imagenes: ["pantalon-cargo-1.svg"]
+  },
+  {
+    id: 10,
+    nombre: "Gorro de Lana Merino",
+    marca: "Patagonia",
+    talla: "Única",
+    color: "Mostaza",
+    categoria: "Accesorios",
+    precio: 18,
+    descripcion: "Gorro de lana merino tejida de comercio justo. Muy cálido, transpirable y de secado rápido. Color mostaza vibrante para dar un toque alegre al invierno.",
+    vendido: true,
+    imagenes: ["gorro-patagonia-1.svg"]
+  }
+];

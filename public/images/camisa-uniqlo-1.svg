@@ -1,0 +1,42 @@
+<svg width="600" height="800" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con degradado sutil de estilo tierra -->
+  <defs>
+    <linearGradient id="grad-camisa-uniqlo-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#e1dfdc" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#grad-camisa-uniqlo-1)" />
+  
+  <!-- Patrón de fondo muy sutil (cuadrícula orgánica) -->
+  <g opacity="0.05" stroke="#5C8362" stroke-width="1">
+    <path d="M 50,0 V 800 M 150,0 V 800 M 250,0 V 800 M 350,0 V 800 M 450,0 V 800 M 550,0 V 800" />
+    <path d="M 0,100 H 600 M 0,200 H 600 M 0,300 H 600 M 0,400 H 600 M 0,500 H 600 M 0,600 H 600 M 0,700 H 600" />
+  </g>
+
+  <!-- Círculo decorativo en el centro -->
+  <circle cx="300" cy="380" r="160" fill="none" stroke="#5C8362" stroke-width="1" stroke-dasharray="5,5" opacity="0.3" />
+  <circle cx="300" cy="380" r="140" fill="#5C8362" opacity="0.05" />
+
+  <!-- Ilustración del Item -->
+  <g transform="translate(180, 260) scale(10)" stroke="#5C8362" color="#5C8362">
+    <path d="M9 4h6l5 2-1 5-3-1v10H8V10L5 11l-1-5 5-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M9 4l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Tarjeta de Texto o Sello -->
+  <g transform="translate(300, 640)">
+    <!-- Etiqueta minimalista -->
+    <rect x="-180" y="0" width="360" height="70" rx="35" fill="#FAF8F5" fill-opacity="0.9" stroke="#5C8362" stroke-width="1.5" />
+    <text x="0" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="1.5" fill="#2D2A26" text-anchor="middle" dominant-baseline="middle">
+      CAMISA OXFORD BLANCA
+    </text>
+    <text x="0" y="48" font-family="system-ui, sans-serif" font-size="10" font-weight="400" letter-spacing="2" fill="#5C8362" text-anchor="middle" dominant-baseline="middle" opacity="0.8">
+      PRENDA SELECCIONADA
+    </text>
+  </g>
+
+  <!-- Detalle decorativo de esquina (Venta de Garage) -->
+  <text x="30" y="50" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#5C8362" letter-spacing="2" opacity="0.6">CLOSET SALE</text>
+  <line x1="30" y1="60" x2="150" y2="60" stroke="#5C8362" stroke-width="1" opacity="0.4" />
+</svg>
