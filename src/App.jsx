@@ -272,11 +272,14 @@ export default function App() {
       
       {/* 1. ANUNCIO SUPERIOR / INFO BAR */}
       {showInfoBanner && (
-        <div className="bg-forest-green-800 text-warm-beige-50 px-4 py-2 text-xs md:text-sm font-medium text-center relative flex justify-center items-center gap-2">
+        <div
+          style={{ backgroundColor: '#242b1a' }}
+          className="bg-forest-green-800 text-warm-beige-50 px-4 py-2 text-xs md:text-sm font-medium text-center relative flex justify-center items-center gap-2"
+        >
           <span>✨ Venta especial de garaje: Prendas de alta calidad, cuidadas al máximo y precios de remate.</span>
-          <button 
+          <button
             onClick={() => setShowInfoBanner(false)}
-            className="hover:bg-forest-green-700 p-1 rounded-full absolute right-2 transition-colors focus:outline-none"
+            className="hover:bg-[#414833] p-1 rounded-full absolute right-2 transition-colors focus:outline-none"
             title="Cerrar aviso"
           >
             <X size={14} />
@@ -285,7 +288,10 @@ export default function App() {
       )}
 
       {/* 2. HEADER / HERO BANNER */}
-      <header className="bg-forest-green-700 text-warm-beige-50 border-b border-forest-green-800 relative overflow-hidden py-10 md:py-16">
+      <header
+        style={{ backgroundColor: '#333d29' }}
+        className="bg-forest-green-700 text-warm-beige-50 border-b border-forest-green-800 relative overflow-hidden py-10 md:py-16"
+      >
         {/* Elementos decorativos de fondo */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-40 h-40 rounded-full border-4 border-white" />
@@ -294,31 +300,37 @@ export default function App() {
         </div>
 
         <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
-          <span className="inline-flex items-center gap-1.5 bg-forest-green-800/60 border border-forest-green-500/40 text-warm-beige-100 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-            <Heart size={12} className="fill-current text-rose-300" /> VENTA DE CLÓSET DE {SELLER_NAME.toUpperCase()}
+          <span
+            style={{ backgroundColor: '#242b1a', borderColor: '#a4ac86' }}
+            className="inline-flex items-center gap-1.5 border text-[#fbfbf9] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 shadow-sm"
+          >
+            <Heart size={12} className="fill-current text-rose-400" /> VENTA DE CLÓSET DE {SELLER_NAME.toUpperCase()}
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight text-white mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight text-white mb-4 drop-shadow-xs">
             Mi Clóset Sostenible
           </h1>
-          <p className="text-base md:text-lg text-warm-beige-100/90 max-w-xl mx-auto font-light leading-relaxed mb-6">
+          <p className="text-base md:text-lg text-stone-100 max-w-xl mx-auto font-light leading-relaxed mb-6">
             Dale una segunda vida a estas prendas exclusivas en impecable estado. Súper fáciles de comprar, ecológicas y con estilo.
           </p>
 
           {/* Estadísticas en la cabecera */}
-          <div className="flex flex-wrap justify-center items-center gap-4 text-xs md:text-sm text-warm-beige-100/80 max-w-lg mx-auto bg-forest-green-800/40 backdrop-blur-xs p-3 rounded-2xl border border-forest-green-600/30">
-            <div className="flex items-center gap-1.5 px-3 py-1">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-              <span><strong>{stats.disponibles}</strong> Prendas Disponibles</span>
+          <div
+            style={{ backgroundColor: '#242b1a', borderColor: '#414833' }}
+            className="flex flex-wrap justify-center items-center gap-4 text-xs md:text-sm text-white max-w-lg mx-auto p-3.5 rounded-2xl border shadow-md"
+          >
+            <div className="flex items-center gap-1.5 px-3 py-1 font-medium">
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-xs" />
+              <span><strong>{stats.disponibles}</strong> Disponibles</span>
             </div>
-            <div className="h-4 w-px bg-forest-green-600/50 hidden sm:block" />
-            <div className="flex items-center gap-1.5 px-3 py-1">
-              <span className="w-2.5 h-2.5 rounded-full bg-forest-green-400" />
-              <span><strong>{stats.vendidos}</strong> Prendas Vendidas</span>
+            <div style={{ backgroundColor: '#414833' }} className="h-4 w-px hidden sm:block" />
+            <div className="flex items-center gap-1.5 px-3 py-1 font-medium">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#a4ac86] shadow-xs" />
+              <span><strong>{stats.vendidos}</strong> Vendidas</span>
             </div>
-            <div className="h-4 w-px bg-forest-green-600/50 hidden sm:block" />
-            <div className="flex items-center gap-1.5 px-3 py-1">
-              <span className="w-2.5 h-2.5 rounded-full bg-white/40" />
-              <span><strong>{stats.total}</strong> Total Clóset</span>
+            <div style={{ backgroundColor: '#414833' }} className="h-4 w-px hidden sm:block" />
+            <div className="flex items-center gap-1.5 px-3 py-1 font-medium">
+              <span className="w-2.5 h-2.5 rounded-full bg-stone-300 shadow-xs" />
+              <span><strong>{stats.total}</strong> Total</span>
             </div>
           </div>
         </div>
