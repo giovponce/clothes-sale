@@ -309,7 +309,7 @@ export default function App() {
           </h1>
           <p className="text-base md:text-lg text-stone-100 max-w-xl mx-auto font-light leading-relaxed mb-6">
             Ropa que ya no me pongo pero sigue en excelente estado.
-            Échale un ojo 👀.
+            <br/>Échale un ojo 👀.
           </p>
 
           {/* Estadísticas en la cabecera */}
