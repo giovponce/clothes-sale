@@ -101,7 +101,11 @@ export const items = [
     new: false,
     descripcion: "Short mezclilla negro, es largo, queda arriba de la rodilla. Tiro alto. Comodo pero la tela casi no estira. Bolsillos muy amplios.",
     vendido: false,
-    imagenes: ["bolso-zara-1.svg"]
+    imagenes: [
+      "clothes/bottoms/8. short-negro-mezclilla1.jpg",
+      "clothes/bottoms/8. short-negro-mezclilla2.jpg",
+      "clothes/bottoms/8. short-negro-mezclilla3.jpg"
+    ]
   },
   {
     id: 9,
