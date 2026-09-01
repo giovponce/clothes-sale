@@ -287,14 +287,17 @@ export default function App() {
 
       {/* 2. HEADER / HERO BANNER */}
       <header
-        style={{ backgroundColor: '#333d29' }}
-        className="bg-forest-green-700 text-warm-beige-50 border-b border-forest-green-800 relative overflow-hidden py-10 md:py-16"
+        style={{
+          backgroundImage: "linear-gradient(to bottom, rgba(51, 61, 41, 0.80), rgba(36, 43, 26, 0.88)), url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1600&q=80')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        className="bg-forest-green-700 text-warm-beige-50 border-b border-forest-green-800 relative overflow-hidden py-12 md:py-20"
       >
-        {/* Elementos decorativos de fondo */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
+        {/* Elementos decorativos de fondo sutiles */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute top-10 left-10 w-40 h-40 rounded-full border-4 border-white" />
           <div className="absolute bottom-5 right-20 w-60 h-60 rounded-full border-2 border-white" />
-          <div className="absolute -top-10 right-10 w-24 h-24 rounded-full bg-white" />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
