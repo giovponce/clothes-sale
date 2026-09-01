@@ -140,7 +140,12 @@ export const items = [
     new: false,
     descripcion: "Falda corta de estampado tartan blanco y negro tipo colegiala, marca hot topic. No estira.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/bottoms/11. falda-hot1.jpg",
+      "clothes/bottoms/11. falda-hot2.jpg",
+      "clothes/bottoms/11. falda-hot3.jpg",
+      "clothes/bottoms/11. falda-hot4.jpg"
+    ]
   },
   {
     id: 12,
@@ -234,16 +239,20 @@ export const items = [
   },
   {
     id: 18,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
+    nombre: "Playera a rayas horizontales",
+    marca: "Sin marca",
+    talla: "M",
+    color: "Rayas",
+    categoria: "Tops",
+    precio: 80,
     new: false,
-    descripcion: "",
+    descripcion: "Playera de cuello redondo con rayas horizontales, fresca, cómoda y en excelente estado.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/tops/18. playera rayas horizontales1.jpg",
+      "clothes/tops/18. playera rayas horizontales 2.jpg",
+      "clothes/tops/18. playera rayas horizontales3.jpg"
+    ]
   },
   {
     id: 19,
