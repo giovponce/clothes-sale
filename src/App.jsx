@@ -246,6 +246,9 @@ export default function App() {
   // --- LÓGICA DE FILTRADO COMBINADO (AND) ---
   const filteredItems = useMemo(() => {
     return items.filter(item => {
+      // Ignorar borradores/items vacíos
+      if (!item.nombre || item.nombre.trim() === "") return false;
+
       // Filtro Talla (Soporta strings y arrays)
       if (talla) {
         const hasTalla = Array.isArray(item.talla)
@@ -281,8 +284,9 @@ export default function App() {
 
   // --- ESTADÍSTICAS RÁPIDAS ---
   const stats = useMemo(() => {
-    const total = items.length;
-    const vendidos = items.filter(i => i.vendido).length;
+    const activeItems = items.filter(i => i.nombre && i.nombre.trim() !== "");
+    const total = activeItems.length;
+    const vendidos = activeItems.filter(i => i.vendido).length;
     const disponibles = total - vendidos;
     return { total, vendidos, disponibles };
   }, []);
