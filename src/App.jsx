@@ -206,6 +206,7 @@ export default function App() {
   const [categoria, setCategoria] = useState('');
   const [search, setSearch] = useState('');
   const [hideSold, setHideSold] = useState(true);
+  const [condicion, setCondicion] = useState(''); // '' (todos), 'nuevo', 'seminuevo'
   const [selectedItem, setSelectedItem] = useState(null);
   const [showInfoBanner, setShowInfoBanner] = useState(true);
 
@@ -267,6 +268,9 @@ export default function App() {
       if (marca && item.marca !== marca) return false;
       // Filtro Categoría
       if (categoria && item.categoria !== categoria) return false;
+      // Filtro de Estado (Nuevo / Seminuevo)
+      if (condicion === 'nuevo' && !item.new) return false;
+      if (condicion === 'seminuevo' && item.new) return false;
       // Filtro Ocultar Vendidos
       if (hideSold && item.vendido) return false;
       // Filtro Búsqueda por texto (Nombre, Marca, Descripción, Categoría)
@@ -280,7 +284,7 @@ export default function App() {
       }
       return true;
     });
-  }, [talla, color, marca, categoria, hideSold, search]);
+  }, [talla, color, marca, categoria, hideSold, search, condicion]);
 
   // --- ESTADÍSTICAS RÁPIDAS ---
   const stats = useMemo(() => {
@@ -293,8 +297,8 @@ export default function App() {
 
   // --- COMPROBAR SI HAY FILTROS ACTIVOS ---
   const hasActiveFilters = useMemo(() => {
-    return talla !== '' || color !== '' || marca !== '' || categoria !== '' || search !== '' || !hideSold;
-  }, [talla, color, marca, categoria, search, hideSold]);
+    return talla !== '' || color !== '' || marca !== '' || categoria !== '' || search !== '' || !hideSold || condicion !== '';
+  }, [talla, color, marca, categoria, search, hideSold, condicion]);
 
   // --- REINICIAR FILTROS ---
   const handleClearFilters = () => {
@@ -303,6 +307,7 @@ export default function App() {
     setMarca('');
     setCategoria('');
     setSearch('');
+    setCondicion('');
     setHideSold(true);
   };
 
@@ -474,21 +479,60 @@ export default function App() {
             </div>
 
             {/* Fila Inferior: Checkbox Ocultar y Botón de Limpieza */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mt-4 pt-4 border-t border-warm-beige-100">
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-4 pt-4 border-t border-warm-beige-100">
               
-              {/* Toggle Ocultar Vendidos */}
-              <label className="inline-flex items-center cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={hideSold}
-                  onChange={(e) => setHideSold(e.target.checked)}
-                  className="sr-only peer"
-                />
-                <div className="w-10 h-6 bg-stone-200 rounded-full peer peer-focus:ring-2 peer-focus:ring-forest-green-300 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-forest-green-600 relative transition-colors duration-300"></div>
-                <span className="ml-3 text-xs md:text-sm font-medium text-stone-700">
-                  Ocultar prendas vendidas
-                </span>
-              </label>
+              <div className="flex flex-wrap items-center gap-4">
+                {/* Toggle Ocultar Vendidos */}
+                <label className="inline-flex items-center cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={hideSold}
+                    onChange={(e) => setHideSold(e.target.checked)}
+                    className="sr-only peer"
+                  />
+                  <div className="w-10 h-6 bg-stone-200 rounded-full peer peer-focus:ring-2 peer-focus:ring-forest-green-300 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-forest-green-600 relative transition-colors duration-300"></div>
+                  <span className="ml-3 text-xs md:text-sm font-medium text-stone-700">
+                    Ocultar prendas vendidas
+                  </span>
+                </label>
+
+                {/* Separador vertical en escritorio */}
+                <div className="hidden sm:block w-px h-5 bg-warm-beige-200" />
+
+                {/* Control Segmentado para ver Nuevo / Seminuevo */}
+                <div className="flex items-center bg-warm-beige-100/90 p-0.5 rounded-lg border border-warm-beige-200 shadow-2xs">
+                  <button
+                    onClick={() => setCondicion('')}
+                    className={`text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md transition-all cursor-pointer ${
+                      condicion === ''
+                        ? 'bg-forest-green-600 text-white shadow-3xs'
+                        : 'text-stone-600 hover:text-stone-950'
+                    }`}
+                  >
+                    Todos
+                  </button>
+                  <button
+                    onClick={() => setCondicion('nuevo')}
+                    className={`text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md transition-all cursor-pointer ${
+                      condicion === 'nuevo'
+                        ? 'bg-forest-green-600 text-white shadow-3xs'
+                        : 'text-stone-600 hover:text-stone-950'
+                    }`}
+                  >
+                    Nuevos
+                  </button>
+                  <button
+                    onClick={() => setCondicion('seminuevo')}
+                    className={`text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md transition-all cursor-pointer ${
+                      condicion === 'seminuevo'
+                        ? 'bg-forest-green-600 text-white shadow-3xs'
+                        : 'text-stone-600 hover:text-stone-950'
+                    }`}
+                  >
+                    Seminuevos
+                  </button>
+                </div>
+              </div>
 
               {/* Botón de limpiar filtros */}
               <div className="flex items-center gap-3">
