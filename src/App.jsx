@@ -17,7 +17,12 @@ import {
   Heart
 } from 'lucide-react';
 import { items } from './data/items.js';
-import mushroomBanner from './assets/mushroom-banner.webp';
+import mushroomBanner1 from './assets/mushroom-banner.webp';
+import mushroomBanner2 from './assets/mushroom-banner-2.png';
+import mushroomBanner3 from './assets/mushroom-banner-3.png';
+import mushroomBanner4 from './assets/mushroom-banner-4.jpg';
+
+const BANNERS = [mushroomBanner1, mushroomBanner2, mushroomBanner3, mushroomBanner4];
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "34600000000";
 const SELLER_NAME = import.meta.env.VITE_SELLER_NAME || "Giov";
@@ -179,6 +184,12 @@ function ProductCard({ item, onSelect }) {
 }
 
 export default function App() {
+  // --- SELECCIÓN ALEATORIA DE BANNER ---
+  const selectedBanner = useMemo(() => {
+    const randomIndex = Math.floor(Math.random() * BANNERS.length);
+    return BANNERS[randomIndex];
+  }, []);
+
   // --- ESTADOS ---
   const [talla, setTalla] = useState('');
   const [color, setColor] = useState('');
@@ -289,7 +300,7 @@ export default function App() {
       {/* 2. HEADER / HERO BANNER */}
       <header
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(51, 61, 41, 0.84), rgba(36, 43, 26, 0.92)), url('${mushroomBanner}')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(51, 61, 41, 0.45), rgba(36, 43, 26, 0.60)), url('${selectedBanner}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
