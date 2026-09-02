@@ -44,7 +44,8 @@ export const items = [
       "clothes/other/3. gorro-husky.png",
       "clothes/other/3. gorro-husky2.jpg",
       "clothes/other/3. gorro-husky3.jpg",
-      "clothes/other/3. gorro-husky4.jpg"
+      "clothes/other/3. gorro-husky4.jpg",
+      "clothes/other/3. gorro-husky .jpg"
     ]
   },
   {
@@ -94,6 +95,7 @@ export const items = [
     descripcion: "Pantalón mezclilla gruesa, tobillos tipo jogger con resorte. Corte tipo mom jeans. Tiro alto. Bolsillos muy amplios",
     vendido: false,
     imagenes: [
+      "clothes/bottoms/6. jeans-negros-rotos.jpg",
       "clothes/bottoms/6. jeans-negros-rotos1.jpg",
       "clothes/bottoms/6. jeans-negros-rotos2.jpg",
       "clothes/bottoms/6. jeans-negros-rotos3.jpg"
