@@ -132,7 +132,7 @@ export const items = [
     imagenes: [
       "clothes/bottoms/8. short-negro-mezclilla1.jpg",
       "clothes/bottoms/8. short-negro-mezclilla2.jpg",
-      "clothes/bottoms/8. short-negro-mezclilla3.jpg"
+      "clothes/bottoms/8. short-negro-mezclilla4.jpg"
     ]
   },
   {
@@ -323,9 +323,9 @@ export const items = [
     descripcion: "Hermoso vestido de mezclilla estilo vaquero, entallado, con botones frontales y cuello clásico.",
     vendido: false,
     imagenes: [
-      "clothes/dresses/19. vestido-vaquero.jpg",
       "clothes/dresses/19. vestido-vaquero1.jpg",
-      "clothes/dresses/19. vestido-vaquero2.jpg"
+      "clothes/dresses/19. vestido-vaquero2.jpg",
+      "clothes/dresses/19. vestido-vaquero3.jpg"
     ]
   },
   {
