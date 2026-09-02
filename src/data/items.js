@@ -10,7 +10,11 @@ export const items = [
     new: true,
     descripcion: "Blusa estilo oriental china, estampado típico, con botones al frente y manga corta. Composición 100% Poliester",
     vendido: false,
-    imagenes: ["abrigo-lana-1.svg", "abrigo-lana-2.svg"]
+    imagenes: [
+      "clothes/tops/1. china1.png",
+      "clothes/tops/1. china2.png",
+      "clothes/tops/1. china3.png"
+    ]
   },
   {
     id: 2,
@@ -71,7 +75,12 @@ export const items = [
     new: false,
     descripcion: "Pantalón ancho color naranja quemada. MEDIDAS: Cintura: 84 cm,  Cadera: 116 cm Tiro: 34 cm Largo: 92 cm. Estira mucho y es muy fresco. Bolsillos funcionales",
     vendido: false,
-    imagenes: ["jersey-mango-1.svg", "jersey-mango-2.svg"]
+    imagenes: [
+      "clothes/bottoms/5. pantalon-naranja.jpg",
+      "clothes/bottoms/5. pantalonnaranja1.jpg",
+      "clothes/bottoms/5. pantalonnaranja3.jpg",
+      "clothes/bottoms/5. pantalon naranja4.jpg"
+    ]
   },
   {
     id: 6,
@@ -135,7 +144,12 @@ export const items = [
     new: false,
     descripcion: "Pantalón de mezclilla color negro liso, corte tipo recto. Estilo tipo mom jeans. Bolsillos muy amplios.",
     vendido: false,
-    imagenes: ["pantalon-cargo-1.svg"]
+    imagenes: [
+      "clothes/bottoms/9. pantalon-negro-mezclilla1.jpg",
+      "clothes/bottoms/9. pantalon-negro-mezclilla2.jpg",
+      "clothes/bottoms/9. pantalon-negro-mezclilla3.jpg",
+      "clothes/bottoms/9. pantalon-negro-mezclilla4.jpg"
+    ]
   },
   {
     id: 10,
@@ -348,16 +362,20 @@ export const items = [
   },
   {
     id: 22,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
+    nombre: "Vestido negro con olanes",
+    marca: "Sin marca",
+    talla: "M",
+    color: "Negro",
+    categoria: "Vestidos",
+    precio: 120,
     new: false,
-    descripcion: "",
+    descripcion: "Vestido negro corto muy lindo con olanes en falda y hombros, ajuste cómodo y fresco.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/dresses/22. vestido olanes negro1.jpg",
+      "clothes/dresses/22. vestido olanes negro2.jpg",
+      "clothes/dresses/22. vestido olanes negro3.jpg"
+    ]
   },
   {
     id: 23,
