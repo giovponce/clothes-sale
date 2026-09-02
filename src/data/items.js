@@ -101,7 +101,11 @@ export const items = [
     new: false,
     descripcion: "Short de mezclilla azul, es largo, pero queda arriba de la rodilla. Tiro alto. Muy comodo y tiene resorte en la parte de atrás para un mejor ajuste. Bolsillos muy amplios.",
     vendido: false,
-    imagenes: ["sandalias-birkenstock-1.svg"]
+    imagenes: [
+      "clothes/bottoms/7. short-azul-mezclilla1.jpg",
+      "clothes/bottoms/7. short-azul-mezclilla2.jpg",
+      "clothes/bottoms/7. short-azul-mezclilla3.jpg"
+    ]
   },
   {
     id: 8,
@@ -199,7 +203,11 @@ export const items = [
     new: false,
     descripcion: "Shorto de vestir corto con bolsillos marca Spirit. Color verde amarillo",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/bottoms/13. short-spirit1.jpg",
+      "clothes/bottoms/13. short-spirit2.jpg",
+      "clothes/bottoms/13. short-spirit3.jpg"
+    ]
   },
   {
     id: 14,
