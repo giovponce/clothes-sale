@@ -331,16 +331,20 @@ export const items = [
   },
   {
     id: 21,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
+    nombre: "Suéter de tejido café",
+    marca: "Sin marca",
+    talla: "M",
+    color: "Café",
+    categoria: "Tops",
+    precio: 120,
     new: false,
-    descripcion: "",
+    descripcion: "Suéter tejido color café de tacto súper suave, cómodo e ideal para los días frescos.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/tops/21. sueter-cafe-1.jpg",
+      "clothes/tops/21. sueter-cafe2.jpg",
+      "clothes/tops/21. sueter-cafe3.jpg"
+    ]
   },
   {
     id: 22,
