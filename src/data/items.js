@@ -36,7 +36,12 @@ export const items = [
     new: false,
     descripcion: "Gorro suavecito y caliente, con forma de perrito husky o lobo siberiano",
     vendido: false,
-    imagenes: ["vestido-lino-1.svg", "vestido-lino-2.svg", "vestido-lino-3.svg"]
+    imagenes: [
+      "clothes/other/3. gorro-husky.png",
+      "clothes/other/3. gorro-husky2.jpg",
+      "clothes/other/3. gorro-husky3.jpg",
+      "clothes/other/3. gorro-husky4.jpg"
+    ]
   },
   {
     id: 4,
@@ -49,7 +54,11 @@ export const items = [
     new: false,
     descripcion: "Vestido clásico negro, con bolsillos y manga 3/4. La tela tiene una caida muy suave y es cómodo. Hecho en Sri Lanka con tela importada. De largo, queda abajo de la rodilla.",
     vendido: false,
-    imagenes: ["jeans-levis-1.svg"]
+    imagenes: [
+      "clothes/dresses/4. vestido-negro-elegante1.png",
+      "clothes/dresses/4. vestido-negro-elegante2.png",
+      "clothes/dresses/4. vestido-negro-elegante3.png"
+    ]
   },
   {
     id: 5,
@@ -75,7 +84,11 @@ export const items = [
     new: false,
     descripcion: "Pantalón mezclilla gruesa, tobillos tipo jogger con resorte. Corte tipo mom jeans. Tiro alto. Bolsillos muy amplios",
     vendido: false,
-    imagenes: ["camisa-uniqlo-1.svg"]
+    imagenes: [
+      "clothes/bottoms/6. jeans-negros-rotos1.jpg",
+      "clothes/bottoms/6. jeans-negros-rotos2.jpg",
+      "clothes/bottoms/6. jeans-negros-rotos3.jpg"
+    ]
   },
   {
     id: 7,
@@ -131,7 +144,13 @@ export const items = [
     new: false,
     descripcion: "Pantalon de mezclilla color azul claro, corte recto ligeramente entubado. Corte del pantalón tipo mom jeans, tiro alto. Bolsillos muy amplios.",
     vendido: false,
-    imagenes: ["gorro-patagonia-1.svg"]
+    imagenes: [
+      "clothes/bottoms/10. mom-jeans-azul1.jpg",
+      "clothes/bottoms/10. mom-jeans-azul2.jpg",
+      "clothes/bottoms/10. mom-jeans-azul3.jpg",
+      "clothes/bottoms/10. mom-jeans-azul4.jpg",
+      "clothes/bottoms/10. mom-jeans-azul5.jpg"
+    ]
   },
   {
     id: 11,
@@ -260,28 +279,36 @@ export const items = [
   },
   {
     id: 19,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
+    nombre: "Vestido vaquero de mezclilla",
+    marca: "Zara",
+    talla: "M",
+    color: ["Azul", "Mezclilla"],
+    categoria: "Vestidos",
+    precio: 120,
     new: false,
-    descripcion: "",
+    descripcion: "Hermoso vestido de mezclilla estilo vaquero, entallado, con botones frontales y cuello clásico.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/dresses/19. vestido-vaquero.jpg",
+      "clothes/dresses/19. vestido-vaquero1.jpg",
+      "clothes/dresses/19. vestido-vaquero2.jpg"
+    ]
   },
   {
     id: 20,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
+    nombre: "Vestido de noche con brillos",
+    marca: "H&M",
+    talla: "S",
+    color: "Negro",
+    categoria: "Vestidos",
+    precio: 150,
     new: false,
-    descripcion: "",
+    descripcion: "Vestido de noche elegante con brillos sutiles, perfecto para fiestas y eventos de gala. Ajuste cómodo.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/dresses/20. vestido-brillos1.jpg",
+      "clothes/dresses/20. vestido-brillos2.jpg",
+      "clothes/dresses/20. vestido-brillos3.jpg"
+    ]
   }
 ];
