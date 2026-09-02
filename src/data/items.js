@@ -181,7 +181,12 @@ export const items = [
     new: false,
     descripcion: "Falda mezclilla corta color azul. Mezclilla rigida, estira muy poco. Flecos en el borde y bolsillos funcionales.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/bottoms/12. falda-mezclilla1.jpg",
+      "clothes/bottoms/12. falda-mezclilla2.jpg",
+      "clothes/bottoms/12. falda-mezclilla3.jpg",
+      "clothes/bottoms/12. falda-mezclilla4.jpg"
+    ]
   },
   {
     id: 13,
@@ -207,7 +212,12 @@ export const items = [
     new: false,
     descripcion: "Falda corta azul mezclilla oscuro, con pequeñas deshilachadas para dar estilo y flecos cortos en el borde.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/bottoms/14. falda-mezclilla hym1.jpg",
+      "clothes/bottoms/14. falda-mezclilla hym2.jpg",
+      "clothes/bottoms/14. falda-mezclilla hym4.jpg",
+      "clothes/bottoms/14. falda-mezclilla hym5.jpg"
+    ]
   },
   {
     id: 15,
