@@ -88,7 +88,7 @@ function ProductCard({ item, onSelect }) {
 
   return (
     <div
-      onClick={(e) => {
+      onClick={() => {
         if (isSwipedRef.current) {
           isSwipedRef.current = false;
           return;
@@ -821,8 +821,6 @@ function ModalGallery({ images, itemNombre, vendido }) {
   const [index, setIndex] = useState(0);
   const scrollContainerRef = useRef(null);
 
-  if (!images || !images.length) return null;
-
   // Sincronizar el scroll cuando cambia la imagen seleccionada desde fuera (por ejemplo, con las imágenes de otra prenda)
   useEffect(() => {
     setIndex(0);
@@ -831,6 +829,8 @@ function ModalGallery({ images, itemNombre, vendido }) {
       container.scrollLeft = 0;
     }
   }, [images]);
+
+  if (!images || !images.length) return null;
 
   // Manejar el scroll manual (deslizamiento táctil en móvil)
   const handleScroll = (e) => {
