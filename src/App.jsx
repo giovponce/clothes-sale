@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react';
-import { 
+import { useState, useMemo, useRef, useEffect } from 'react';
+import {
   Shirt, 
   Tag, 
   Sparkles, 
@@ -32,6 +32,10 @@ function ProductCard({ item, onSelect }) {
 
   const hasMultipleImages = item.imagenes && item.imagenes.length > 1;
 
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const isSwipedRef = useRef(false);
+
   const nextImage = (e) => {
     e.stopPropagation();
     if (item.imagenes && item.imagenes.length) {
@@ -51,13 +55,55 @@ function ProductCard({ item, onSelect }) {
     setCurrentImgIndex(index);
   };
 
+  const handleTouchStart = (e) => {
+    if (!hasMultipleImages || item.vendido) return;
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    isSwipedRef.current = false;
+  };
+
+  const handleTouchMove = (e) => {
+    if (!hasMultipleImages || item.vendido) return;
+    const diffX = touchStartX.current - e.touches[0].clientX;
+    const diffY = touchStartY.current - e.touches[0].clientY;
+    if (Math.abs(diffX) > 15 && Math.abs(diffX) > Math.abs(diffY)) {
+      isSwipedRef.current = true;
+    }
+  };
+
+  const handleTouchEnd = (e) => {
+    if (!hasMultipleImages || item.vendido) return;
+    if (isSwipedRef.current) {
+      const diffX = touchStartX.current - e.changedTouches[0].clientX;
+      if (Math.abs(diffX) > 40) {
+        e.stopPropagation();
+        if (diffX > 0) {
+          nextImage(e);
+        } else {
+          prevImage(e);
+        }
+      }
+    }
+  };
+
   return (
-    <div 
-      onClick={() => onSelect(item)}
+    <div
+      onClick={(e) => {
+        if (isSwipedRef.current) {
+          isSwipedRef.current = false;
+          return;
+        }
+        onSelect(item);
+      }}
       className="group relative bg-[#faf8f5] rounded-2xl overflow-hidden border border-warm-beige-200 hover:border-forest-green-300 transition-all duration-300 hover:shadow-lg cursor-pointer flex flex-col h-full"
     >
       {/* Contenedor de la Imagen */}
-      <div className="relative aspect-[3/4] w-full bg-warm-beige-100 overflow-hidden select-none">
+      <div
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        className="relative aspect-[3/4] w-full bg-warm-beige-100 overflow-hidden select-none"
+      >
         <img
           src={`/images/${item.imagenes[currentImgIndex]}`}
           alt={`${item.nombre} - imagen ${currentImgIndex + 1}`}
@@ -773,28 +819,79 @@ export default function App() {
 // Subcomponente para renderizar la galería interna del modal con su propio carrusel de imágenes
 function ModalGallery({ images, itemNombre, vendido }) {
   const [index, setIndex] = useState(0);
+  const scrollContainerRef = useRef(null);
 
   if (!images || !images.length) return null;
 
+  // Sincronizar el scroll cuando cambia la imagen seleccionada desde fuera (por ejemplo, con las imágenes de otra prenda)
+  useEffect(() => {
+    setIndex(0);
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.scrollLeft = 0;
+    }
+  }, [images]);
+
+  // Manejar el scroll manual (deslizamiento táctil en móvil)
+  const handleScroll = (e) => {
+    const container = e.currentTarget;
+    const width = container.getBoundingClientRect().width;
+    if (width > 0) {
+      const newIndex = Math.round(container.scrollLeft / width);
+      if (newIndex !== index && newIndex >= 0 && newIndex < images.length) {
+        setIndex(newIndex);
+      }
+    }
+  };
+
+  const scrollToImage = (targetIndex) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const width = container.getBoundingClientRect().width;
+      container.scrollTo({
+        left: targetIndex * width,
+        behavior: 'smooth'
+      });
+      setIndex(targetIndex);
+    }
+  };
+
   const nextImg = () => {
-    setIndex((prev) => (prev + 1) % images.length);
+    const nextIndex = (index + 1) % images.length;
+    scrollToImage(nextIndex);
   };
 
   const prevImg = () => {
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
+    const prevIndex = (index - 1 + images.length) % images.length;
+    scrollToImage(prevIndex);
   };
 
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center overflow-hidden bg-stone-100 md:rounded-l-3xl">
-      <img
-        src={`/images/${images[index]}`}
-        alt={`${itemNombre} - detalle ${index + 1}`}
-        className={`w-full h-full object-cover max-h-[40vh] md:max-h-none ${vendido ? 'grayscale opacity-50' : ''}`}
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src = `https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600`;
-        }}
-      />
+      {/* Contenedor deslizable horizontalmente (scroll horizontal nativo en móviles) */}
+      <div
+        ref={scrollContainerRef}
+        onScroll={handleScroll}
+        className="w-full h-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {images.map((img, i) => (
+          <div
+            key={i}
+            className="w-full h-full shrink-0 snap-center flex justify-center items-center"
+          >
+            <img
+              src={`/images/${img}`}
+              alt={`${itemNombre} - detalle ${i + 1}`}
+              className={`w-full h-full object-cover max-h-[40vh] md:max-h-none ${vendido ? 'grayscale opacity-50' : ''}`}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = `https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600`;
+              }}
+            />
+          </div>
+        ))}
+      </div>
 
       {/* Flechas del carrusel del modal */}
       {images.length > 1 && (
@@ -822,10 +919,10 @@ function ModalGallery({ images, itemNombre, vendido }) {
           {images.map((img, i) => (
             <button
               key={i}
-              onClick={() => setIndex(i)}
+              onClick={() => scrollToImage(i)}
               className={`w-3.5 h-3.5 rounded-full overflow-hidden border transition-all ${
-                i === index 
-                  ? 'border-white bg-forest-green-500 scale-110' 
+                i === index
+                  ? 'border-white bg-forest-green-500 scale-110'
                   : 'border-white/50 bg-white/50 hover:bg-white'
               }`}
               title={`Ver foto ${i + 1}`}
