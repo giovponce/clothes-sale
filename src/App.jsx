@@ -255,6 +255,7 @@ export default function App() {
   const [condicion, setCondicion] = useState(''); // '' (todos), 'nuevo', 'seminuevo'
   const [selectedItem, setSelectedItem] = useState(null);
   const [showInfoBanner, setShowInfoBanner] = useState(true);
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   // --- OBTENER OPCIONES ÚNICAS DE FILTROS ---
   const uniqueFilters = useMemo(() => {
@@ -434,46 +435,66 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-4 mt-8">
         
         {/* BARRA DE FILTROS & BUSCADOR (STICKY) */}
-        <div className="sticky top-0 z-40 bg-warm-beige-50/95 backdrop-blur-md py-4 border-b border-warm-beige-200 shadow-xs mb-8 transition-all duration-300">
-          <div className="bg-white rounded-2xl p-4 border border-warm-beige-200/80 shadow-xs">
-            <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-between">
+        <div className="sticky top-0 z-40 bg-warm-beige-50/95 backdrop-blur-md py-2 md:py-3.5 border-b border-warm-beige-200 shadow-xs mb-4 md:mb-8 transition-all duration-300">
+          <div className="bg-white rounded-2xl p-2.5 md:p-4 border border-warm-beige-200/80 shadow-xs">
+            <div className="flex flex-col lg:flex-row gap-2.5 lg:gap-4 items-stretch justify-between">
               
-              {/* Buscador de texto */}
-              <div className="relative flex-1">
-                <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none" />
-                <input
-                  type="text"
-                  placeholder="Buscar por nombre, marca, descripción..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 focus:ring-1 focus:ring-forest-green-500 bg-warm-beige-50/50 text-sm placeholder-stone-400 text-stone-800 transition-all"
-                />
-                {search && (
-                  <button 
-                    onClick={() => setSearch('')}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 focus:outline-none"
-                  >
-                    <X size={16} />
-                  </button>
-                )}
+              {/* Buscador y Botón de Filtros en Móvil */}
+              <div className="flex gap-2 items-center flex-1">
+                {/* Buscador de texto */}
+                <div className="relative flex-1">
+                  <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none" />
+                  <input
+                    type="text"
+                    placeholder="Buscar por nombre, marca..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 md:py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 focus:ring-1 focus:ring-forest-green-500 bg-warm-beige-50/50 text-xs md:text-sm placeholder-stone-400 text-stone-800 transition-all"
+                  />
+                  {search && (
+                    <button
+                      onClick={() => setSearch('')}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 focus:outline-none"
+                    >
+                      <X size={16} />
+                    </button>
+                  )}
+                </div>
+
+                {/* Botón Filtros Móvil */}
+                <button
+                  type="button"
+                  onClick={() => setShowMobileFilters(!showMobileFilters)}
+                  className={`lg:hidden flex items-center justify-center gap-1.5 px-3 py-2 md:py-2.5 rounded-xl border text-xs font-bold transition-all cursor-pointer select-none ${
+                    showMobileFilters || hasActiveFilters
+                      ? 'bg-forest-green-600 border-forest-green-600 text-white shadow-xs'
+                      : 'border-warm-beige-200 text-stone-700 bg-warm-beige-50/30 hover:bg-warm-beige-50'
+                  }`}
+                >
+                  <Filter size={14} />
+                  <span>Filtros</span>
+                  {hasActiveFilters && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                  )}
+                </button>
               </div>
 
-              {/* Controles de Selección de Filtros */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-3 flex-[2]">
+              {/* Controles de Selección de Filtros (Categoría, Talla, Color, Marca) */}
+              <div className={`${showMobileFilters ? 'grid' : 'hidden'} lg:grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-3 flex-[2]`}>
                 
                 {/* Categoría */}
                 <div className="relative">
                   <select
                     value={categoria}
                     onChange={(e) => setCategoria(e.target.value)}
-                    className="w-full px-3 py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 bg-white text-xs md:text-sm text-stone-700 font-medium cursor-pointer transition-all appearance-none pr-8"
+                    className="w-full px-2.5 py-2 md:px-3 md:py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 bg-white text-[11px] md:text-sm text-stone-700 font-medium cursor-pointer transition-all appearance-none pr-7 md:pr-8"
                   >
                     <option value="">Categoría (Todas)</option>
                     {uniqueFilters.categorias.map(cat => (
                       <option key={cat} value={cat}>{cat}</option>
                     ))}
                   </select>
-                  <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 border-l border-warm-beige-200 pl-1.5 text-[10px]">▼</div>
+                  <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 border-l border-warm-beige-200 pl-1 md:pl-1.5 text-[9px] md:text-[10px]">▼</div>
                 </div>
 
                 {/* Talla */}
@@ -481,14 +502,14 @@ export default function App() {
                   <select
                     value={talla}
                     onChange={(e) => setTalla(e.target.value)}
-                    className="w-full px-3 py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 bg-white text-xs md:text-sm text-stone-700 font-medium cursor-pointer transition-all appearance-none pr-8"
+                    className="w-full px-2.5 py-2 md:px-3 md:py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 bg-white text-[11px] md:text-sm text-stone-700 font-medium cursor-pointer transition-all appearance-none pr-7 md:pr-8"
                   >
                     <option value="">Talla (Todas)</option>
                     {uniqueFilters.tallas.map(t => (
                       <option key={t} value={t}>Talla {t}</option>
                     ))}
                   </select>
-                  <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 border-l border-warm-beige-200 pl-1.5 text-[10px]">▼</div>
+                  <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 border-l border-warm-beige-200 pl-1 md:pl-1.5 text-[9px] md:text-[10px]">▼</div>
                 </div>
 
                 {/* Color */}
@@ -496,14 +517,14 @@ export default function App() {
                   <select
                     value={color}
                     onChange={(e) => setColor(e.target.value)}
-                    className="w-full px-3 py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 bg-white text-xs md:text-sm text-stone-700 font-medium cursor-pointer transition-all appearance-none pr-8"
+                    className="w-full px-2.5 py-2 md:px-3 md:py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 bg-white text-[11px] md:text-sm text-stone-700 font-medium cursor-pointer transition-all appearance-none pr-7 md:pr-8"
                   >
                     <option value="">Color (Todos)</option>
                     {uniqueFilters.colores.map(c => (
                       <option key={c} value={c}>{c}</option>
                     ))}
                   </select>
-                  <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 border-l border-warm-beige-200 pl-1.5 text-[10px]">▼</div>
+                  <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 border-l border-warm-beige-200 pl-1 md:pl-1.5 text-[9px] md:text-[10px]">▼</div>
                 </div>
 
                 {/* Marca */}
@@ -511,23 +532,23 @@ export default function App() {
                   <select
                     value={marca}
                     onChange={(e) => setMarca(e.target.value)}
-                    className="w-full px-3 py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 bg-white text-xs md:text-sm text-stone-700 font-medium cursor-pointer transition-all appearance-none pr-8"
+                    className="w-full px-2.5 py-2 md:px-3 md:py-2.5 rounded-xl border border-warm-beige-200 focus:outline-none focus:border-forest-green-500 bg-white text-[11px] md:text-sm text-stone-700 font-medium cursor-pointer transition-all appearance-none pr-7 md:pr-8"
                   >
                     <option value="">Marca (Todas)</option>
                     {uniqueFilters.marcas.map(m => (
                       <option key={m} value={m}>{m}</option>
                     ))}
                   </select>
-                  <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 border-l border-warm-beige-200 pl-1.5 text-[10px]">▼</div>
+                  <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400 border-l border-warm-beige-200 pl-1 md:pl-1.5 text-[9px] md:text-[10px]">▼</div>
                 </div>
 
               </div>
             </div>
 
             {/* Fila Inferior: Checkbox Ocultar y Botón de Limpieza */}
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-4 pt-4 border-t border-warm-beige-100">
+            <div className={`${showMobileFilters ? 'flex' : 'hidden'} lg:flex flex-wrap items-center justify-between gap-3 mt-3 pt-3 border-t border-warm-beige-100`}>
               
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                 {/* Toggle Ocultar Vendidos */}
                 <label className="inline-flex items-center cursor-pointer select-none">
                   <input
@@ -536,9 +557,9 @@ export default function App() {
                     onChange={(e) => setHideSold(e.target.checked)}
                     className="sr-only peer"
                   />
-                  <div className="w-10 h-6 bg-stone-200 rounded-full peer peer-focus:ring-2 peer-focus:ring-forest-green-300 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-forest-green-600 relative transition-colors duration-300"></div>
-                  <span className="ml-3 text-xs md:text-sm font-medium text-stone-700">
-                    Ocultar prendas vendidas
+                  <div className="w-8 h-5 bg-stone-200 rounded-full peer peer-focus:ring-2 peer-focus:ring-forest-green-300 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-forest-green-600 relative transition-colors duration-300"></div>
+                  <span className="ml-2.5 text-xs md:text-sm font-medium text-stone-700">
+                    Ocultar vendidos
                   </span>
                 </label>
 
@@ -549,7 +570,7 @@ export default function App() {
                 <div className="flex items-center bg-warm-beige-100/90 p-0.5 rounded-lg border border-warm-beige-200 shadow-2xs">
                   <button
                     onClick={() => setCondicion('')}
-                    className={`text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md transition-all cursor-pointer ${
+                    className={`text-[9px] md:text-xs font-bold px-2 py-0.5 md:px-2.5 md:py-1 rounded-md transition-all cursor-pointer ${
                       condicion === ''
                         ? 'bg-forest-green-600 text-white shadow-3xs'
                         : 'text-stone-600 hover:text-stone-950'
@@ -559,7 +580,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setCondicion('nuevo')}
-                    className={`text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md transition-all cursor-pointer ${
+                    className={`text-[9px] md:text-xs font-bold px-2 py-0.5 md:px-2.5 md:py-1 rounded-md transition-all cursor-pointer ${
                       condicion === 'nuevo'
                         ? 'bg-forest-green-600 text-white shadow-3xs'
                         : 'text-stone-600 hover:text-stone-950'
@@ -569,7 +590,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setCondicion('seminuevo')}
-                    className={`text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md transition-all cursor-pointer ${
+                    className={`text-[9px] md:text-xs font-bold px-2 py-0.5 md:px-2.5 md:py-1 rounded-md transition-all cursor-pointer ${
                       condicion === 'seminuevo'
                         ? 'bg-forest-green-600 text-white shadow-3xs'
                         : 'text-stone-600 hover:text-stone-950'
@@ -581,18 +602,18 @@ export default function App() {
               </div>
 
               {/* Botón de limpiar filtros */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5 sm:gap-3">
                 {hasActiveFilters && (
                   <button
                     onClick={handleClearFilters}
-                    className="inline-flex items-center gap-1.5 text-xs text-forest-green-700 hover:text-forest-green-900 font-semibold py-1.5 px-3 rounded-lg hover:bg-forest-green-50 transition-colors focus:outline-none"
+                    className="inline-flex items-center gap-1 text-[11px] md:text-xs text-forest-green-700 hover:text-forest-green-900 font-semibold py-1 md:py-1.5 px-2 md:px-3 rounded-lg hover:bg-forest-green-50 transition-colors focus:outline-none"
                   >
-                    <RotateCcw size={13} />
-                    Limpiar Filtros
+                    <RotateCcw size={12} />
+                    Limpiar
                   </button>
                 )}
-                <span className="text-xs text-stone-500 font-medium">
-                  Mostrando {filteredItems.length} de {items.length} prendas
+                <span className="text-[11px] md:text-xs text-stone-500 font-medium">
+                  {filteredItems.length} de {items.length} prendas
                 </span>
               </div>
 
