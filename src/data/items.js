@@ -901,5 +901,59 @@ export const items = [
       "clothes/dresses/50. vestido-encaje-blanco-escote-v4.jpg",
       "clothes/dresses/50. vestido-encaje-blanco-escote-v5.jpg"
     ]
+  },
+  {
+    id: 51,
+    nombre: "Sandalias hebilla plateada Steve Madden",
+    marca: "Steve Madden",
+    talla: "4 (4.5)",
+    color: "Plateado",
+    categoria: "Accesorios",
+    precio: 100,
+    new: true,
+    descripcion: "Sandalias Steve Madden talla 4, dan para talla 4.5. En buen estado, con hebillas plateadas elegantes. Perfectas para looks casuales o de vestir.",
+    vendido: false,
+    imagenes: [
+      "clothes/other/51. sandalias-steve-madden1.jpg",
+      "clothes/other/51. sandalias-steve-madden2.jpg",
+      "clothes/other/51. sandalias-steve-madden3.jpg"
+    ]
+  },
+  {
+    id: 52,
+    nombre: "Calcetines navideños antiderrapantes",
+    marca: "Sin marca",
+    talla: "Unitalla (hasta pie 7)",
+    color: "Sin especificar",
+    categoria: "Accesorios",
+    precio: 40,
+    new: true,
+    descripcion: "Calcetines navideños calientitos, nuevos. Unitalla, máximo para pie talla 7. Tienen huellitas de silicón en la planta para andar solo con ellos sin resbalar.",
+    vendido: false,
+    imagenes: [
+      "clothes/other/52. calcetines-navidenos-silicon1.jpg",
+      "clothes/other/52. calcetines-navidenos-silicon2.jpg",
+      "clothes/other/52. calcetines-navidenos-silicon3.jpg"
+    ]
+  },
+  {
+    id: 53,
+    nombre: "Botas café tacón punta cuadrada H&M",
+    marca: "H&M",
+    talla: "38 EU / 24 MX",
+    color: "Café",
+    categoria: "Accesorios",
+    precio: 150,
+    new: true,
+    descripcion: "Botas color café con tacón y punta cuadrada al frente, marca H&M. Talla 38 EU equivalente a talla 24 MX. Elegantes y muy versátiles para cualquier outfit.",
+    vendido: false,
+    imagenes: [
+      "clothes/other/53. botas-cafe-tacon-hm1.jpg",
+      "clothes/other/53. botas-cafe-tacon-hm2.jpg",
+      "clothes/other/53. botas-cafe-tacon-hm3.jpg",
+      "clothes/other/53. botas-cafe-tacon-hm4.jpg",
+      "clothes/other/53. botas-cafe-tacon-hm5.jpg",
+      "clothes/other/53. botas-cafe-tacon-hm6.jpg"
+    ]
   }
 ];
