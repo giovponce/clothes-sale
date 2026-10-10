@@ -68,7 +68,7 @@ export const items = [
   {
     id: 5,
     nombre: "Pantalón ancho",
-    marca: "Mango",
+    marca: "Sin marca",
     talla: ["14", "L"],
     color: "Terracota",
     categoria: "Pantalones",
@@ -218,7 +218,7 @@ export const items = [
     categoria: "Shorts",
     precio: 80,
     new: false,
-    descripcion: "Shorto de vestir corto con bolsillos marca Spirit. Color verde amarillo",
+    descripcion: "Short de vestir corto con bolsillos marca Spirit. Color verde amarillo",
     vendido: false,
     imagenes: [
       "clothes/bottoms/13. short-spirit1.jpg",
@@ -264,7 +264,7 @@ export const items = [
   {
     id: 16,
     nombre: "Blusa rayas negro y tinto",
-    marca: "Sin marca",
+    marca: "That's it",
     talla: "L",
     color: ["Negro", "Rojo"],
     categoria: "Tops",
@@ -384,106 +384,522 @@ export const items = [
   },
   {
     id: 23,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
-    new: false,
-    descripcion: "",
+    nombre: "Vestido verde bandera Zara",
+    marca: "Zara",
+    talla: ["L", "30"],
+    color: "Verde",
+    categoria: "Vestidos",
+    precio: 120,
+    new: true,
+    descripcion: "Vestido color verde bandera de Zara. Tela tipo plástico ligera e impermeable, composición 100% poliéster. Ideal para días lluviosos o looks vibrantes.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/dresses/23. vestido-verde-zara1.png",
+      "clothes/dresses/23. vestido-verde-zara2.png",
+      "clothes/dresses/23. vestido-verde-zara3.png",
+      "clothes/dresses/23. vestido-verde-zara4.png",
+      "clothes/dresses/23. vestido-verde-zara5.png"
+    ]
   },
   {
     id: 24,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
-    new: false,
-    descripcion: "",
+    nombre: "Kimono tipo japonés Shein",
+    marca: "Shein",
+    talla: "L",
+    color: "Sin especificar",
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Kimono estilo japonés de composición 100% poliéster. Diseño oriental con caída suave y ligera, ideal para usarlo como capa sobre cualquier outfit.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/tops/24. kimono-japones-shein1.jpg",
+      "clothes/tops/24. kimono-japones-shein2.jpg",
+      "clothes/tops/24. kimono-japones-shein3.jpg",
+      "clothes/tops/24. kimono-japones-shein4.jpg"
+    ]
   },
   {
     id: 25,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
-    new: false,
-    descripcion: "",
+    nombre: "Conjunto vichy Bershka falda y blusa",
+    marca: "Bershka",
+    talla: "S",
+    color: ["Blanco", "Negro", "Cuadros"],
+    categoria: "Conjuntos",
+    precio: 150,
+    new: true,
+    descripcion: "Conjunto de falda y blusa en tela vichy (cuadritos blanco y negro estilo picnic). La blusa cuenta con tirantes traseros ajustables. La falda tiene cierre y botones decorativos al frente.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/conjuntos/25. conjunto-vichy-bershka1.jpg",
+      "clothes/conjuntos/25. conjunto-vichy-bershka2.jpg",
+      "clothes/conjuntos/25. conjunto-vichy-bershka3.jpg",
+      "clothes/conjuntos/25. conjunto-vichy-bershka4.jpg",
+      "clothes/conjuntos/25. conjunto-vichy-bershka5.jpg",
+      "clothes/conjuntos/25. conjunto-vichy-bershka6.jpg",
+      "clothes/conjuntos/25. conjunto-vichy-bershka7.jpg",
+      "clothes/conjuntos/25. conjunto-vichy-bershka8.jpg"
+    ]
   },
   {
     id: 26,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
-    new: false,
-    descripcion: "",
+    nombre: "Falda larga flores witchy Romwe",
+    marca: "Romwe (Shein)",
+    talla: "XL",
+    color: ["Morado", "Flores"],
+    categoria: "Faldas",
+    precio: 80,
+    new: true,
+    descripcion: "Falda larga de estampado floral con flores moradas y estética witchy. Cintura con resorte para mayor comodidad y ajuste. Tela ligera con hermosa caída.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/bottoms/26. falda-flores-witchy-romwe1.jpg",
+      "clothes/bottoms/26. falda-flores-witchy-romwe2.jpg",
+      "clothes/bottoms/26. falda-flores-witchy-romwe3.jpg",
+      "clothes/bottoms/26. falda-flores-witchy-romwe4.jpg"
+    ]
   },
   {
     id: 27,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
-    new: false,
-    descripcion: "",
+    nombre: "Suéter gris con desgaste Forever 21",
+    marca: "Forever 21",
+    talla: "XL",
+    color: "Gris",
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Suéter color gris con desgaste intencional en la tela para un look casual y con estilo. Marca Forever 21, cómodo y muy llevadero.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/tops/27. sueter-gris-desgaste-forever211.jpg",
+      "clothes/tops/27. sueter-gris-desgaste-forever212.jpg",
+      "clothes/tops/27. sueter-gris-desgaste-forever213.jpg",
+      "clothes/tops/27. sueter-gris-desgaste-forever214.jpg"
+    ]
   },
   {
     id: 28,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
-    new: false,
-    descripcion: "",
+    nombre: "Suéter largo verde jaspeado Philosophy",
+    marca: "Philosophy",
+    talla: "XL",
+    color: "Verde",
+    categoria: "Tops",
+    precio: 100,
+    new: true,
+    descripcion: "Suéter largo tejido color verde jaspeado, composición 81% algodón y el resto acrílico. Increíblemente suave al tacto, estira bastante y tiene una caída larga muy favorecida.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/tops/28. sueter-verde-jaspeado-philosophy1.jpg",
+      "clothes/tops/28. sueter-verde-jaspeado-philosophy2.jpg",
+      "clothes/tops/28. sueter-verde-jaspeado-philosophy3.jpg",
+      "clothes/tops/28. sueter-verde-jaspeado-philosophy4.jpg",
+      "clothes/tops/28. sueter-verde-jaspeado-philosophy5.jpg",
+      "clothes/tops/28. sueter-verde-jaspeado-philosophy6.jpg"
+    ]
   },
   {
     id: 29,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
-    new: false,
-    descripcion: "",
+    nombre: "Chamarra mezclilla ladybug Forever 21",
+    marca: "Forever 21",
+    talla: "L",
+    color: ["Azul", "Mezclilla"],
+    categoria: "Tops",
+    precio: 120,
+    new: true,
+    descripcion: "Chamarra de mezclilla corta estilo cropped, largo a la cintura. Tiene un parche de lentejuelas de una ladybug (catarina) agregado, dándole un toque único y divertido.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/tops/29. chamarra-mezclilla-ladybug-forever211.jpg",
+      "clothes/tops/29. chamarra-mezclilla-ladybug-forever212.jpg",
+      "clothes/tops/29. chamarra-mezclilla-ladybug-forever213.jpg",
+      "clothes/tops/29. chamarra-mezclilla-ladybug-forever214.jpg"
+    ]
   },
   {
     id: 30,
-    nombre: "",
-    marca: "",
-    talla: "",
-    color: "",
-    categoria: "",
-    precio: 0,
-    new: false,
-    descripcion: "",
+    nombre: "Suéter navideño Meowy Christmas",
+    marca: "George",
+    talla: "XL",
+    color: "Negro",
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Suéter negro navideño con estampado de gato y la frase \"Meowy Christmas\" al frente, decorado con motivos navideños. El estampado es solo en el frente.",
     vendido: false,
-    imagenes: []
+    imagenes: [
+      "clothes/tops/30. sueter-meowy-christmas-george1.jpg",
+      "clothes/tops/30. sueter-meowy-christmas-george2.jpg",
+      "clothes/tops/30. sueter-meowy-christmas-george3.jpg",
+      "clothes/tops/30. sueter-meowy-christmas-george4.jpg",
+      "clothes/tops/30. sueter-meowy-christmas-george5.jpg"
+    ]
+ },
+ {
+   id: 31,
+    nombre: "Suéter rojo Pikachu navideño Pokémon",
+    marca: "Pokémon",
+    talla: "XL",
+    color: "Rojo",
+    categoria: "Tops",
+    precio: 100,
+    new: true,
+    descripcion: "Suéter rojo con estampado de Pikachu en versión navideña o de cumpleaños. Prácticamente nuevo, en excelente estado. Perfecto para fans de Pokémon.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/31. sueter-pikachu-pokemon1.jpg",
+      "clothes/tops/31. sueter-pikachu-pokemon2.jpg",
+      "clothes/tops/31. sueter-pikachu-pokemon3.jpg",
+      "clothes/tops/31. sueter-pikachu-pokemon4.jpg"
+    ]
+  },
+  {
+    id: 32,
+    nombre: "Chaleco navideño renos White Stag",
+    marca: "White Stag",
+    talla: ["XL", "16/18"],
+    color: "Sin especificar",
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Chaleco navideño con estampado bordado de renos y detalles brillosos. Marca White Stag, talla 16/18. Perfecto para lucir el espíritu navideño con estilo.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/32. chaleco-navideno-renos-white-stag1.jpg",
+      "clothes/tops/32. chaleco-navideno-renos-white-stag2.jpg",
+      "clothes/tops/32. chaleco-navideno-renos-white-stag3.jpg",
+      "clothes/tops/32. chaleco-navideno-renos-white-stag4.jpg"
+    ]
+  },
+  {
+    id: 33,
+    nombre: "Blusa crop sapo cottagecore Romwe",
+    marca: "Romwe (Shein)",
+    talla: "1XL",
+    color: ["Verde", "Negro"],
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Blusa crop verde militar con estampado cottagecore de sapo. Simula llevar una blusa de tirantes negra por debajo, aunque es parte del mismo diseño. Talla 1XL.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/33. blusa-crop-sapo-cottagecore-romwe1.jpg",
+      "clothes/tops/33. blusa-crop-sapo-cottagecore-romwe2.jpg",
+      "clothes/tops/33. blusa-crop-sapo-cottagecore-romwe3.jpg",
+      "clothes/tops/33. blusa-crop-sapo-cottagecore-romwe4.jpg"
+    ]
+  },
+  {
+    id: 34,
+    nombre: "Vestido terciopelo verde navidad Shein",
+    marca: "Shein",
+    talla: "XL",
+    color: "Verde",
+    categoria: "Vestidos",
+    precio: 120,
+    new: true,
+    descripcion: "Vestido de terciopelo verde, perfecto para la temporada navideña. Largo abajo de la rodilla, con ajuste en cintura y cierre en la parte trasera. Elegante y muy favorecedor.",
+    vendido: false,
+    imagenes: [
+      "clothes/dresses/34. vestido-terciopelo-verde-shein1.jpg",
+      "clothes/dresses/34. vestido-terciopelo-verde-shein2.jpg",
+      "clothes/dresses/34. vestido-terciopelo-verde-shein3.jpg",
+      "clothes/dresses/34. vestido-terciopelo-verde-shein4.jpg"
+    ]
+  },
+  {
+    id: 35,
+    nombre: "Pantalón negro de vestir Dazy",
+    marca: "Dazy",
+    talla: "1XL",
+    color: "Negro",
+    categoria: "Pantalones",
+    precio: 80,
+    new: true,
+    descripcion: "Pantalón negro de vestir en perfecto estado, ideal para oficina. Tela ligera que no necesita planchado y cae muy bien. Cómodo y elegante para el día a día.",
+    vendido: false,
+    imagenes: [
+      "clothes/bottoms/35. pantalon-vestir-negro-dazy1.jpg",
+      "clothes/bottoms/35. pantalon-vestir-negro-dazy2.jpg",
+      "clothes/bottoms/35. pantalon-vestir-negro-dazy3.jpg",
+      "clothes/bottoms/35. pantalon-vestir-negro-dazy4.png",
+      "clothes/bottoms/35. pantalon-vestir-negro-dazy5.png"
+    ]
+  },
+  {
+    id: 36,
+    nombre: "Falda terciopelo verde midi con pliegues",
+    marca: "Sin marca",
+    talla: "1XL",
+    color: "Verde",
+    categoria: "Faldas",
+    precio: 80,
+    new: true,
+    descripcion: "Falda larga tipo midi de terciopelo verde navideño con pliegues. Muy elegante y perfecta para fiestas decembrinas. Cintura cómoda y caída vistosa.",
+    vendido: false,
+    imagenes: [
+      "clothes/bottoms/36. falda-terciopelo-verde-midi1.png",
+      "clothes/bottoms/36. falda-terciopelo-verde-midi2.png",
+      "clothes/bottoms/36. falda-terciopelo-verde-midi3.jpg",
+      "clothes/bottoms/36. falda-terciopelo-verde-midi4.jpg"
+    ]
+  },
+  {
+    id: 37,
+    nombre: "Blusa coreana Peter Pan floral encaje",
+    marca: "Youe Shone",
+    talla: "S/M",
+    color: ["Azul", "Amarillo", "Flores"],
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Blusa de estilo coreano con cuello Peter Pan adornado con encaje. Estampado floral en azul con amarillo, manga bombacha muy romántica y femenina. Con etiqueta, prácticamente nueva.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/37. blusa-coreana-peterpan-floral1.png",
+      "clothes/tops/37. blusa-coreana-peterpan-floral2.png",
+      "clothes/tops/37. blusa-coreana-peterpan-floral3.jpg",
+      "clothes/tops/37. blusa-coreana-peterpan-floral4.jpg",
+      "clothes/tops/37. blusa-coreana-peterpan-floral5.jpg",
+      "clothes/tops/37. blusa-coreana-peterpan-floral6.jpg"
+    ]
+  },
+  {
+    id: 38,
+    nombre: "Blusa coreana Peter Pan multicolor nueva",
+    marca: "Jingyfushi",
+    talla: "S/M",
+    color: ["Negro", "Rosa", "Azul", "Blanco", "Amarillo"],
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Blusa de estilo coreano con cuello Peter Pan y estampado multicolor en negro, rosa, azul, blanco y amarillo. Nueva con etiqueta, sin uso. Muy linda y femenina.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi1.png",
+      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi2.png",
+      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi3.png",
+      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi4.jpg",
+      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi5.jpg"
+    ]
+  },
+  {
+    id: 39,
+    nombre: "Palazzo overol blanco Massimo Dutti",
+    marca: "Massimo Dutti",
+    talla: "S",
+    color: ["Blanco", "Hueso"],
+    categoria: "Conjuntos",
+    precio: 200,
+    new: true,
+    descripcion: "Conjunto palazzo tipo overol formal de Massimo Dutti, color blanco hueso. Pantalón de pierna ancha y blusa manga larga de una sola pieza, con elegantes botones negros como detalle. Muy sofisticado.",
+    vendido: false,
+    imagenes: [
+      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti1.jpg",
+      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti2.jpg",
+      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti3.jpg",
+      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti4.jpg",
+      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti5.jpg",
+      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti6.jpg"
+    ]
+  },
+  {
+    id: 40,
+    nombre: "Camisa cuadros rosa y café Rewind",
+    marca: "Rewind",
+    talla: "M",
+    color: ["Rosa", "Café", "Cuadros"],
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Camisa de cuadros en tonos rosa y café, marca Rewind. Estilo casual y muy versátil, ideal para combinar con jeans o faldas.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind1.jpg",
+      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind2.jpg",
+      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind3.jpg",
+      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind4.jpg",
+      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind5.jpg",
+      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind6.jpg"
+    ]
+  },
+  {
+    id: 41,
+    nombre: "Pantalón rayas acampanado azul Zara",
+    marca: "Zara",
+    talla: "M",
+    color: ["Azul", "Negro", "Blanco", "Rayas"],
+    categoria: "Pantalones",
+    precio: 120,
+    new: true,
+    descripcion: "Pantalón acampanado de tela ligera color azul con rayas verticales negras y blancas, marca Zara hecho en Turquía. Cordón para ajustar la cintura y bolsillos funcionales. Muy cómodo y estilizado.",
+    vendido: false,
+    imagenes: [
+      "clothes/bottoms/41. pantalon-rayas-acampanado-zara1.png",
+      "clothes/bottoms/41. pantalon-rayas-acampanado-zara2.png",
+      "clothes/bottoms/41. pantalon-rayas-acampanado-zara3.png",
+      "clothes/bottoms/41. pantalon-rayas-acampanado-zara4.png",
+      "clothes/bottoms/41. pantalon-rayas-acampanado-zara5.png"
+    ]
+  },
+  {
+    id: 42,
+    nombre: "Falda larga pana café oscuro Shein",
+    marca: "Shein",
+    talla: "0XL",
+    color: "Café",
+    categoria: "Faldas",
+    precio: 80,
+    new: true,
+    descripcion: "Falda larga color café oscuro de tela tipo pana, suave y ligera. Cintura con resorte y pequeña cinturilla decorativa de listones. Muy cómoda y con bonita caída.",
+    vendido: false,
+    imagenes: [
+      "clothes/bottoms/42. falda-pana-cafe-larga-shein1.jpg",
+      "clothes/bottoms/42. falda-pana-cafe-larga-shein2.jpg",
+      "clothes/bottoms/42. falda-pana-cafe-larga-shein3.jpg",
+      "clothes/bottoms/42. falda-pana-cafe-larga-shein4.jpg",
+      "clothes/bottoms/42. falda-pana-cafe-larga-shein5.jpg"
+    ]
+  },
+  {
+    id: 43,
+    nombre: "Short traje de baño Shein",
+    marca: "Shein",
+    talla: "XL",
+    color: "Sin especificar",
+    categoria: "Shorts",
+    precio: 60,
+    new: true,
+    descripcion: "Short de traje de baño, jamás usado y sin traje de baño por debajo. Tela plástica de secado rápido con resorte en cintura. En perfecto estado.",
+    vendido: false,
+    imagenes: [
+      "clothes/bottoms/43. short-bano-shein1.jpg",
+      "clothes/bottoms/43. short-bano-shein2.jpg",
+      "clothes/bottoms/43. short-bano-shein3.jpg",
+      "clothes/bottoms/43. short-bano-shein4.jpg"
+    ]
+  },
+  {
+    id: 44,
+    nombre: "Suéter rosa Born in the 90s Forever 21",
+    marca: "Forever 21",
+    talla: "L",
+    color: "Rosa",
+    categoria: "Tops",
+    precio: 50,
+    new: true,
+    descripcion: "Suéter rosa claro con estampado 'Born in the 90s'. Marca Forever 21, talla L. Tiene una pequeña mancha, se refleja en el precio.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/44. sueter-rosa-90s-forever211.jpg",
+      "clothes/tops/44. sueter-rosa-90s-forever212.jpg",
+      "clothes/tops/44. sueter-rosa-90s-forever213.jpg",
+      "clothes/tops/44. sueter-rosa-90s-forever214.jpg"
+    ]
+  },
+  {
+    id: 45,
+    nombre: "Playera negra manga larga Old Navy",
+    marca: "Old Navy",
+    talla: "M",
+    color: "Negro",
+    categoria: "Tops",
+    precio: 60,
+    new: true,
+    descripcion: "Playera básica negra de manga larga y cuello redondo, marca Old Navy. Clásica y versátil, ideal para cualquier outfit del día a día.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/45. playera-negra-manga-larga-oldnavy1.jpg",
+      "clothes/tops/45. playera-negra-manga-larga-oldnavy2.jpg",
+      "clothes/tops/45. playera-negra-manga-larga-oldnavy3.jpg"
+    ]
+  },
+  {
+    id: 46,
+    nombre: "Blusa cuello tortuga roja Studio Works",
+    marca: "Studio Works",
+    talla: "M",
+    color: ["Rojo", "Negro"],
+    categoria: "Tops",
+    precio: 70,
+    new: true,
+    descripcion: "Blusa de cuello tortuga en rojo y negro, manga larga y calientita. Marca Studio Works, hecha en Indonesia. Perfecta para días fríos con mucho estilo.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/46. blusa-tortuga-roja-negro-studioworks1.jpg",
+      "clothes/tops/46. blusa-tortuga-roja-negro-studioworks2.jpg",
+      "clothes/tops/46. blusa-tortuga-roja-negro-studioworks3.jpg"
+    ]
+  },
+  {
+    id: 47,
+    nombre: "Playera negra Pink Floyd Romwe licencia",
+    marca: "Romwe (Shein)",
+    talla: "XL",
+    color: "Negro",
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Playera negra lisa al frente con estampado oficial de Pink Floyd en la parte trasera. Licencia original, marca Romwe. Ideal para fans del rock clásico.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/47. playera-pink-floyd-romwe1.jpg",
+      "clothes/tops/47. playera-pink-floyd-romwe2.jpg",
+      "clothes/tops/47. playera-pink-floyd-romwe3.jpg"
+    ]
+  },
+  {
+    id: 48,
+    nombre: "Blusa terciopelo negra witchy Knox Rose",
+    marca: "Knox Rose",
+    talla: "L",
+    color: "Negro",
+    categoria: "Tops",
+    precio: 80,
+    new: true,
+    descripcion: "Blusa de terciopelo negro estilo witchy con escote en V y manga corta. Marca Knox Rose, muy elegante y con mucho carácter. Perfecta para looks oscuros y sofisticados.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/48. blusa-terciopelo-negra-witchy-knox-rose1.jpg",
+      "clothes/tops/48. blusa-terciopelo-negra-witchy-knox-rose2.jpg",
+      "clothes/tops/48. blusa-terciopelo-negra-witchy-knox-rose3.jpg",
+      "clothes/tops/48. blusa-terciopelo-negra-witchy-knox-rose4.jpg"
+    ]
+  },
+  {
+    id: 49,
+    nombre: "Bralette tinto con broche Aerie",
+    marca: "Aerie",
+    talla: "L/G",
+    color: "Tinto",
+    categoria: "Accesorios",
+    precio: 60,
+    new: true,
+    descripcion: "Bralette color tinto marca Aerie con broche al frente. Talla L/G, cómodo y con un lindo detalle en el cierre. Ideal para usarse solo o como capa.",
+    vendido: false,
+    imagenes: [
+      "clothes/other/49. bralette-tinto-aerie1.jpg",
+      "clothes/other/49. bralette-tinto-aerie2.jpg",
+      "clothes/other/49. bralette-tinto-aerie3.jpg",
+      "clothes/other/49. bralette-tinto-aerie4.jpg"
+    ]
+  },
+  {
+    id: 50,
+    nombre: "Vestido encaje blanco escote V con forro",
+    marca: "Pieces",
+    talla: "M",
+    color: "Blanco",
+    categoria: "Vestidos",
+    precio: 120,
+    new: true,
+    descripcion: "Vestido blanco de tela tipo encaje con hermoso escote en V. Largo arriba de la rodilla y cuenta con forro interior. Elegante y muy femenino.",
+    vendido: false,
+    imagenes: [
+      "clothes/dresses/50. vestido-encaje-blanco-escote-v1.jpg",
+      "clothes/dresses/50. vestido-encaje-blanco-escote-v2.jpg",
+      "clothes/dresses/50. vestido-encaje-blanco-escote-v3.jpg",
+      "clothes/dresses/50. vestido-encaje-blanco-escote-v4.jpg",
+      "clothes/dresses/50. vestido-encaje-blanco-escote-v5.jpg"
+    ]
   }
 ];
