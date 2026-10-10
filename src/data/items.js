@@ -394,11 +394,11 @@ export const items = [
     descripcion: "Vestido color verde bandera de Zara. Tela tipo plástico ligera e impermeable, composición 100% poliéster. Ideal para días lluviosos o looks vibrantes.",
     vendido: false,
     imagenes: [
-      "clothes/dresses/23. vestido-verde-zara1.png",
-      "clothes/dresses/23. vestido-verde-zara2.png",
-      "clothes/dresses/23. vestido-verde-zara3.png",
-      "clothes/dresses/23. vestido-verde-zara4.png",
-      "clothes/dresses/23. vestido-verde-zara5.png"
+      "clothes/dresses/23.vestido-verde-zara1.png",
+      "clothes/dresses/23.vestido-verde-zara2.png",
+      "clothes/dresses/23.vestido-verde-zara3.png",
+      "clothes/dresses/23.vestido-verde-zara4.png",
+      "clothes/dresses/23.vestido-verde-zara5.png"
     ]
   },
   {
@@ -413,10 +413,10 @@ export const items = [
     descripcion: "Kimono estilo japonés de composición 100% poliéster. Diseño oriental con caída suave y ligera, ideal para usarlo como capa sobre cualquier outfit.",
     vendido: false,
     imagenes: [
-      "clothes/tops/24. kimono-japones-shein1.jpg",
-      "clothes/tops/24. kimono-japones-shein2.jpg",
-      "clothes/tops/24. kimono-japones-shein3.jpg",
-      "clothes/tops/24. kimono-japones-shein4.jpg"
+      "clothes/tops/24.kimono-japones-shein1.jpg",
+      "clothes/tops/24.kimono-japones-shein2.jpg",
+      "clothes/tops/24.kimono-japones-shein3.jpg",
+      "clothes/tops/24.kimono-japones-shein4.jpg"
     ]
   },
   {
@@ -431,14 +431,14 @@ export const items = [
     descripcion: "Conjunto de falda y blusa en tela vichy (cuadritos blanco y negro estilo picnic). La blusa cuenta con tirantes traseros ajustables. La falda tiene cierre y botones decorativos al frente.",
     vendido: false,
     imagenes: [
-      "clothes/conjuntos/25. conjunto-vichy-bershka1.jpg",
-      "clothes/conjuntos/25. conjunto-vichy-bershka2.jpg",
-      "clothes/conjuntos/25. conjunto-vichy-bershka3.jpg",
-      "clothes/conjuntos/25. conjunto-vichy-bershka4.jpg",
-      "clothes/conjuntos/25. conjunto-vichy-bershka5.jpg",
-      "clothes/conjuntos/25. conjunto-vichy-bershka6.jpg",
-      "clothes/conjuntos/25. conjunto-vichy-bershka7.jpg",
-      "clothes/conjuntos/25. conjunto-vichy-bershka8.jpg"
+      "clothes/conjuntos/25.conjunto-vichy-bershka1.jpg",
+      "clothes/conjuntos/25.conjunto-vichy-bershka2.jpg",
+      "clothes/conjuntos/25.conjunto-vichy-bershka3.jpg",
+      "clothes/conjuntos/25.conjunto-vichy-bershka4.jpg",
+      "clothes/conjuntos/25.conjunto-vichy-bershka5.jpg",
+      "clothes/conjuntos/25.conjunto-vichy-bershka6.jpg",
+      "clothes/conjuntos/25.conjunto-vichy-bershka7.jpg",
+      "clothes/conjuntos/25.conjunto-vichy-bershka8.jpg"
     ]
   },
   {
@@ -453,10 +453,10 @@ export const items = [
     descripcion: "Falda larga de estampado floral con flores moradas y estética witchy. Cintura con resorte para mayor comodidad y ajuste. Tela ligera con hermosa caída.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/26. falda-flores-witchy-romwe1.jpg",
-      "clothes/bottoms/26. falda-flores-witchy-romwe2.jpg",
-      "clothes/bottoms/26. falda-flores-witchy-romwe3.jpg",
-      "clothes/bottoms/26. falda-flores-witchy-romwe4.jpg"
+      "clothes/bottoms/26.falda-flores-witchy-romwe1.jpg",
+      "clothes/bottoms/26.falda-flores-witchy-romwe2.jpg",
+      "clothes/bottoms/26.falda-flores-witchy-romwe3.jpg",
+      "clothes/bottoms/26.falda-flores-witchy-romwe4.jpg"
     ]
   },
   {
@@ -471,10 +471,10 @@ export const items = [
     descripcion: "Suéter color gris con desgaste intencional en la tela para un look casual y con estilo. Marca Forever 21, cómodo y muy llevadero.",
     vendido: false,
     imagenes: [
-      "clothes/tops/27. sueter-gris-desgaste-forever211.jpg",
-      "clothes/tops/27. sueter-gris-desgaste-forever212.jpg",
-      "clothes/tops/27. sueter-gris-desgaste-forever213.jpg",
-      "clothes/tops/27. sueter-gris-desgaste-forever214.jpg"
+      "clothes/tops/27.sueter-gris-desgaste-forever211.jpg",
+      "clothes/tops/27.sueter-gris-desgaste-forever212.jpg",
+      "clothes/tops/27.sueter-gris-desgaste-forever213.jpg",
+      "clothes/tops/27.sueter-gris-desgaste-forever214.jpg"
     ]
   },
   {
@@ -489,12 +489,12 @@ export const items = [
     descripcion: "Suéter largo tejido color verde jaspeado, composición 81% algodón y el resto acrílico. Increíblemente suave al tacto, estira bastante y tiene una caída larga muy favorecida.",
     vendido: false,
     imagenes: [
-      "clothes/tops/28. sueter-verde-jaspeado-philosophy1.jpg",
-      "clothes/tops/28. sueter-verde-jaspeado-philosophy2.jpg",
-      "clothes/tops/28. sueter-verde-jaspeado-philosophy3.jpg",
-      "clothes/tops/28. sueter-verde-jaspeado-philosophy4.jpg",
-      "clothes/tops/28. sueter-verde-jaspeado-philosophy5.jpg",
-      "clothes/tops/28. sueter-verde-jaspeado-philosophy6.jpg"
+      "clothes/tops/28.sueter-verde-jaspeado-philosophy1.jpg",
+      "clothes/tops/28.sueter-verde-jaspeado-philosophy2.jpg",
+      "clothes/tops/28.sueter-verde-jaspeado-philosophy3.jpg",
+      "clothes/tops/28.sueter-verde-jaspeado-philosophy4.jpg",
+      "clothes/tops/28.sueter-verde-jaspeado-philosophy5.jpg",
+      "clothes/tops/28.sueter-verde-jaspeado-philosophy6.jpg"
     ]
   },
   {
@@ -509,10 +509,10 @@ export const items = [
     descripcion: "Chamarra de mezclilla corta estilo cropped, largo a la cintura. Tiene un parche de lentejuelas de una ladybug (catarina) agregado, dándole un toque único y divertido.",
     vendido: false,
     imagenes: [
-      "clothes/tops/29. chamarra-mezclilla-ladybug-forever211.jpg",
-      "clothes/tops/29. chamarra-mezclilla-ladybug-forever212.jpg",
-      "clothes/tops/29. chamarra-mezclilla-ladybug-forever213.jpg",
-      "clothes/tops/29. chamarra-mezclilla-ladybug-forever214.jpg"
+      "clothes/tops/29.chamarra-mezclilla-ladybug-forever211.jpg",
+      "clothes/tops/29.chamarra-mezclilla-ladybug-forever212.jpg",
+      "clothes/tops/29.chamarra-mezclilla-ladybug-forever213.jpg",
+      "clothes/tops/29.chamarra-mezclilla-ladybug-forever214.jpg"
     ]
   },
   {
@@ -527,11 +527,11 @@ export const items = [
     descripcion: "Suéter negro navideño con estampado de gato y la frase \"Meowy Christmas\" al frente, decorado con motivos navideños. El estampado es solo en el frente.",
     vendido: false,
     imagenes: [
-      "clothes/tops/30. sueter-meowy-christmas-george1.jpg",
-      "clothes/tops/30. sueter-meowy-christmas-george2.jpg",
-      "clothes/tops/30. sueter-meowy-christmas-george3.jpg",
-      "clothes/tops/30. sueter-meowy-christmas-george4.jpg",
-      "clothes/tops/30. sueter-meowy-christmas-george5.jpg"
+      "clothes/tops/30.sueter-meowy-christmas-george1.jpg",
+      "clothes/tops/30.sueter-meowy-christmas-george2.jpg",
+      "clothes/tops/30.sueter-meowy-christmas-george3.jpg",
+      "clothes/tops/30.sueter-meowy-christmas-george4.jpg",
+      "clothes/tops/30.sueter-meowy-christmas-george5.jpg"
     ]
  },
  {
@@ -546,10 +546,10 @@ export const items = [
     descripcion: "Suéter rojo con estampado de Pikachu en versión navideña o de cumpleaños. Prácticamente nuevo, en excelente estado. Perfecto para fans de Pokémon.",
     vendido: false,
     imagenes: [
-      "clothes/tops/31. sueter-pikachu-pokemon1.jpg",
-      "clothes/tops/31. sueter-pikachu-pokemon2.jpg",
-      "clothes/tops/31. sueter-pikachu-pokemon3.jpg",
-      "clothes/tops/31. sueter-pikachu-pokemon4.jpg"
+      "clothes/tops/31.sueter-pikachu-pokemon1.jpg",
+      "clothes/tops/31.sueter-pikachu-pokemon2.jpg",
+      "clothes/tops/31.sueter-pikachu-pokemon3.jpg",
+      "clothes/tops/31.sueter-pikachu-pokemon4.jpg"
     ]
   },
   {
@@ -564,10 +564,10 @@ export const items = [
     descripcion: "Chaleco navideño con estampado bordado de renos y detalles brillosos. Marca White Stag, talla 16/18. Perfecto para lucir el espíritu navideño con estilo.",
     vendido: false,
     imagenes: [
-      "clothes/tops/32. chaleco-navideno-renos-white-stag1.jpg",
-      "clothes/tops/32. chaleco-navideno-renos-white-stag2.jpg",
-      "clothes/tops/32. chaleco-navideno-renos-white-stag3.jpg",
-      "clothes/tops/32. chaleco-navideno-renos-white-stag4.jpg"
+      "clothes/tops/32.chaleco-navideno-renos-white-stag1.jpg",
+      "clothes/tops/32.chaleco-navideno-renos-white-stag2.jpg",
+      "clothes/tops/32.chaleco-navideno-renos-white-stag3.jpg",
+      "clothes/tops/32.chaleco-navideno-renos-white-stag4.jpg"
     ]
   },
   {
@@ -582,10 +582,10 @@ export const items = [
     descripcion: "Blusa crop verde militar con estampado cottagecore de sapo. Simula llevar una blusa de tirantes negra por debajo, aunque es parte del mismo diseño. Talla 1XL.",
     vendido: false,
     imagenes: [
-      "clothes/tops/33. blusa-crop-sapo-cottagecore-romwe1.jpg",
-      "clothes/tops/33. blusa-crop-sapo-cottagecore-romwe2.jpg",
-      "clothes/tops/33. blusa-crop-sapo-cottagecore-romwe3.jpg",
-      "clothes/tops/33. blusa-crop-sapo-cottagecore-romwe4.jpg"
+      "clothes/tops/33.blusa-crop-sapo-cottagecore-romwe1.jpg",
+      "clothes/tops/33.blusa-crop-sapo-cottagecore-romwe2.jpg",
+      "clothes/tops/33.blusa-crop-sapo-cottagecore-romwe3.jpg",
+      "clothes/tops/33.blusa-crop-sapo-cottagecore-romwe4.jpg"
     ]
   },
   {
@@ -600,10 +600,10 @@ export const items = [
     descripcion: "Vestido de terciopelo verde, perfecto para la temporada navideña. Largo abajo de la rodilla, con ajuste en cintura y cierre en la parte trasera. Elegante y muy favorecedor.",
     vendido: false,
     imagenes: [
-      "clothes/dresses/34. vestido-terciopelo-verde-shein1.jpg",
-      "clothes/dresses/34. vestido-terciopelo-verde-shein2.jpg",
-      "clothes/dresses/34. vestido-terciopelo-verde-shein3.jpg",
-      "clothes/dresses/34. vestido-terciopelo-verde-shein4.jpg"
+      "clothes/dresses/34.vestido-terciopelo-verde-shein1.jpg",
+      "clothes/dresses/34.vestido-terciopelo-verde-shein2.jpg",
+      "clothes/dresses/34.vestido-terciopelo-verde-shein3.jpg",
+      "clothes/dresses/34.vestido-terciopelo-verde-shein4.jpg"
     ]
   },
   {
@@ -618,11 +618,11 @@ export const items = [
     descripcion: "Pantalón negro de vestir en perfecto estado, ideal para oficina. Tela ligera que no necesita planchado y cae muy bien. Cómodo y elegante para el día a día.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/35. pantalon-vestir-negro-dazy1.jpg",
-      "clothes/bottoms/35. pantalon-vestir-negro-dazy2.jpg",
-      "clothes/bottoms/35. pantalon-vestir-negro-dazy3.jpg",
-      "clothes/bottoms/35. pantalon-vestir-negro-dazy4.png",
-      "clothes/bottoms/35. pantalon-vestir-negro-dazy5.png"
+      "clothes/bottoms/35.pantalon-vestir-negro-dazy1.jpg",
+      "clothes/bottoms/35.pantalon-vestir-negro-dazy2.jpg",
+      "clothes/bottoms/35.pantalon-vestir-negro-dazy3.jpg",
+      "clothes/bottoms/35.pantalon-vestir-negro-dazy4.png",
+      "clothes/bottoms/35.pantalon-vestir-negro-dazy5.png"
     ]
   },
   {
@@ -637,10 +637,10 @@ export const items = [
     descripcion: "Falda larga tipo midi de terciopelo verde navideño con pliegues. Muy elegante y perfecta para fiestas decembrinas. Cintura cómoda y caída vistosa.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/36. falda-terciopelo-verde-midi1.png",
-      "clothes/bottoms/36. falda-terciopelo-verde-midi2.png",
-      "clothes/bottoms/36. falda-terciopelo-verde-midi3.jpg",
-      "clothes/bottoms/36. falda-terciopelo-verde-midi4.jpg"
+      "clothes/bottoms/36.falda-terciopelo-verde-midi1.png",
+      "clothes/bottoms/36.falda-terciopelo-verde-midi2.png",
+      "clothes/bottoms/36.falda-terciopelo-verde-midi3.jpg",
+      "clothes/bottoms/36.falda-terciopelo-verde-midi4.jpg"
     ]
   },
   {
@@ -655,12 +655,12 @@ export const items = [
     descripcion: "Blusa de estilo coreano con cuello Peter Pan adornado con encaje. Estampado floral en azul con amarillo, manga bombacha muy romántica y femenina. Con etiqueta, prácticamente nueva.",
     vendido: false,
     imagenes: [
-      "clothes/tops/37. blusa-coreana-peterpan-floral1.png",
-      "clothes/tops/37. blusa-coreana-peterpan-floral2.png",
-      "clothes/tops/37. blusa-coreana-peterpan-floral3.jpg",
-      "clothes/tops/37. blusa-coreana-peterpan-floral4.jpg",
-      "clothes/tops/37. blusa-coreana-peterpan-floral5.jpg",
-      "clothes/tops/37. blusa-coreana-peterpan-floral6.jpg"
+      "clothes/tops/37.blusa-coreana-peterpan-floral1.png",
+      "clothes/tops/37.blusa-coreana-peterpan-floral2.png",
+      "clothes/tops/37.blusa-coreana-peterpan-floral3.jpg",
+      "clothes/tops/37.blusa-coreana-peterpan-floral4.jpg",
+      "clothes/tops/37.blusa-coreana-peterpan-floral5.jpg",
+      "clothes/tops/37.blusa-coreana-peterpan-floral6.jpg"
     ]
   },
   {
@@ -675,11 +675,11 @@ export const items = [
     descripcion: "Blusa de estilo coreano con cuello Peter Pan y estampado multicolor en negro, rosa, azul, blanco y amarillo. Nueva con etiqueta, sin uso. Muy linda y femenina.",
     vendido: false,
     imagenes: [
-      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi1.png",
-      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi2.png",
-      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi3.png",
-      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi4.jpg",
-      "clothes/tops/38. blusa-coreana-peterpan-jingyfushi5.jpg"
+      "clothes/tops/38.blusa-coreana-peterpan-jingyfushi1.png",
+      "clothes/tops/38.blusa-coreana-peterpan-jingyfushi2.png",
+      "clothes/tops/38.blusa-coreana-peterpan-jingyfushi3.png",
+      "clothes/tops/38.blusa-coreana-peterpan-jingyfushi4.jpg",
+      "clothes/tops/38.blusa-coreana-peterpan-jingyfushi5.jpg"
     ]
   },
   {
@@ -694,12 +694,12 @@ export const items = [
     descripcion: "Conjunto palazzo tipo overol formal de Massimo Dutti, color blanco hueso. Pantalón de pierna ancha y blusa manga larga de una sola pieza, con elegantes botones negros como detalle. Muy sofisticado.",
     vendido: false,
     imagenes: [
-      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti1.jpg",
-      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti2.jpg",
-      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti3.jpg",
-      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti4.jpg",
-      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti5.jpg",
-      "clothes/conjuntos/39. palazzo-overol-blanco-massimo-dutti6.jpg"
+      "clothes/conjuntos/39.palazzo-overol-blanco-massimo-dutti1.jpg",
+      "clothes/conjuntos/39.palazzo-overol-blanco-massimo-dutti2.jpg",
+      "clothes/conjuntos/39.palazzo-overol-blanco-massimo-dutti3.jpg",
+      "clothes/conjuntos/39.palazzo-overol-blanco-massimo-dutti4.jpg",
+      "clothes/conjuntos/39.palazzo-overol-blanco-massimo-dutti5.jpg",
+      "clothes/conjuntos/39.palazzo-overol-blanco-massimo-dutti6.jpg"
     ]
   },
   {
@@ -714,12 +714,12 @@ export const items = [
     descripcion: "Camisa de cuadros en tonos rosa y café, marca Rewind. Estilo casual y muy versátil, ideal para combinar con jeans o faldas.",
     vendido: false,
     imagenes: [
-      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind1.jpg",
-      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind2.jpg",
-      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind3.jpg",
-      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind4.jpg",
-      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind5.jpg",
-      "clothes/tops/40. camisa-cuadros-rosa-cafe-rewind6.jpg"
+      "clothes/tops/40.camisa-cuadros-rosa-cafe-rewind1.jpg",
+      "clothes/tops/40.camisa-cuadros-rosa-cafe-rewind2.jpg",
+      "clothes/tops/40.camisa-cuadros-rosa-cafe-rewind3.jpg",
+      "clothes/tops/40.camisa-cuadros-rosa-cafe-rewind4.jpg",
+      "clothes/tops/40.camisa-cuadros-rosa-cafe-rewind5.jpg",
+      "clothes/tops/40.camisa-cuadros-rosa-cafe-rewind6.jpg"
     ]
   },
   {
@@ -734,11 +734,11 @@ export const items = [
     descripcion: "Pantalón acampanado de tela ligera color azul con rayas verticales negras y blancas, marca Zara hecho en Turquía. Cordón para ajustar la cintura y bolsillos funcionales. Muy cómodo y estilizado.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/41. pantalon-rayas-acampanado-zara1.png",
-      "clothes/bottoms/41. pantalon-rayas-acampanado-zara2.png",
-      "clothes/bottoms/41. pantalon-rayas-acampanado-zara3.png",
-      "clothes/bottoms/41. pantalon-rayas-acampanado-zara4.png",
-      "clothes/bottoms/41. pantalon-rayas-acampanado-zara5.png"
+      "clothes/bottoms/41.pantalon-rayas-acampanado-zara1.png",
+      "clothes/bottoms/41.pantalon-rayas-acampanado-zara2.png",
+      "clothes/bottoms/41.pantalon-rayas-acampanado-zara3.png",
+      "clothes/bottoms/41.pantalon-rayas-acampanado-zara4.png",
+      "clothes/bottoms/41.pantalon-rayas-acampanado-zara5.png"
     ]
   },
   {
@@ -753,11 +753,11 @@ export const items = [
     descripcion: "Falda larga color café oscuro de tela tipo pana, suave y ligera. Cintura con resorte y pequeña cinturilla decorativa de listones. Muy cómoda y con bonita caída.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/42. falda-pana-cafe-larga-shein1.jpg",
-      "clothes/bottoms/42. falda-pana-cafe-larga-shein2.jpg",
-      "clothes/bottoms/42. falda-pana-cafe-larga-shein3.jpg",
-      "clothes/bottoms/42. falda-pana-cafe-larga-shein4.jpg",
-      "clothes/bottoms/42. falda-pana-cafe-larga-shein5.jpg"
+      "clothes/bottoms/42.falda-pana-cafe-larga-shein1.jpg",
+      "clothes/bottoms/42.falda-pana-cafe-larga-shein2.jpg",
+      "clothes/bottoms/42.falda-pana-cafe-larga-shein3.jpg",
+      "clothes/bottoms/42.falda-pana-cafe-larga-shein4.jpg",
+      "clothes/bottoms/42.falda-pana-cafe-larga-shein5.jpg"
     ]
   },
   {
@@ -772,10 +772,10 @@ export const items = [
     descripcion: "Short de traje de baño, jamás usado y sin traje de baño por debajo. Tela plástica de secado rápido con resorte en cintura. En perfecto estado.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/43. short-bano-shein1.jpg",
-      "clothes/bottoms/43. short-bano-shein2.jpg",
-      "clothes/bottoms/43. short-bano-shein3.jpg",
-      "clothes/bottoms/43. short-bano-shein4.jpg"
+      "clothes/bottoms/43.short-bano-shein1.jpg",
+      "clothes/bottoms/43.short-bano-shein2.jpg",
+      "clothes/bottoms/43.short-bano-shein3.jpg",
+      "clothes/bottoms/43.short-bano-shein4.jpg"
     ]
   },
   {
@@ -790,10 +790,10 @@ export const items = [
     descripcion: "Suéter rosa claro con estampado 'Born in the 90s'. Marca Forever 21, talla L. Tiene una pequeña mancha, se refleja en el precio.",
     vendido: false,
     imagenes: [
-      "clothes/tops/44. sueter-rosa-90s-forever211.jpg",
-      "clothes/tops/44. sueter-rosa-90s-forever212.jpg",
-      "clothes/tops/44. sueter-rosa-90s-forever213.jpg",
-      "clothes/tops/44. sueter-rosa-90s-forever214.jpg"
+      "clothes/tops/44.sueter-rosa-90s-forever211.jpg",
+      "clothes/tops/44.sueter-rosa-90s-forever212.jpg",
+      "clothes/tops/44.sueter-rosa-90s-forever213.jpg",
+      "clothes/tops/44.sueter-rosa-90s-forever214.jpg"
     ]
   },
   {
@@ -808,9 +808,9 @@ export const items = [
     descripcion: "Playera básica negra de manga larga y cuello redondo, marca Old Navy. Clásica y versátil, ideal para cualquier outfit del día a día.",
     vendido: false,
     imagenes: [
-      "clothes/tops/45. playera-negra-manga-larga-oldnavy1.jpg",
-      "clothes/tops/45. playera-negra-manga-larga-oldnavy2.jpg",
-      "clothes/tops/45. playera-negra-manga-larga-oldnavy3.jpg"
+      "clothes/tops/45.playera-negra-manga-larga-oldnavy1.jpg",
+      "clothes/tops/45.playera-negra-manga-larga-oldnavy2.jpg",
+      "clothes/tops/45.playera-negra-manga-larga-oldnavy3.jpg"
     ]
   },
   {
@@ -825,9 +825,9 @@ export const items = [
     descripcion: "Blusa de cuello tortuga en rojo y negro, manga larga y calientita. Marca Studio Works, hecha en Indonesia. Perfecta para días fríos con mucho estilo.",
     vendido: false,
     imagenes: [
-      "clothes/tops/46. blusa-tortuga-roja-negro-studioworks1.jpg",
-      "clothes/tops/46. blusa-tortuga-roja-negro-studioworks2.jpg",
-      "clothes/tops/46. blusa-tortuga-roja-negro-studioworks3.jpg"
+      "clothes/tops/46.blusa-tortuga-roja-negro-studioworks1.jpg",
+      "clothes/tops/46.blusa-tortuga-roja-negro-studioworks2.jpg",
+      "clothes/tops/46.blusa-tortuga-roja-negro-studioworks3.jpg"
     ]
   },
   {
@@ -842,9 +842,9 @@ export const items = [
     descripcion: "Playera negra lisa al frente con estampado oficial de Pink Floyd en la parte trasera. Licencia original, marca Romwe. Ideal para fans del rock clásico.",
     vendido: false,
     imagenes: [
-      "clothes/tops/47. playera-pink-floyd-romwe1.jpg",
-      "clothes/tops/47. playera-pink-floyd-romwe2.jpg",
-      "clothes/tops/47. playera-pink-floyd-romwe3.jpg"
+      "clothes/tops/47.playera-pink-floyd-romwe1.jpg",
+      "clothes/tops/47.playera-pink-floyd-romwe2.jpg",
+      "clothes/tops/47.playera-pink-floyd-romwe3.jpg"
     ]
   },
   {
@@ -859,10 +859,10 @@ export const items = [
     descripcion: "Blusa de terciopelo negro estilo witchy con escote en V y manga corta. Marca Knox Rose, muy elegante y con mucho carácter. Perfecta para looks oscuros y sofisticados.",
     vendido: false,
     imagenes: [
-      "clothes/tops/48. blusa-terciopelo-negra-witchy-knox-rose1.jpg",
-      "clothes/tops/48. blusa-terciopelo-negra-witchy-knox-rose2.jpg",
-      "clothes/tops/48. blusa-terciopelo-negra-witchy-knox-rose3.jpg",
-      "clothes/tops/48. blusa-terciopelo-negra-witchy-knox-rose4.jpg"
+      "clothes/tops/48.blusa-terciopelo-negra-witchy-knox-rose1.jpg",
+      "clothes/tops/48.blusa-terciopelo-negra-witchy-knox-rose2.jpg",
+      "clothes/tops/48.blusa-terciopelo-negra-witchy-knox-rose3.jpg",
+      "clothes/tops/48.blusa-terciopelo-negra-witchy-knox-rose4.jpg"
     ]
   },
   {
@@ -877,10 +877,10 @@ export const items = [
     descripcion: "Bralette color tinto marca Aerie con broche al frente. Talla L/G, cómodo y con un lindo detalle en el cierre. Ideal para usarse solo o como capa.",
     vendido: false,
     imagenes: [
-      "clothes/other/49. bralette-tinto-aerie1.jpg",
-      "clothes/other/49. bralette-tinto-aerie2.jpg",
-      "clothes/other/49. bralette-tinto-aerie3.jpg",
-      "clothes/other/49. bralette-tinto-aerie4.jpg"
+      "clothes/other/49.bralette-tinto-aerie1.jpg",
+      "clothes/other/49.bralette-tinto-aerie2.jpg",
+      "clothes/other/49.bralette-tinto-aerie3.jpg",
+      "clothes/other/49.bralette-tinto-aerie4.jpg"
     ]
   },
   {
@@ -895,11 +895,11 @@ export const items = [
     descripcion: "Vestido blanco de tela tipo encaje con hermoso escote en V. Largo arriba de la rodilla y cuenta con forro interior. Elegante y muy femenino.",
     vendido: false,
     imagenes: [
-      "clothes/dresses/50. vestido-encaje-blanco-escote-v1.jpg",
-      "clothes/dresses/50. vestido-encaje-blanco-escote-v2.jpg",
-      "clothes/dresses/50. vestido-encaje-blanco-escote-v3.jpg",
-      "clothes/dresses/50. vestido-encaje-blanco-escote-v4.jpg",
-      "clothes/dresses/50. vestido-encaje-blanco-escote-v5.jpg"
+      "clothes/dresses/50.vestido-encaje-blanco-escote-v1.jpg",
+      "clothes/dresses/50.vestido-encaje-blanco-escote-v2.jpg",
+      "clothes/dresses/50.vestido-encaje-blanco-escote-v3.jpg",
+      "clothes/dresses/50.vestido-encaje-blanco-escote-v4.jpg",
+      "clothes/dresses/50.vestido-encaje-blanco-escote-v5.jpg"
     ]
   },
   {
@@ -914,9 +914,9 @@ export const items = [
     descripcion: "Sandalias Steve Madden talla 4, dan para talla 4.5. En buen estado, con hebillas plateadas elegantes. Perfectas para looks casuales o de vestir.",
     vendido: false,
     imagenes: [
-      "clothes/other/51. sandalias-steve-madden1.jpg",
-      "clothes/other/51. sandalias-steve-madden2.jpg",
-      "clothes/other/51. sandalias-steve-madden3.jpg"
+      "clothes/other/51.sandalias-steve-madden1.jpg",
+      "clothes/other/51.sandalias-steve-madden2.jpg",
+      "clothes/other/51.sandalias-steve-madden3.jpg"
     ]
   },
   {
@@ -931,9 +931,9 @@ export const items = [
     descripcion: "Calcetines navideños calientitos, nuevos. Unitalla, máximo para pie talla 7. Tienen huellitas de silicón en la planta para andar solo con ellos sin resbalar.",
     vendido: false,
     imagenes: [
-      "clothes/other/52. calcetines-navidenos-silicon1.jpg",
-      "clothes/other/52. calcetines-navidenos-silicon2.jpg",
-      "clothes/other/52. calcetines-navidenos-silicon3.jpg"
+      "clothes/other/52.calcetines-navidenos-silicon1.jpg",
+      "clothes/other/52.calcetines-navidenos-silicon2.jpg",
+      "clothes/other/52.calcetines-navidenos-silicon3.jpg"
     ]
   },
   {
@@ -948,12 +948,12 @@ export const items = [
     descripcion: "Botas color café con tacón y punta cuadrada al frente, marca H&M. Talla 38 EU equivalente a talla 24 MX. Elegantes y muy versátiles para cualquier outfit.",
     vendido: false,
     imagenes: [
-      "clothes/other/53. botas-cafe-tacon-hm1.jpg",
-      "clothes/other/53. botas-cafe-tacon-hm2.jpg",
-      "clothes/other/53. botas-cafe-tacon-hm3.jpg",
-      "clothes/other/53. botas-cafe-tacon-hm4.jpg",
-      "clothes/other/53. botas-cafe-tacon-hm5.jpg",
-      "clothes/other/53. botas-cafe-tacon-hm6.jpg"
+      "clothes/other/53.botas-cafe-tacon-hm1.jpg",
+      "clothes/other/53.botas-cafe-tacon-hm2.jpg",
+      "clothes/other/53.botas-cafe-tacon-hm3.jpg",
+      "clothes/other/53.botas-cafe-tacon-hm4.jpg",
+      "clothes/other/53.botas-cafe-tacon-hm5.jpg",
+      "clothes/other/53.botas-cafe-tacon-hm6.jpg"
     ]
   }
 ];
