@@ -11,9 +11,9 @@ export const items = [
     descripcion: "Blusa estilo oriental china, estampado típico, con botones al frente y manga corta. Composición 100% Poliester",
     vendido: false,
     imagenes: [
-      "clothes/tops/1. china1.png",
-      "clothes/tops/1. china2.png",
-      "clothes/tops/1. china3.png"
+      "clothes/tops/1.china1.png",
+      "clothes/tops/1.china2.png",
+      "clothes/tops/1.china3.png"
     ]
   },
   {
@@ -27,7 +27,7 @@ export const items = [
     new: false,
     descripcion: "Blusa blanca, tela ligera. Botones al frente. Cuello semi-redondo.",
     vendido: false,
-    imagenes: ["clothes/tops/2. blusa-blanca-dazy1.png", "clothes/tops/2. blusa-blanca-dazy2.png"]
+    imagenes: ["clothes/tops/2.blusa-blanca-dazy1.png", "clothes/tops/2.blusa-blanca-dazy2.png"]
   },
   {
     id: 3,
@@ -41,11 +41,11 @@ export const items = [
     descripcion: "Gorro suavecito y caliente, con forma de perrito husky o lobo siberiano",
     vendido: false,
     imagenes: [
-      "clothes/other/3. gorro-husky.png",
-      "clothes/other/3. gorro-husky2.jpg",
-      "clothes/other/3. gorro-husky3.jpg",
-      "clothes/other/3. gorro-husky4.jpg",
-      "clothes/other/3. gorro-husky .jpg"
+      "clothes/other/3.gorro-husky.png",
+      "clothes/other/3.gorro-husky2.jpg",
+      "clothes/other/3.gorro-husky3.jpg",
+      "clothes/other/3.gorro-husky4.jpg",
+      "clothes/other/3.gorro-husky5.jpg"
     ]
   },
   {
@@ -60,9 +60,9 @@ export const items = [
     descripcion: "Vestido clásico negro, con bolsillos y manga 3/4. La tela tiene una caida muy suave y es cómodo. Hecho en Sri Lanka con tela importada. De largo, queda abajo de la rodilla.",
     vendido: false,
     imagenes: [
-      "clothes/dresses/4. vestido-negro-elegante1.png",
-      "clothes/dresses/4. vestido-negro-elegante2.png",
-      "clothes/dresses/4. vestido-negro-elegante3.png"
+      "clothes/dresses/4.vestido-negro-elegante1.png",
+      "clothes/dresses/4.vestido-negro-elegante2.png",
+      "clothes/dresses/4.vestido-negro-elegante3.png"
     ]
   },
   {
@@ -77,10 +77,10 @@ export const items = [
     descripcion: "Pantalón ancho color naranja quemada. MEDIDAS: Cintura: 84 cm,  Cadera: 116 cm Tiro: 34 cm Largo: 92 cm. Estira mucho y es muy fresco. Bolsillos funcionales",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/5. pantalon-naranja.jpg",
-      "clothes/bottoms/5. pantalonnaranja1.jpg",
-      "clothes/bottoms/5. pantalonnaranja3.jpg",
-      "clothes/bottoms/5. pantalon naranja4.jpg"
+      "clothes/bottoms/5.pantalon-naranja.jpg",
+      "clothes/bottoms/5.pantalonnaranja1.jpg",
+      "clothes/bottoms/5.pantalonnaranja3.jpg",
+      "clothes/bottoms/5.pantalon-naranja4.jpg"
     ]
   },
   {
@@ -95,10 +95,10 @@ export const items = [
     descripcion: "Pantalón mezclilla gruesa, tobillos tipo jogger con resorte. Corte tipo mom jeans. Tiro alto. Bolsillos muy amplios",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/6. jeans-negros-rotos.jpg",
-      "clothes/bottoms/6. jeans-negros-rotos1.jpg",
-      "clothes/bottoms/6. jeans-negros-rotos2.jpg",
-      "clothes/bottoms/6. jeans-negros-rotos3.jpg"
+      "clothes/bottoms/6.jeans-negros-rotos.jpg",
+      "clothes/bottoms/6.jeans-negros-rotos1.jpg",
+      "clothes/bottoms/6.jeans-negros-rotos2.jpg",
+      "clothes/bottoms/6.jeans-negros-rotos3.jpg"
     ]
   },
   {
@@ -113,10 +113,10 @@ export const items = [
     descripcion: "Short de mezclilla azul, es largo, pero queda arriba de la rodilla. Tiro alto. Muy comodo y tiene resorte en la parte de atrás para un mejor ajuste. Bolsillos muy amplios.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/7. short-azul-mezclilla1.jpg",
-      "clothes/bottoms/7. short-azul-mezclilla2.jpg",
-      "clothes/bottoms/7. short-azul-mezclilla3.jpg",
-      "clothes/bottoms/7. short-azul-mezclilla-5.png"
+      "clothes/bottoms/7.short-azul-mezclilla1.jpg",
+      "clothes/bottoms/7.short-azul-mezclilla2.jpg",
+      "clothes/bottoms/7.short-azul-mezclilla3.jpg",
+      "clothes/bottoms/7.short-azul-mezclilla5.png"
     ]
   },
   {
@@ -131,9 +131,9 @@ export const items = [
     descripcion: "Short mezclilla negro, es largo, queda arriba de la rodilla. Tiro alto. Comodo pero la tela casi no estira. Bolsillos muy amplios.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/8. short-negro-mezclilla1.jpg",
-      "clothes/bottoms/8. short-negro-mezclilla2.jpg",
-      "clothes/bottoms/8. short-negro-mezclilla4.jpg"
+      "clothes/bottoms/8.short-negro-mezclilla1.jpg",
+      "clothes/bottoms/8.short-negro-mezclilla2.jpg",
+      "clothes/bottoms/8.short-negro-mezclilla4.jpg"
     ]
   },
   {
@@ -148,10 +148,10 @@ export const items = [
     descripcion: "Pantalón de mezclilla color negro liso, corte tipo recto. Estilo tipo mom jeans. Bolsillos muy amplios.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/9. pantalon-negro-mezclilla1.jpg",
-      "clothes/bottoms/9. pantalon-negro-mezclilla2.jpg",
-      "clothes/bottoms/9. pantalon-negro-mezclilla3.jpg",
-      "clothes/bottoms/9. pantalon-negro-mezclilla4.jpg"
+      "clothes/bottoms/9.pantalon-negro-mezclilla1.jpg",
+      "clothes/bottoms/9.pantalon-negro-mezclilla2.jpg",
+      "clothes/bottoms/9.pantalon-negro-mezclilla3.jpg",
+      "clothes/bottoms/9.pantalon-negro-mezclilla4.jpg"
     ]
   },
   {
@@ -166,11 +166,11 @@ export const items = [
     descripcion: "Pantalon de mezclilla color azul claro, corte recto ligeramente entubado. Corte del pantalón tipo mom jeans, tiro alto. Bolsillos muy amplios.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/10. mom-jeans-azul1.jpg",
-      "clothes/bottoms/10. mom-jeans-azul2.jpg",
-      "clothes/bottoms/10. mom-jeans-azul3.jpg",
-      "clothes/bottoms/10. mom-jeans-azul4.jpg",
-      "clothes/bottoms/10. mom-jeans-azul5.jpg"
+      "clothes/bottoms/10.mom-jeans-azul1.jpg",
+      "clothes/bottoms/10.mom-jeans-azul2.jpg",
+      "clothes/bottoms/10.mom-jeans-azul3.jpg",
+      "clothes/bottoms/10.mom-jeans-azul4.jpg",
+      "clothes/bottoms/10.mom-jeans-azul5.jpg"
     ]
   },
   {
@@ -185,10 +185,10 @@ export const items = [
     descripcion: "Falda corta de estampado tartan blanco y negro tipo colegiala, marca hot topic. No estira.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/11. falda-hot1.jpg",
-      "clothes/bottoms/11. falda-hot2.jpg",
-      "clothes/bottoms/11. falda-hot3.jpg",
-      "clothes/bottoms/11. falda-hot4.jpg"
+      "clothes/bottoms/11.falda-hot1.jpg",
+      "clothes/bottoms/11.falda-hot2.jpg",
+      "clothes/bottoms/11.falda-hot3.jpg",
+      "clothes/bottoms/11.falda-hot4.jpg"
     ]
   },
   {
@@ -203,10 +203,10 @@ export const items = [
     descripcion: "Falda mezclilla corta color azul. Mezclilla rigida, estira muy poco. Flecos en el borde y bolsillos funcionales.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/12. falda-mezclilla1.jpg",
-      "clothes/bottoms/12. falda-mezclilla2.jpg",
-      "clothes/bottoms/12. falda-mezclilla3.jpg",
-      "clothes/bottoms/12. falda-mezclilla4.jpg"
+      "clothes/bottoms/12.falda-mezclilla1.jpg",
+      "clothes/bottoms/12.falda-mezclilla2.jpg",
+      "clothes/bottoms/12.falda-mezclilla3.jpg",
+      "clothes/bottoms/12.falda-mezclilla4.jpg"
     ]
   },
   {
@@ -221,9 +221,9 @@ export const items = [
     descripcion: "Short de vestir corto con bolsillos marca Spirit. Color verde amarillo",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/13. short-spirit1.jpg",
-      "clothes/bottoms/13. short-spirit2.jpg",
-      "clothes/bottoms/13. short-spirit3.jpg"
+      "clothes/bottoms/13.short-spirit1.jpg",
+      "clothes/bottoms/13.short-spirit2.jpg",
+      "clothes/bottoms/13.short-spirit3.jpg"
     ]
   },
   {
@@ -238,10 +238,10 @@ export const items = [
     descripcion: "Falda corta azul mezclilla oscuro, con pequeñas deshilachadas para dar estilo y flecos cortos en el borde.",
     vendido: false,
     imagenes: [
-      "clothes/bottoms/14. falda-mezclilla hym1.jpg",
-      "clothes/bottoms/14. falda-mezclilla hym2.jpg",
-      "clothes/bottoms/14. falda-mezclilla hym4.jpg",
-      "clothes/bottoms/14. falda-mezclilla hym5.jpg"
+      "clothes/bottoms/14.falda-mezclilla-hym1.jpg",
+      "clothes/bottoms/14.falda-mezclilla-hym2.jpg",
+      "clothes/bottoms/14.falda-mezclilla-hym4.jpg",
+      "clothes/bottoms/14.falda-mezclilla-hym5.jpg"
     ]
   },
   {
@@ -256,9 +256,9 @@ export const items = [
     descripcion: "Blusa manga larga de rayas en blanco y negro, cuello de tortuga muy cómodo y suave.",
     vendido: false,
     imagenes: [
-      "clothes/tops/15. blusa rayas cuello 1.jpg",
-      "clothes/tops/15. blusa rayas cuello 2.jpg",
-      "clothes/tops/15. blusa rayas cuello3.jpg"
+      "clothes/tops/15.blusa-rayas-cuello1.jpg",
+      "clothes/tops/15.blusa-rayas-cuello2.jpg",
+      "clothes/tops/15.blusa-rayas-cuello3.jpg"
     ]
   },
   {
@@ -273,9 +273,9 @@ export const items = [
     descripcion: "Blusa ligera de rayas negro y tinto, mangas cómodas 3/4 con listón para amarrarse y caída súper agradable.",
     vendido: false,
     imagenes: [
-      "clothes/tops/16. blusa-rayas-roja-negro1.jpg",
-      "clothes/tops/16. blusa-rayas-roja-negro2.jpg",
-      "clothes/tops/16. blusa-rayas-roja-negro3.jpg"
+      "clothes/tops/16.blusa-rayas-roja-negro1.jpg",
+      "clothes/tops/16.blusa-rayas-roja-negro2.jpg",
+      "clothes/tops/16.blusa-rayas-roja-negro3.jpg"
     ]
   },
   {
@@ -290,9 +290,9 @@ export const items = [
     descripcion: "Hermoso chaleco tejido beige de Lefties. Largo y cuenta con cordones para ajustar.",
     vendido: false,
     imagenes: [
-      "clothes/tops/17. chaleco lefties.jpg",
-      "clothes/tops/17. chaleco lefties 2.jpg",
-      "clothes/tops/17. chaleco lefties 3.jpg"
+      "clothes/tops/17.chaleco-lefties1.jpg",
+      "clothes/tops/17.chaleco-lefties2.jpg",
+      "clothes/tops/17.chaleco-lefties3.jpg"
     ]
   },
   {
@@ -307,11 +307,11 @@ export const items = [
     descripcion: "Playera de cuello tipo Polo con rayas horizontales, fresca y cómoda. Cuenta con pequeño cierre para mejor ajuste en el cuello",
     vendido: false,
     imagenes: [
-      "clothes/tops/18. playera rayas horizontales 1.png",
-      "clothes/tops/18. playera rayas horizontales1.jpg",
-      "clothes/tops/18. playera rayas horizontales 2.jpg",
-      "clothes/tops/18. playera rayas horizontales3.jpg",
-      "clothes/tops/18. playera rayas horizontales4.png"
+      "clothes/tops/18.playera-rayas-horizontales1.png",
+      "clothes/tops/18.playera-rayas-horizontales1.jpg",
+      "clothes/tops/18.playera-rayas-horizontales2.jpg",
+      "clothes/tops/18.playera-rayas-horizontales3.jpg",
+      "clothes/tops/18.playera-rayas-horizontales4.png"
     ]
   },
   {
@@ -326,9 +326,9 @@ export const items = [
     descripcion: "Vestido con cuello tipo vaquero, con estampado clásico",
     vendido: false,
     imagenes: [
-      "clothes/dresses/19. vestido-vaquero1.jpg",
-      "clothes/dresses/19. vestido-vaquero2.jpg",
-      "clothes/dresses/19. vestido-vaquero3.jpg"
+      "clothes/dresses/19.vestido-vaquero1.jpg",
+      "clothes/dresses/19.vestido-vaquero2.jpg",
+      "clothes/dresses/19.vestido-vaquero3.jpg"
     ]
   },
   {
@@ -343,9 +343,9 @@ export const items = [
     descripcion: "Vestido de noche elegante con brillos y textura tipo pelo, perfecto para fiestas y eventos de gala. Ajuste cómodo.",
     vendido: false,
     imagenes: [
-      "clothes/dresses/20. vestido-brillos1.jpg",
-      "clothes/dresses/20. vestido-brillos2.jpg",
-      "clothes/dresses/20. vestido-brillos3.jpg"
+      "clothes/dresses/20.vestido-brillos1.jpg",
+      "clothes/dresses/20.vestido-brillos2.jpg",
+      "clothes/dresses/20.vestido-brillos3.jpg"
     ]
   },
   {
@@ -360,9 +360,9 @@ export const items = [
     descripcion: "Suéter tejido color café de tacto suave, estambre acrilico y botones combinados. Ideal para días frescos.",
     vendido: false,
     imagenes: [
-      "clothes/tops/21. sueter-cafe-1.jpg",
-      "clothes/tops/21. sueter-cafe2.jpg",
-      "clothes/tops/21. sueter-cafe3.jpg"
+      "clothes/tops/21.sueter-cafe1.jpg",
+      "clothes/tops/21.sueter-cafe2.jpg",
+      "clothes/tops/21.sueter-cafe3.jpg"
     ]
   },
   {
@@ -377,9 +377,9 @@ export const items = [
     descripcion: "Vestido negro corto muy lindo con olanes de tela vaporosa en todo el vestido, ajuste cómodo y muy fresh.",
     vendido: false,
     imagenes: [
-      "clothes/dresses/22. vestido olanes negro1.jpg",
-      "clothes/dresses/22. vestido olanes negro2.jpg",
-      "clothes/dresses/22. vestido olanes negro3.jpg"
+      "clothes/dresses/22.vestido-olanes-negro1.jpg",
+      "clothes/dresses/22.vestido-olanes-negro2.jpg",
+      "clothes/dresses/22.vestido-olanes-negro3.jpg"
     ]
   },
   {
