@@ -328,7 +328,9 @@ export const items = [
     imagenes: [
       "clothes/dresses/19.vestido-vaquero1.jpg",
       "clothes/dresses/19.vestido-vaquero2.jpg",
-      "clothes/dresses/19.vestido-vaquero3.jpg"
+      "clothes/dresses/19.vestido-vaquero3.jpg",
+      "clothes/dresses/19.vestido-vaquero4.png",
+      "clothes/dresses/19.vestido-vaquero5.png"
     ]
   },
   {
