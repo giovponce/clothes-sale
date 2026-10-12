@@ -360,7 +360,7 @@ export const items = [
     precio: 80,
     new: false,
     descripcion: "Suéter tejido color café de tacto suave, estambre acrilico y botones combinados. Ideal para días frescos.",
-    vendido: false,
+    vendido: true,
     imagenes: [
       "clothes/tops/21.sueter-cafe1.jpg",
       "clothes/tops/21.sueter-cafe2.jpg",
@@ -694,7 +694,7 @@ export const items = [
     precio: 180,
     new: true,
     descripcion: "Conjunto palazzo tipo overol formal de Massimo Dutti, color blanco hueso. Pantalón de pierna ancha y blusa manga larga de una sola pieza, con elegantes botones negros como detalle. Muy sofisticado.",
-    vendido: false,
+    vendido: true,
     imagenes: [
       "clothes/conjuntos/39.palazzo-overol-blanco-massimo-dutti1.jpg",
       "clothes/conjuntos/39.palazzo-overol-blanco-massimo-dutti2.jpg",
@@ -914,7 +914,7 @@ export const items = [
     precio: 250,
     new: true,
     descripcion: "Sandalias Steve Madden talla 4, dan para talla 4.5. En buen estado, con hebillas plateadas elegantes. Perfectas para looks casuales o de vestir.",
-    vendido: false,
+    vendido: true,
     imagenes: [
       "clothes/other/51.sandalias-steve-madden1.jpg",
       "clothes/other/51.sandalias-steve-madden2.jpg",
