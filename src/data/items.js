@@ -394,7 +394,7 @@ export const items = [
     precio: 120,
     new: true,
     descripcion: "Vestido color verde bandera de Zara. Tela tipo plástico ligera e impermeable, composición 100% poliéster. Ideal para días lluviosos o looks vibrantes.",
-    vendido: false,
+    vendido: true,
     imagenes: [
       "clothes/dresses/23.vestido-verde-zara1.png",
       "clothes/dresses/23.vestido-verde-zara2.png",
@@ -734,7 +734,7 @@ export const items = [
     precio: 120,
     new: true,
     descripcion: "Pantalón acampanado de tela ligera color azul con rayas verticales negras y blancas, marca Zara hecho en Turquía. Cordón para ajustar la cintura y bolsillos funcionales. Muy cómodo y estilizado.",
-    vendido: false,
+    vendido: true,
     imagenes: [
       "clothes/bottoms/41.pantalon-rayas-acampanado-zara1.png",
       "clothes/bottoms/41.pantalon-rayas-acampanado-zara2.png",
