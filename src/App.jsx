@@ -291,9 +291,19 @@ export default function App() {
     };
   }, []);
 
+  // --- ORDEN ALEATORIO (Fisher-Yates, una vez por carga de página) ---
+  const shuffledItems = useMemo(() => {
+    const arr = [...items];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, []);
+
   // --- LÓGICA DE FILTRADO COMBINADO (AND) ---
   const filteredItems = useMemo(() => {
-    return items.filter(item => {
+    return shuffledItems.filter(item => {
       // Ignorar borradores/items vacíos
       if (!item.nombre || item.nombre.trim() === "") return false;
 
@@ -331,7 +341,7 @@ export default function App() {
       }
       return true;
     });
-  }, [talla, color, marca, categoria, hideSold, search, condicion]);
+  }, [shuffledItems, talla, color, marca, categoria, hideSold, search, condicion]);
 
   // --- ESTADÍSTICAS RÁPIDAS ---
   const stats = useMemo(() => {
