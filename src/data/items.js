@@ -957,5 +957,188 @@ export const items = [
       "clothes/other/53.botas-cafe-tacon-hm5.jpg",
       "clothes/other/53.botas-cafe-tacon-hm6.jpg"
     ]
+  },
+  {
+    id: 54,
+    nombre: "Mini falda tartán café Forever 21",
+    marca: "Forever 21",
+    talla: "M",
+    color: ["Café", "Negro", "Cuadros"],
+    categoria: "Faldas",
+    precio: 150,
+    new: true,
+    descripcion: "Mini falda tartán café con cierre en la parte posterior, de tela suave y calientita. Marca Forever 21 talla M, en excelente estado. MEDIDAS: Largo: 38 cm, Cintura: 37 cm.",
+    vendido: false,
+    imagenes: [
+      "clothes/bottoms/54.mini-falda-tartan-cafe-forever211.jpg",
+      "clothes/bottoms/54.mini-falda-tartan-cafe-forever212.webp",
+      "clothes/bottoms/54.mini-falda-tartan-cafe-forever213.jpg",
+      "clothes/bottoms/54.mini-falda-tartan-cafe-forever214.webp",
+      "clothes/bottoms/54.mini-falda-tartan-cafe-forever215.jpg",
+      "clothes/bottoms/54.mini-falda-tartan-cafe-forever216.jpg",
+      "clothes/bottoms/54.mini-falda-tartan-cafe-forever217.jpg"
+    ]
+  },
+  {
+    id: 55,
+    nombre: "Falda midi flores azul marino Ann Taylor",
+    marca: "Ann Taylor",
+    talla: ["S", "6"],
+    color: ["Azul", "Amarillo", "Morado", "Flores"],
+    categoria: "Faldas",
+    precio: 200,
+    new: true,
+    descripcion: "Falda midi marca Ann Taylor con estampado de flores en azul marino, amarillo y toques moraditos. Talla 6 (S), usada una sola vez. MEDIDAS: Cintura: 37 cm, Largo: 63.5 cm.",
+    vendido: false,
+    imagenes: [
+      "clothes/bottoms/55.falda-midi-flores-ann-taylor1.webp",
+      "clothes/bottoms/55.falda-midi-flores-ann-taylor2.webp",
+      "clothes/bottoms/55.falda-midi-flores-ann-taylor3.webp",
+      "clothes/bottoms/55.falda-midi-flores-ann-taylor4.jpg",
+      "clothes/bottoms/55.falda-midi-flores-ann-taylor5.jpg",
+      "clothes/bottoms/55.falda-midi-flores-ann-taylor6.jpg"
+    ]
+  },
+  {
+    id: 56,
+    nombre: "Vestido flores amarillas azul marino Loft",
+    marca: "Loft",
+    talla: ["S", "4"],
+    color: ["Azul", "Amarillo", "Flores"],
+    categoria: "Vestidos",
+    precio: 200,
+    new: true,
+    descripcion: "Vestido marca Loft talla 4 (da a una talla M, viene amplio) color azul marino con estampado diverso de flores amarillas. Manga larga, cuello con holán y listones para amarrar, cierre trasero. Llega a la rodilla. Usado una sola vez.",
+    vendido: false,
+    imagenes: [
+      "clothes/dresses/56.vestido-flores-azul-marino-loft1.jpg",
+      "clothes/dresses/56.vestido-flores-azul-marino-loft2.jpg",
+      "clothes/dresses/56.vestido-flores-azul-marino-loft3.jpg",
+      "clothes/dresses/56.vestido-flores-azul-marino-loft4.jpg",
+      "clothes/dresses/56.vestido-flores-azul-marino-loft5.jpg",
+      "clothes/dresses/56.vestido-flores-azul-marino-loft6.jpg",
+      "clothes/dresses/56.vestido-flores-azul-marino-loft7.jpg",
+      "clothes/dresses/56.vestido-flores-azul-marino-loft8.jpg"
+    ]
+  },
+  {
+    id: 57,
+    nombre: "Sombrero fedora café tipo pueblo mágico Shein",
+    marca: "Shein",
+    talla: "Unica",
+    color: "Café",
+    categoria: "Accesorios",
+    precio: 170,
+    new: true,
+    descripcion: "Sombrero café de tela suave tipo fedora / vaquero / pueblo mágico, con cintilla decorativa. Cuenta con la base para mantener forma, por lo que está en excelente estado. A estrenar, sin etiqueta. (En las fotos se ve un poco de pelo, pero te lo mando impecable).",
+    vendido: false,
+    imagenes: [
+      "clothes/other/57.sombrero-fedora-cafe-shein1.jpg",
+      "clothes/other/57.sombrero-fedora-cafe-shein2.jpg",
+      "clothes/other/57.sombrero-fedora-cafe-shein3.jpg",
+      "clothes/other/57.sombrero-fedora-cafe-shein4.jpg",
+      "clothes/other/57.sombrero-fedora-cafe-shein5.jpg"
+    ]
+  },
+  {
+    id: 58,
+    nombre: "Vestido vintage fiesta blanco hueso años 80 R-vintage",
+    marca: "R-vintage",
+    talla: ["L", "12-14"],
+    color: ["Blanco", "Hueso"],
+    categoria: "Vestidos",
+    precio: 400,
+    new: true,
+    descripcion: "Vestido vintage de los años 80, corte princesa (V) con mangas abombadas y encaje frontal. Muy romántico. Tela ligera y fácil, podría servir para una boda civil o estilo vintage, también para fiestas que no sean bodas por el color. Excelente estado y ya tiene su tintorería. MEDIDAS: Cintura (donde está la V): 44 cm, Largo frente: 128 cm.",
+    vendido: false,
+    imagenes: [
+      "clothes/dresses/58.vestido-vintage-80s-blanco-hueso-rvintage1.webp",
+      "clothes/dresses/58.vestido-vintage-80s-blanco-hueso-rvintage2.webp",
+      "clothes/dresses/58.vestido-vintage-80s-blanco-hueso-rvintage3.webp",
+      "clothes/dresses/58.vestido-vintage-80s-blanco-hueso-rvintage4.webp",
+      "clothes/dresses/58.vestido-vintage-80s-blanco-hueso-rvintage5.webp",
+      "clothes/dresses/58.vestido-vintage-80s-blanco-hueso-rvintage6.webp",
+      "clothes/dresses/58.vestido-vintage-80s-blanco-hueso-rvintage7.jpg"
+    ]
+  },
+  {
+    id: 59,
+    nombre: "Vestido blanco bordado con forro Tea n Rose",
+    marca: "Tea n Rose",
+    talla: ["L", "12-14"],
+    color: "Blanco",
+    categoria: "Vestidos",
+    precio: 80,
+    new: true,
+    descripcion: "Vestido blanco bordado con forro, manga corta y detalles de ojalillo (bordado inglés). Tiene algunos detalles que se ven en las fotos, por eso el precio, pero sigue bastante usable. Cuenta con cierre lateral para poderse poner porque la tela no estira. MEDIDAS: Cintura: 43 cm, Largo: 103 cm.",
+    vendido: false,
+    imagenes: [
+      "clothes/dresses/59.vestido-blanco-bordado-tea-n-rose1.jpg",
+      "clothes/dresses/59.vestido-blanco-bordado-tea-n-rose2.jpg",
+      "clothes/dresses/59.vestido-blanco-bordado-tea-n-rose3.webp",
+      "clothes/dresses/59.vestido-blanco-bordado-tea-n-rose4.jpg",
+      "clothes/dresses/59.vestido-blanco-bordado-tea-n-rose5.jpg",
+      "clothes/dresses/59.vestido-blanco-bordado-tea-n-rose6.jpg",
+      "clothes/dresses/59.vestido-blanco-bordado-tea-n-rose7.webp"
+    ]
+  },
+  {
+    id: 60,
+    nombre: "Vestido de novia bohemio con cola larga AliExpress",
+    marca: "AliExpress",
+    talla: ["L", "12-14"],
+    color: ["Blanco", "Hueso"],
+    categoria: "Vestidos",
+    precio: 1300,
+    new: true,
+    descripcion: "Vestido de novia bohemio mandado a hacer en AliExpress, talla 14, usado una sola vez. Le falta tintorería por eso se ve sucio, pero está en perfecto estado. Manga acampanada 3/4 de encaje, cola larga de encaje con un botoncito para amarrar la cola. Cuenta con lazo para ajuste atrás y lateral abierto con lazos también. MEDIDAS: Busto: 100 cm, Cintura: 83 cm, pero da a mucho más por ser ajustable. La cadera está libre.",
+    vendido: false,
+    imagenes: [
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress1.webp",
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress2.webp",
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress3.jpg",
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress4.jpg",
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress5.jpg",
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress6.webp",
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress7.jpg",
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress8.webp",
+      "clothes/dresses/60.vestido-novia-bohemio-cola-larga-aliexpress9.webp"
+    ]
+  },
+  {
+    id: 61,
+    nombre: "Falda de cuadros tartán asimétrica con volantes H&M",
+    marca: "H&M",
+    talla: ["M", "8", "38 EU"],
+    color: ["Café", "Amarillo", "Azul", "Cuadros"],
+    categoria: "Faldas",
+    precio: 200,
+    new: true,
+    descripcion: "Falda de cuadros en tonos café, amarillo y azul, con silueta asimétrica y paneles de volantes en capas que aportan movimiento y volumen. Presenta pretina estructurada y una abertura lateral con detalle de cinta negra, que añade un acento al diseño. En perfecto estado.",
+    vendido: false,
+    imagenes: [
+      "clothes/bottoms/61.falda-cuadros-tartan-asimetrica-hm1.jpg",
+      "clothes/bottoms/61.falda-cuadros-tartan-asimetrica-hm2.jpg",
+      "clothes/bottoms/61.falda-cuadros-tartan-asimetrica-hm3.jpg",
+      "clothes/bottoms/61.falda-cuadros-tartan-asimetrica-hm4.webp"
+    ]
+  },
+  {
+    id: 62,
+    nombre: "Blusa verde floral transparente Zara",
+    marca: "Zara",
+    talla: ["L", "12-14", "40 EU"],
+    color: ["Verde", "Flores"],
+    categoria: "Tops",
+    precio: 220,
+    new: true,
+    descripcion: "Linda blusa verde oscuro de tela transparente con estampado de florecitas, sin detalles. Cuello alto con holán, pecho con tela fruncida (smock) y mangas acampanadas con holanes. En perfecto estado.",
+    vendido: false,
+    imagenes: [
+      "clothes/tops/62.blusa-verde-floral-transparente-zara1.webp",
+      "clothes/tops/62.blusa-verde-floral-transparente-zara2.webp",
+      "clothes/tops/62.blusa-verde-floral-transparente-zara3.webp",
+      "clothes/tops/62.blusa-verde-floral-transparente-zara4.webp"
+    ]
   }
 ];
