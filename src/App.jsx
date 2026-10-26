@@ -633,7 +633,7 @@ export default function App() {
         </div>
 
         {/* CÓMO COMPRAR - SECCIÓN EXPLICATIVA */}
-        <section className="bg-white rounded-2xl p-5 border border-warm-beige-200 mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-2xs">
+        <section className="bg-white rounded-2xl p-5 border border-warm-beige-200 mb-8 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-4 shadow-2xs">
           <div className="flex items-center gap-3">
             <div className="p-3 bg-forest-green-50 rounded-xl text-forest-green-700 flex-shrink-0">
               <Info size={24} />
@@ -645,13 +645,19 @@ export default function App() {
               </p>
             </div>
           </div>
-          <div className="w-full md:max-w-[320px] flex-shrink-0">
-            <span className="inline-flex items-start gap-2 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold p-3 rounded-xl leading-relaxed">
+          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0 w-full xl:w-auto">
+            <div className="flex-1 sm:max-w-[280px] bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold p-3 rounded-xl leading-relaxed flex items-start gap-2">
               <span className="text-sm select-none">🤝</span>
               <span>
-                Entrega/Translado CasaBlanca sucursal de tu preferencia <br className="hidden md:inline" />en compras mayores a $200
+                Entrega/Translado CasaBlanca sucursal de tu preferencia en compras mayores a $200
               </span>
-            </span>
+            </div>
+            <div className="flex-1 sm:max-w-[280px] bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold p-3 rounded-xl leading-relaxed flex items-start gap-2">
+              <span className="text-sm select-none">📦</span>
+              <span>
+                Envío a toda la república por Punto Post en compras mayores a $600
+              </span>
+            </div>
           </div>
         </section>
 
