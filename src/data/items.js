@@ -655,7 +655,7 @@ export const items = [
     precio: 80,
     new: true,
     descripcion: "Blusa de estilo coreano con cuello Peter Pan adornado con encaje. Estampado floral en azul con amarillo, manga bombacha muy romántica y femenina. Con etiqueta, prácticamente nueva.",
-    vendido: false,
+    vendido: true,
     imagenes: [
       "clothes/tops/37.blusa-coreana-peterpan-floral1.png",
       "clothes/tops/37.blusa-coreana-peterpan-floral2.png",
@@ -714,7 +714,7 @@ export const items = [
     precio: 100,
     new: true,
     descripcion: "Camisa de cuadros en tonos rosa y café, marca Rewind. Estilo casual y muy versátil, ideal para combinar con jeans o faldas.",
-    vendido: false,
+    vendido: true,
     imagenes: [
       "clothes/tops/40.camisa-cuadros-rosa-cafe-rewind1.jpg",
       "clothes/tops/40.camisa-cuadros-rosa-cafe-rewind2.jpg",
@@ -948,7 +948,7 @@ export const items = [
     precio: 250,
     new: true,
     descripcion: "Botas color café con tacón y punta cuadrada al frente, marca H&M. Talla 38 EU equivalente a talla 24 MX. Elegantes y muy versátiles para cualquier outfit.",
-    vendido: false,
+    vendido: true,
     imagenes: [
       "clothes/other/53.botas-cafe-tacon-hm1.jpg",
       "clothes/other/53.botas-cafe-tacon-hm2.jpg",
