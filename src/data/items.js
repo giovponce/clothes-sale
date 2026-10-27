@@ -26,7 +26,7 @@ export const items = [
     categoria: "Tops",
     precio: 80,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Blusa blanca, tela ligera. Botones al frente. Cuello semi-redondo.",
     vendido: false,
     imagenes: ["clothes/tops/2.blusa-blanca-dazy1.png", "clothes/tops/2.blusa-blanca-dazy2.png"]
@@ -60,7 +60,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 150,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Vestido clásico negro, con bolsillos y manga 3/4. La tela tiene una caida muy suave y es cómodo. Hecho en Sri Lanka con tela importada. De largo, queda abajo de la rodilla.",
     vendido: false,
     imagenes: [
@@ -78,7 +78,7 @@ export const items = [
     categoria: "Pantalones",
     precio: 80,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Pantalón ancho color naranja quemada. MEDIDAS: Cintura: 84 cm,  Cadera: 116 cm Tiro: 34 cm Largo: 92 cm. Estira mucho y es muy fresco. Bolsillos funcionales",
     vendido: false,
     imagenes: [
