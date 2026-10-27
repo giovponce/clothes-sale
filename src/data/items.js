@@ -192,7 +192,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Falda corta de estampado tartan blanco y negro tipo colegiala, marca hot topic. No estira.",
     vendido: false,
     imagenes: [
@@ -211,7 +211,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Falda mezclilla corta color azul. Mezclilla rigida, estira muy poco. Flecos en el borde y bolsillos funcionales.",
     vendido: false,
     imagenes: [
@@ -230,7 +230,7 @@ export const items = [
     categoria: "Shorts",
     precio: 80,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Short de vestir corto con bolsillos marca Spirit. Color verde amarillo",
     vendido: false,
     imagenes: [
@@ -248,7 +248,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Falda corta azul mezclilla oscuro, con pequeñas deshilachadas para dar estilo y flecos cortos en el borde.",
     vendido: false,
     imagenes: [
@@ -267,7 +267,7 @@ export const items = [
     categoria: "Tops",
     precio: 70,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Blusa manga larga de rayas en blanco y negro, cuello de tortuga muy cómodo y suave.",
     vendido: false,
     imagenes: [
@@ -303,7 +303,7 @@ export const items = [
     categoria: "Tops",
     precio: 100,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "nuevo",
     descripcion: "Hermoso chaleco tejido beige de Lefties. Largo y cuenta con cordones para ajustar.",
     vendido: false,
     imagenes: [
@@ -361,7 +361,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 120,
     new: false,
-    condicion: "seminuevo",
+    condicion: "como-nuevo",
     descripcion: "Vestido de noche elegante con brillos y textura tipo pelo, perfecto para fiestas y eventos de gala. Ajuste cómodo.",
     vendido: false,
     imagenes: [
@@ -477,7 +477,7 @@ export const items = [
     categoria: "Faldas",
     precio: 100,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "nuevo",
     descripcion: "Falda larga de estampado floral con flores moradas y estética witchy. Cintura con resorte para mayor comodidad y ajuste. Tela ligera con hermosa caída.",
     vendido: false,
     imagenes: [
@@ -496,7 +496,7 @@ export const items = [
     categoria: "Tops",
     precio: 50,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "seminuevo",
     descripcion: "Suéter color gris con desgaste intencional en la tela para un look casual y con estilo. Marca Forever 21, cómodo y muy llevadero.",
     vendido: false,
     imagenes: [
@@ -613,7 +613,7 @@ export const items = [
     categoria: "Tops",
     precio: 70,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "nuevo",
     descripcion: "Blusa crop verde militar con estampado cottagecore de sapo. Simula llevar una blusa de tirantes negra por debajo, aunque es parte del mismo diseño. Talla 1XL.",
     vendido: false,
     imagenes: [
@@ -651,7 +651,7 @@ export const items = [
     categoria: "Pantalones",
     precio: 80,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "seminuevo",
     descripcion: "Pantalón negro de vestir en perfecto estado, ideal para oficina. Tela ligera que no necesita planchado y cae muy bien. Cómodo y elegante para el día a día.",
     vendido: false,
     imagenes: [
@@ -671,7 +671,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "seminuevo",
     descripcion: "Falda larga tipo midi de terciopelo verde navideño con pliegues. Muy elegante y perfecta para fiestas decembrinas. Cintura cómoda y caída vistosa.",
     vendido: false,
     imagenes: [
@@ -793,7 +793,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "seminuevo",
     descripcion: "Falda larga color café oscuro de tela tipo pana, suave y ligera. Cintura con resorte y pequeña cinturilla decorativa de listones. Muy cómoda y con bonita caída.",
     vendido: false,
     imagenes: [
@@ -832,7 +832,7 @@ export const items = [
     categoria: "Tops",
     precio: 40,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "seminuevo",
     descripcion: "Suéter rosa claro con estampado 'Born in the 90s'. Marca Forever 21, talla L. Tiene una pequeña mancha, se refleja en el precio.",
     vendido: false,
     imagenes: [
@@ -924,7 +924,7 @@ export const items = [
     categoria: "Accesorios",
     precio: 40,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "seminuevo",
     descripcion: "Bralette color tinto marca Aerie con broche al frente. Talla L/G, cómodo y con un lindo detalle en el cierre. Ideal para usarse solo o como capa.",
     vendido: false,
     imagenes: [
@@ -1128,7 +1128,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 60,
     new: true,
-    condicion: "como-nuevo",
+    condicion: "seminuevo",
     descripcion: "Vestido blanco bordado con forro, manga corta y detalles de ojalillo (bordado inglés). Tiene algunos detalles que se ven en las fotos, por eso el precio, pero sigue bastante usable. Cuenta con cierre lateral para poderse poner porque la tela no estira. MEDIDAS: Cintura: 43 cm, Largo: 103 cm.",
     vendido: false,
     imagenes: [
