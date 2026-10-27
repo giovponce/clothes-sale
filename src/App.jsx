@@ -1,20 +1,22 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import {
-  Shirt, 
-  Tag, 
-  Sparkles, 
-  Check, 
-  X, 
-  Filter, 
-  Search, 
-  RotateCcw, 
-  ChevronLeft, 
-  ChevronRight, 
-  MessageCircle, 
-  Info, 
-  CheckCircle2, 
+  Shirt,
+  Sparkles,
+  Check,
+  X,
+  Filter,
+  Search,
+  RotateCcw,
+  ChevronLeft,
+  ChevronRight,
+  MessageCircle,
+  CheckCircle2,
   ExternalLink,
-  Heart
+  Heart,
+  ShoppingBag,
+  Trash2,
+  Truck,
+  Store
 } from 'lucide-react';
 import { items } from './data/items.js';
 import mushroomBanner1 from './assets/mushroom-banner.webp';
@@ -26,6 +28,37 @@ const BANNERS = [mushroomBanner1, mushroomBanner2, mushroomBanner3, mushroomBann
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "34600000000";
 const SELLER_NAME = import.meta.env.VITE_SELLER_NAME || "Giov";
+
+// Reglas de costos y umbrales de envío gratis
+const CASA_BLANCA_FREE_THRESHOLD = 200;
+const PUNTO_POST_FREE_THRESHOLD = 600;
+const CASA_BLANCA_EXTRA_COST = 20;
+const PUNTO_POST_EXTRA_COST = 95;
+
+// Helper para calcular calificación de envíos
+const getShippingQualification = (total) => {
+  const qualifiesCasaBlanca = total >= CASA_BLANCA_FREE_THRESHOLD;
+  const qualifiesPuntoPost = total >= PUNTO_POST_FREE_THRESHOLD;
+  const diffCasaBlanca = Math.max(0, CASA_BLANCA_FREE_THRESHOLD - total);
+  const diffPuntoPost = Math.max(0, PUNTO_POST_FREE_THRESHOLD - total);
+
+  let statusText = '';
+  if (qualifiesCasaBlanca && qualifiesPuntoPost) {
+    statusText = '¡Felicidades! Calificas para envío gratis tanto por Casa Blanca como por Punto Post 🎉';
+  } else if (qualifiesCasaBlanca) {
+    statusText = `Calificas para entrega gratis por Casa Blanca. El envío por Punto Post sale en $${PUNTO_POST_EXTRA_COST} extra (o agrega $${diffPuntoPost} más para envío gratis por Punto Post).`;
+  } else {
+    statusText = `Aún no calificas para envío gratis. El envío por Punto Post sale en $${PUNTO_POST_EXTRA_COST} extra y Casa Blanca en $${CASA_BLANCA_EXTRA_COST} extra (agrega $${diffCasaBlanca} más para entrega gratis en Casa Blanca o $${diffPuntoPost} para Punto Post).`;
+  }
+
+  return {
+    qualifiesCasaBlanca,
+    qualifiesPuntoPost,
+    diffCasaBlanca,
+    diffPuntoPost,
+    statusText,
+  };
+};
 
 // Helpers para estado y badges de prendas
 const getItemCondition = (item) => {
@@ -57,7 +90,7 @@ const getConditionBadge = (condicion) => {
   }
 };
 
-function ProductCard({ item, onSelect }) {
+function ProductCard({ item, onSelect, inBag, onToggleBag }) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
   const hasMultipleImages = item.imagenes && item.imagenes.length > 1;
@@ -125,7 +158,9 @@ function ProductCard({ item, onSelect }) {
         }
         onSelect(item);
       }}
-      className="group relative bg-[#faf8f5] rounded-2xl overflow-hidden border border-warm-beige-200 hover:border-forest-green-300 transition-all duration-300 hover:shadow-lg cursor-pointer flex flex-col h-full"
+      className={`group relative bg-[#faf8f5] rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-lg cursor-pointer flex flex-col h-full ${
+        inBag ? 'border-emerald-500 ring-2 ring-emerald-500/20' : 'border-warm-beige-200 hover:border-forest-green-300'
+      }`}
     >
       {/* Contenedor de la Imagen */}
       <div
@@ -158,6 +193,13 @@ function ProductCard({ item, onSelect }) {
             <span className="bg-red-800 text-white font-extrabold text-sm md:text-base px-5 py-2.5 rounded-full shadow-lg border-2 border-white/40 tracking-widest transform -rotate-6 uppercase animate-pulse">
               Vendido
             </span>
+          </div>
+        )}
+
+        {/* Badge en bolsa */}
+        {!item.vendido && inBag && (
+          <div className="absolute top-3 right-3 z-10 bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1 animate-fade-in">
+            <Check size={12} strokeWidth={3} /> En bolsa
           </div>
         )}
 
@@ -248,23 +290,321 @@ function ProductCard({ item, onSelect }) {
           {item.descripcion}
         </p>
 
-        {/* Botón de acción */}
-        <button 
-          className={`w-full py-2 px-4 rounded-xl text-xs font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 ${
-            item.vendido
-              ? 'bg-stone-100 text-stone-400 cursor-not-allowed border border-stone-200'
-              : 'bg-forest-green-600 text-white hover:bg-forest-green-700 active:scale-98 shadow-xs hover:shadow-md'
-          }`}
-          disabled={item.vendido}
-        >
+        {/* Botones de acción */}
+        <div className="mt-auto pt-2 flex items-center gap-2">
           {item.vendido ? (
-            <>Ya Vendido</>
+            <button 
+              disabled
+              className="w-full py-2 px-4 rounded-xl text-xs font-semibold bg-stone-100 text-stone-400 cursor-not-allowed border border-stone-200 flex items-center justify-center gap-1.5"
+            >
+              Ya Vendido
+            </button>
           ) : (
             <>
-              Ver Detalles <Sparkles size={12} />
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onToggleBag(item);
+                }}
+                className={`flex-1 py-2 px-3 rounded-xl text-xs font-semibold transition-all duration-200 flex items-center justify-center gap-1.5 shadow-xs ${
+                  inBag
+                    ? 'bg-emerald-700 text-white hover:bg-emerald-800'
+                    : 'bg-forest-green-700 text-white hover:bg-forest-green-800 active:scale-98'
+                }`}
+                title={inBag ? 'Quitar de la bolsa' : 'Agregar a la bolsa'}
+              >
+                {inBag ? (
+                  <>
+                    <Check size={14} /> En bolsa
+                  </>
+                ) : (
+                  <>
+                    <ShoppingBag size={14} /> + Bolsa
+                  </>
+                )}
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onSelect(item);
+                }}
+                className="py-2 px-3 rounded-xl text-xs font-semibold bg-warm-beige-100 hover:bg-warm-beige-200 text-forest-green-900 border border-warm-beige-300 transition-colors flex items-center justify-center gap-1"
+                title="Ver detalles completos"
+              >
+                Detalles <Sparkles size={11} />
+              </button>
             </>
           )}
-        </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Componente Drawer / Modal de la Bolsa de Compras
+function BagDrawer({ isOpen, onClose, bagItems, onRemoveItem, onClearBag }) {
+  const total = useMemo(() => {
+    return bagItems.reduce((acc, item) => acc + (Number(item.precio) || 0), 0);
+  }, [bagItems]);
+
+  const shipping = useMemo(() => {
+    return getShippingQualification(total);
+  }, [total]);
+
+  // Generar link de WhatsApp con todos los items
+  const bagWhatsAppLink = useMemo(() => {
+    if (!bagItems || bagItems.length === 0) return '';
+
+    const itemsList = bagItems
+      .map((item, idx) => {
+        const tallas = Array.isArray(item.talla) ? item.talla.join(', ') : item.talla;
+        const colores = Array.isArray(item.color) ? item.color.join(', ') : item.color;
+        return `${idx + 1}. *${item.nombre}* (${item.marca})\n   - Talla: ${tallas} | Color: ${colores}\n   - Precio: $${item.precio}`;
+      })
+      .join('\n\n');
+
+    let shippingSummary = '';
+    if (shipping.qualifiesCasaBlanca && shipping.qualifiesPuntoPost) {
+      shippingSummary = '📦 Califico para envío gratis por Punto Post o Casa Blanca.';
+    } else if (shipping.qualifiesCasaBlanca) {
+      shippingSummary = `🤝 Califico para entrega gratis por Casa Blanca (o Punto Post con $${PUNTO_POST_EXTRA_COST} de envío).`;
+    } else {
+      shippingSummary = `📍 Envío regular (Punto Post: $${PUNTO_POST_EXTRA_COST} extra / Casa Blanca: $${CASA_BLANCA_EXTRA_COST} extra).`;
+    }
+
+    const text = `¡Hola ${SELLER_NAME}! Me interesa apartar las siguientes prendas (${bagItems.length} ${bagItems.length === 1 ? 'prenda' : 'prendas'}) de tu venta de clóset:\n\n${itemsList}\n\n💰 *Total (${bagItems.length} prendas): $${total}*\n${shippingSummary}\n\n¿Siguen disponibles? Me gustaría coordinar para comprarlas. ¡Muchas gracias!`;
+
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  }, [bagItems, total, shipping]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 overflow-hidden bg-black/60 backdrop-blur-xs flex justify-end animate-fade-in">
+      <div 
+        className="w-full max-w-lg bg-white h-full shadow-2xl flex flex-col relative animate-slide-left border-l border-warm-beige-200"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Cabecera de la Bolsa */}
+        <div className="p-4 md:p-5 border-b border-warm-beige-200 flex items-center justify-between bg-warm-beige-50">
+          <div className="flex items-center gap-2.5">
+            <div className="p-2 bg-forest-green-700 text-white rounded-xl shadow-xs">
+              <ShoppingBag size={20} />
+            </div>
+            <div>
+              <h2 className="text-base md:text-lg font-bold text-forest-green-950 font-serif">
+                Mi Bolsa de Compras
+              </h2>
+              <span className="text-xs text-stone-500 font-medium">
+                {bagItems.length} {bagItems.length === 1 ? 'prenda seleccionada' : 'prendas seleccionadas'}
+              </span>
+            </div>
+          </div>
+          
+          <button
+            onClick={onClose}
+            className="p-2 rounded-full hover:bg-warm-beige-200 text-stone-600 hover:text-stone-900 transition-colors focus:outline-none"
+            aria-label="Cerrar bolsa"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        {/* Contenido scrolleable */}
+        <div className="flex-1 overflow-y-auto p-4 md:p-5 space-y-4">
+          {bagItems.length === 0 ? (
+            <div className="text-center py-16 px-4">
+              <div className="w-16 h-16 bg-warm-beige-100 text-stone-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-warm-beige-200">
+                <ShoppingBag size={28} />
+              </div>
+              <h3 className="text-base font-bold text-stone-800 mb-1">Tu bolsa está vacía</h3>
+              <p className="text-xs text-stone-500 max-w-xs mx-auto mb-6">
+                Agrega prendas del clóset para pedirlas todas juntas en un solo mensaje de WhatsApp.
+              </p>
+              <button
+                onClick={onClose}
+                className="bg-forest-green-700 hover:bg-forest-green-800 text-white font-semibold text-xs py-2.5 px-5 rounded-xl transition-all shadow-xs"
+              >
+                Explorar catálogo
+              </button>
+            </div>
+          ) : (
+            <>
+              {/* Sección de Estado y Calificación de Envíos */}
+              <div className="bg-[#faf8f5] rounded-2xl p-4 border border-warm-beige-300 space-y-3 shadow-2xs">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold uppercase tracking-wider text-forest-green-800">
+                    Información de Envío
+                  </span>
+                  <span className="text-xs font-extrabold text-forest-green-900 bg-warm-beige-200/70 px-2 py-0.5 rounded-md">
+                    Subtotal: ${total}
+                  </span>
+                </div>
+
+                {/* Banner de Calificación Principal */}
+                <div className={`p-3 rounded-xl border text-xs leading-relaxed ${
+                  shipping.qualifiesCasaBlanca && shipping.qualifiesPuntoPost
+                    ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
+                    : shipping.qualifiesCasaBlanca
+                    ? 'bg-amber-50 border-amber-300 text-amber-900'
+                    : 'bg-warm-beige-100 border-warm-beige-300 text-stone-800'
+                }`}>
+                  <p className="font-semibold">
+                    {shipping.statusText}
+                  </p>
+                </div>
+
+                {/* Detalle por tipo de entrega */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs">
+                  {/* Tarjeta Casa Blanca */}
+                  <div className={`p-2.5 rounded-xl border flex flex-col justify-between ${
+                    shipping.qualifiesCasaBlanca 
+                      ? 'bg-emerald-50/70 border-emerald-200 text-emerald-900' 
+                      : 'bg-stone-50 border-warm-beige-200 text-stone-700'
+                  }`}>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-bold flex items-center gap-1">
+                        <Store size={13} className="text-forest-green-700" /> Casa Blanca
+                      </span>
+                      {shipping.qualifiesCasaBlanca ? (
+                        <span className="bg-emerald-600 text-white text-[10px] font-bold px-1.5 py-0.2 rounded">
+                          ¡GRATIS!
+                        </span>
+                      ) : (
+                        <span className="text-stone-500 font-semibold text-[10px]">
+                          +$20 extra
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-[11px] text-stone-600">
+                      {shipping.qualifiesCasaBlanca 
+                        ? 'Compras ≥ $200' 
+                        : `Te faltan $${shipping.diffCasaBlanca} para gratis`}
+                    </span>
+                  </div>
+
+                  {/* Tarjeta Punto Post */}
+                  <div className={`p-2.5 rounded-xl border flex flex-col justify-between ${
+                    shipping.qualifiesPuntoPost 
+                      ? 'bg-emerald-50/70 border-emerald-200 text-emerald-900' 
+                      : 'bg-stone-50 border-warm-beige-200 text-stone-700'
+                  }`}>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-bold flex items-center gap-1">
+                        <Truck size={13} className="text-forest-green-700" /> Punto Post
+                      </span>
+                      {shipping.qualifiesPuntoPost ? (
+                        <span className="bg-emerald-600 text-white text-[10px] font-bold px-1.5 py-0.2 rounded">
+                          ¡GRATIS!
+                        </span>
+                      ) : (
+                        <span className="text-stone-500 font-semibold text-[10px]">
+                          +$95 extra
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-[11px] text-stone-600">
+                      {shipping.qualifiesPuntoPost 
+                        ? 'Compras ≥ $600 a todo México' 
+                        : `Te faltan $${shipping.diffPuntoPost} para gratis`}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lista de Prendas en la bolsa */}
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between px-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-stone-500">
+                    Prendas en tu lista ({bagItems.length})
+                  </span>
+                  <button
+                    onClick={onClearBag}
+                    className="text-[11px] text-red-600 hover:text-red-800 font-semibold transition-colors"
+                  >
+                    Vaciar bolsa
+                  </button>
+                </div>
+
+                {bagItems.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex items-center gap-3 bg-white p-3 rounded-2xl border border-warm-beige-200 shadow-2xs hover:border-warm-beige-300 transition-all"
+                  >
+                    {/* Miniatura */}
+                    <img
+                      src={`/images/${item.imagenes[0]}`}
+                      alt={item.nombre}
+                      className="w-16 h-20 object-cover rounded-xl bg-warm-beige-100 flex-shrink-0 border border-warm-beige-200"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = `https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600`;
+                      }}
+                    />
+
+                    {/* Información */}
+                    <div className="flex-1 min-w-0">
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-forest-green-700/80">
+                        {item.marca}
+                      </div>
+                      <h4 className="text-xs font-bold text-stone-900 truncate">
+                        {item.nombre}
+                      </h4>
+                      <div className="flex flex-wrap gap-1 my-1 text-[10px] text-stone-600">
+                        <span className="bg-warm-beige-100 px-1.5 py-0.5 rounded">
+                          Talla: {Array.isArray(item.talla) ? item.talla.join(', ') : item.talla}
+                        </span>
+                        <span className="bg-warm-beige-100 px-1.5 py-0.5 rounded">
+                          Color: {Array.isArray(item.color) ? item.color.join(', ') : item.color}
+                        </span>
+                      </div>
+                      <div className="text-xs font-extrabold text-forest-green-900">
+                        ${item.precio}
+                      </div>
+                    </div>
+
+                    {/* Botón eliminar */}
+                    <button
+                      onClick={() => onRemoveItem(item.id)}
+                      className="p-2 text-stone-400 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors focus:outline-none flex-shrink-0"
+                      title="Quitar de la bolsa"
+                      aria-label="Quitar prenda"
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* Pie de la bolsa con Checkout por WhatsApp */}
+        {bagItems.length > 0 && (
+          <div className="p-4 md:p-5 border-t border-warm-beige-200 bg-white space-y-3">
+            <div className="flex items-center justify-between text-stone-800">
+              <span className="text-xs font-medium">Total de prendas ({bagItems.length}):</span>
+              <span className="text-xl font-extrabold text-forest-green-950">${total}</span>
+            </div>
+
+            <a
+              href={bagWhatsAppLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#25d366] hover:bg-[#20ba5a] text-white py-3.5 px-5 rounded-2xl font-bold text-sm transition-all shadow-md hover:shadow-lg active:scale-98 flex items-center justify-center gap-2 focus:outline-none"
+            >
+              <MessageCircle size={18} className="fill-current" />
+              Enviar pedido por WhatsApp (${total})
+              <ExternalLink size={14} />
+            </a>
+
+            <p className="text-[10px] text-center text-stone-400 leading-tight">
+              Se enviará la lista completa de {bagItems.length} prendas a WhatsApp para apartarlas y coordinar entrega con {SELLER_NAME}.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -277,7 +617,53 @@ export default function App() {
     return BANNERS[randomIndex];
   }, []);
 
-  // --- ESTADOS ---
+  // --- ESTADO DE LA BOLSA DE COMPRAS (con persistencia en localStorage) ---
+  const [bag, setBag] = useState(() => {
+    try {
+      const saved = localStorage.getItem('closet_sale_bag');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  const [isBagOpen, setIsBagOpen] = useState(false);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('closet_sale_bag', JSON.stringify(bag));
+    } catch {
+      // Ignorar fallas de localStorage
+    }
+  }, [bag]);
+
+  // Lista completa de objetos prenda en la bolsa
+  const bagItems = useMemo(() => {
+    return bag
+      .map(id => items.find(item => item.id === id))
+      .filter(item => item && !item.vendido);
+  }, [bag]);
+
+  const bagTotal = useMemo(() => {
+    return bagItems.reduce((sum, item) => sum + (Number(item.precio) || 0), 0);
+  }, [bagItems]);
+
+  const isInBag = (itemId) => bag.includes(itemId);
+
+  const toggleBagItem = (item) => {
+    if (item.vendido) return;
+    setBag(prev => prev.includes(item.id) ? prev.filter(id => id !== item.id) : [...prev, item.id]);
+  };
+
+  const removeFromBag = (itemId) => {
+    setBag(prev => prev.filter(id => id !== itemId));
+  };
+
+  const clearBag = () => {
+    setBag([]);
+  };
+
+  // --- ESTADOS DE FILTROS ---
   const [talla, setTalla] = useState('');
   const [color, setColor] = useState('');
   const [marca, setMarca] = useState('');
@@ -288,6 +674,18 @@ export default function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [showInfoBanner, setShowInfoBanner] = useState(true);
   const [showMobileFilters, setShowMobileFilters] = useState(false);
+
+  // Cerrar modales con tecla Escape
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setSelectedItem(null);
+        setIsBagOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   // --- OBTENER OPCIONES ÚNICAS DE FILTROS ---
   const uniqueFilters = useMemo(() => {
@@ -402,14 +800,14 @@ export default function App() {
     setHideSold(true);
   };
 
-  // --- GENERAR ENLACE WHATSAPP ---
+  // --- GENERAR ENLACE WHATSAPP INDIVIDUAL ---
   const getWhatsAppLink = (item) => {
     const text = `¡Hola! Me interesa muchísimo tu prenda de la venta de clóset:\n\n*${item.nombre}* (${item.marca})\nTalla: ${item.talla}\nColor: ${item.color}\nPrecio: $${item.precio}\n\n¿Sigue disponible? Me gustaría coordinar para comprarla. ¡Gracias!`;
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
   };
 
   return (
-    <div className="min-height-screen bg-warm-beige-50 selection:bg-forest-green-100 selection:text-forest-green-900 pb-16">
+    <div className="min-height-screen bg-warm-beige-50 selection:bg-forest-green-100 selection:text-forest-green-900 pb-20">
       
       {/* 1. ANUNCIO SUPERIOR / INFO BAR */}
       {showInfoBanner && (
@@ -417,7 +815,7 @@ export default function App() {
           style={{ backgroundColor: '#242b1a' }}
           className="bg-forest-green-800 text-warm-beige-50 px-4 py-2 text-xs md:text-sm font-medium text-center relative flex justify-center items-center gap-2"
         >
-          <span>✨ Limpieza de clóset.</span>
+          <span>✨ Limpieza de clóset. Entrega gratis en compras mayores a $200 (Casa Blanca) o $600 (Punto Post).</span>
           <button
             onClick={() => setShowInfoBanner(false)}
             className="hover:bg-[#414833] p-1 rounded-full absolute right-2 transition-colors focus:outline-none"
@@ -449,7 +847,7 @@ export default function App() {
           </h1>
           <p className="text-base md:text-lg text-stone-100 max-w-xl mx-auto font-light leading-relaxed mb-6">
             Ropa que ya no me pongo pero sigue en excelente estado.
-            <br/>Échale un ojo 👀.
+            <br/>Agrega varias prendas a tu bolsa y haz tu pedido junto por WhatsApp.
           </p>
 
           {/* Estadísticas en la cabecera */}
@@ -478,12 +876,12 @@ export default function App() {
       {/* 3. CONTENEDOR PRINCIPAL */}
       <main className="max-w-6xl mx-auto px-4 mt-8">
         
-        {/* BARRA DE FILTROS & BUSCADOR (STICKY) */}
+        {/* BARRA DE FILTROS & BUSCADOR & BOTÓN BOLSA (STICKY) */}
         <div className="sticky top-0 z-40 bg-warm-beige-50/95 backdrop-blur-md py-2 md:py-3.5 border-b border-warm-beige-200 shadow-xs mb-4 md:mb-8 transition-all duration-300">
           <div className="bg-white rounded-2xl p-2.5 md:p-4 border border-warm-beige-200/80 shadow-xs">
             <div className="flex flex-col lg:flex-row gap-2.5 lg:gap-4 items-stretch justify-between">
               
-              {/* Buscador y Botón de Filtros en Móvil */}
+              {/* Buscador, Filtros y Botón de Bolsa */}
               <div className="flex gap-2 items-center flex-1">
                 {/* Buscador de texto */}
                 <div className="relative flex-1">
@@ -520,6 +918,20 @@ export default function App() {
                   {hasActiveFilters && (
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                   )}
+                </button>
+
+                {/* Botón de Bolsa en Barra Superior */}
+                <button
+                  type="button"
+                  onClick={() => setIsBagOpen(true)}
+                  className="flex items-center justify-center gap-2 px-3 py-2 md:py-2.5 rounded-xl bg-forest-green-700 hover:bg-forest-green-800 text-white text-xs font-bold transition-all shadow-xs active:scale-98 relative"
+                  title="Abrir bolsa de compras"
+                >
+                  <ShoppingBag size={15} />
+                  <span className="hidden sm:inline">Bolsa</span>
+                  <span className="bg-emerald-500 text-forest-green-950 font-black text-[11px] px-1.5 py-0.2 rounded-full min-w-[20px] text-center">
+                    {bagItems.length}
+                  </span>
                 </button>
               </div>
 
@@ -680,26 +1092,26 @@ export default function App() {
         <section className="bg-white rounded-2xl p-5 border border-warm-beige-200 mb-8 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-4 shadow-2xs">
           <div className="flex items-center gap-3">
             <div className="p-3 bg-forest-green-50 rounded-xl text-forest-green-700 flex-shrink-0">
-              <Info size={24} />
+              <ShoppingBag size={24} />
             </div>
             <div>
-              <h3 className="font-bold text-gray-900 text-sm md:text-base">¿Cómo reservar o comprar prendas?</h3>
+              <h3 className="font-bold text-gray-900 text-sm md:text-base">¿Cómo funciona la bolsa de compras?</h3>
               <p className="text-xs text-stone-600 max-w-xl mt-0.5">
-                Navega por el catálogo, haz clic en lo que te guste para ver sus fotos completas y pulsa el botón de WhatsApp para mandarme un mensajito. Así nos ponemos de acuerdo para entrega.
+                Presiona <strong>+ Bolsa</strong> en las prendas que te gusten para agregarlas. Al finalizar, abre tu bolsa para enviar un solo mensaje de WhatsApp con todo tu pedido.
               </p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0 w-full xl:w-auto">
             <div className="flex-1 sm:max-w-[280px] bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold p-3 rounded-xl leading-relaxed flex items-start gap-2">
-              <span className="text-sm select-none">🤝</span>
+              <Store size={18} className="shrink-0 mt-0.5 text-amber-700" />
               <span>
-                Entrega/Translado CasaBlanca sucursal de tu preferencia en compras mayores a $200
+                <strong>Casa Blanca:</strong> Entrega gratis en compras &gt; $200 (o $20 extra).
               </span>
             </div>
             <div className="flex-1 sm:max-w-[280px] bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold p-3 rounded-xl leading-relaxed flex items-start gap-2">
-              <span className="text-sm select-none">📦</span>
+              <Truck size={18} className="shrink-0 mt-0.5 text-emerald-700" />
               <span>
-                Envío a toda la república por Punto Post en compras mayores a $600
+                <strong>Punto Post:</strong> Envío nacional gratis en compras &gt; $600 (o $95 extra).
               </span>
             </div>
           </div>
@@ -712,7 +1124,9 @@ export default function App() {
               <ProductCard 
                 key={item.id} 
                 item={item} 
-                onSelect={(selected) => setSelectedItem(selected)} 
+                onSelect={(selected) => setSelectedItem(selected)}
+                inBag={isInBag(item.id)}
+                onToggleBag={toggleBagItem}
               />
             ))}
           </div>
@@ -736,7 +1150,29 @@ export default function App() {
 
       </main>
 
-      {/* 4. MODAL DE DETALLE DE PRENDA */}
+      {/* 4. BOTÓN FLOTANTE DE LA BOLSA (FAB) */}
+      {bagItems.length > 0 && (
+        <div className="fixed bottom-5 right-5 z-40 animate-fade-in">
+          <button
+            onClick={() => setIsBagOpen(true)}
+            className="flex items-center gap-3 bg-forest-green-800 hover:bg-forest-green-900 text-white px-5 py-3.5 rounded-full shadow-2xl border-2 border-emerald-400/40 hover:scale-105 active:scale-95 transition-all duration-300"
+            aria-label="Abrir bolsa de compras"
+          >
+            <div className="relative">
+              <ShoppingBag size={22} />
+              <span className="absolute -top-2 -right-2 bg-emerald-400 text-forest-green-950 text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-xs">
+                {bagItems.length}
+              </span>
+            </div>
+            <div className="flex flex-col text-left">
+              <span className="text-xs font-bold leading-tight">Mi Bolsa</span>
+              <span className="text-[11px] text-emerald-200 font-semibold leading-tight">${bagTotal}</span>
+            </div>
+          </button>
+        </div>
+      )}
+
+      {/* 5. MODAL DE DETALLE DE PRENDA */}
       {selectedItem && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
@@ -747,7 +1183,7 @@ export default function App() {
             className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl border border-warm-beige-100 flex flex-col md:flex-row relative animate-scale-up"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Botón Cerrar (Esquina superior derecha en móvil/escritorio) */}
+            {/* Botón Cerrar */}
             <button 
               onClick={() => setSelectedItem(null)}
               className="absolute right-4 top-4 z-20 p-2 rounded-full bg-white/90 hover:bg-white text-stone-700 hover:text-stone-950 shadow-md transition-all focus:outline-none"
@@ -761,7 +1197,7 @@ export default function App() {
               <ModalGallery images={selectedItem.imagenes} itemNombre={selectedItem.nombre} vendido={selectedItem.vendido} />
             </div>
 
-            {/* Lado Derecho: Información Completa y Botón WhatsApp */}
+            {/* Lado Derecho: Información Completa y Botones */}
             <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col h-full justify-between overflow-y-auto md:max-h-[600px]">
               <div>
                 
@@ -833,7 +1269,7 @@ export default function App() {
                   </p>
                 </div>
 
-                {/* Garantía e Higiene (Detalle sutil ecológico) */}
+                {/* Garantía e Higiene */}
                 <div className="space-y-2 mb-8 text-xs text-stone-500">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={14} className="text-forest-green-500" />
@@ -847,7 +1283,7 @@ export default function App() {
 
               </div>
 
-              {/* Botón WhatsApp */}
+              {/* Botones de Acción en el Modal */}
               <div>
                 {selectedItem.vendido ? (
                   <button 
@@ -857,19 +1293,58 @@ export default function App() {
                     Este artículo ya se vendió
                   </button>
                 ) : (
-                  <a
-                    href={getWhatsAppLink(selectedItem)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-[#25d366] hover:bg-[#20ba5a] text-white py-3.5 px-6 rounded-2xl font-bold text-sm transition-all shadow-md hover:shadow-lg active:scale-98 flex items-center justify-center gap-2 focus:outline-none"
-                  >
-                    <MessageCircle size={18} className="fill-current" />
-                    Me interesa comprarlo por WhatsApp
-                    <ExternalLink size={14} />
-                  </a>
+                  <div className="space-y-3">
+                    {/* Botón Principal: Agregar / Quitar de la bolsa */}
+                    <button
+                      onClick={() => toggleBagItem(selectedItem)}
+                      className={`w-full py-3.5 px-5 rounded-2xl font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2 ${
+                        isInBag(selectedItem.id)
+                          ? 'bg-emerald-700 hover:bg-emerald-800 text-white'
+                          : 'bg-forest-green-700 hover:bg-forest-green-800 text-white active:scale-98'
+                      }`}
+                    >
+                      {isInBag(selectedItem.id) ? (
+                        <>
+                          <Check size={18} />
+                          En tu bolsa (Clic para quitar)
+                        </>
+                      ) : (
+                        <>
+                          <ShoppingBag size={18} />
+                          Agregar a la bolsa
+                        </>
+                      )}
+                    </button>
+
+                    {/* Botón Ver Bolsa si hay prendas */}
+                    {bagItems.length > 0 && (
+                      <button
+                        onClick={() => {
+                          setSelectedItem(null);
+                          setIsBagOpen(true);
+                        }}
+                        className="w-full bg-warm-beige-100 hover:bg-warm-beige-200 text-forest-green-900 border border-warm-beige-300 py-2.5 px-4 rounded-2xl font-semibold text-xs transition-all flex items-center justify-center gap-2"
+                      >
+                        <ShoppingBag size={15} />
+                        Ver mi bolsa ({bagItems.length} {bagItems.length === 1 ? 'prenda' : 'prendas'}) y pedir por WhatsApp
+                      </button>
+                    )}
+
+                    {/* Link para comprar solo este artículo */}
+                    <a
+                      href={getWhatsAppLink(selectedItem)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-[#25d366]/10 hover:bg-[#25d366]/20 text-emerald-800 border border-emerald-300 py-2.5 px-4 rounded-2xl font-semibold text-xs transition-all flex items-center justify-center gap-2"
+                    >
+                      <MessageCircle size={15} className="text-[#25d366] fill-current" />
+                      Comprar solo esta prenda por WhatsApp
+                      <ExternalLink size={12} />
+                    </a>
+                  </div>
                 )}
                 <p className="text-[10px] text-center text-stone-400 mt-2.5">
-                  Se abrirá tu aplicación de WhatsApp con un mensaje pre-configurado para consultar a {SELLER_NAME}.
+                  Agrega varias prendas para calificar para envío gratis por Casa Blanca ($200) o Punto Post ($600).
                 </p>
               </div>
 
@@ -877,6 +1352,15 @@ export default function App() {
           </div>
         </div>
       )}
+
+      {/* 6. DRAWER / MODAL DE LA BOLSA DE COMPRAS */}
+      <BagDrawer
+        isOpen={isBagOpen}
+        onClose={() => setIsBagOpen(false)}
+        bagItems={bagItems}
+        onRemoveItem={removeFromBag}
+        onClearBag={clearBag}
+      />
 
       {/* FOOTER */}
       <footer className="mt-20 border-t border-warm-beige-200 py-10 text-center text-stone-500 text-xs px-4">
@@ -904,7 +1388,7 @@ function ModalGallery({ images, itemNombre, vendido }) {
   const [index, setIndex] = useState(0);
   const scrollContainerRef = useRef(null);
 
-  // Sincronizar el scroll cuando cambia la imagen seleccionada desde fuera (por ejemplo, con las imágenes de otra prenda)
+  // Sincronizar el scroll cuando cambia la imagen seleccionada desde fuera
   useEffect(() => {
     setIndex(0);
     const container = scrollContainerRef.current;
