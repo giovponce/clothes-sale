@@ -27,6 +27,36 @@ const BANNERS = [mushroomBanner1, mushroomBanner2, mushroomBanner3, mushroomBann
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "34600000000";
 const SELLER_NAME = import.meta.env.VITE_SELLER_NAME || "Giov";
 
+// Helpers para estado y badges de prendas
+const getItemCondition = (item) => {
+  if (item.condicion) return item.condicion;
+  const newIds = [1, 24, 30, 38, 43, 52];
+  if (newIds.includes(item.id)) return 'nuevo';
+  if (item.new) return 'como-nuevo';
+  return 'seminuevo';
+};
+
+const getConditionBadge = (condicion) => {
+  switch (condicion) {
+    case 'nuevo':
+      return {
+        label: 'Nuevo',
+        classes: 'bg-emerald-100 text-emerald-800 border-emerald-300 font-bold'
+      };
+    case 'como-nuevo':
+      return {
+        label: 'Como nuevo',
+        classes: 'bg-[#e3ebe4] text-forest-green-700 border-forest-green-300 font-semibold'
+      };
+    case 'seminuevo':
+    default:
+      return {
+        label: 'Seminuevo',
+        classes: 'bg-warm-beige-100 text-warm-beige-700 border-warm-beige-300 font-semibold'
+      };
+  }
+};
+
 function ProductCard({ item, onSelect }) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
@@ -192,13 +222,15 @@ function ProductCard({ item, onSelect }) {
           <h3 className="font-semibold text-gray-900 text-sm md:text-base line-clamp-1 group-hover:text-forest-green-700 transition-colors flex-1">
             {item.nombre}
           </h3>
-          <span className={`inline-flex items-center text-[9px] font-bold px-1.5 py-0.5 rounded-md uppercase tracking-wider flex-shrink-0 border ${
-            item.new
-              ? 'bg-[#e3ebe4] text-forest-green-700 border-forest-green-300'
-              : 'bg-warm-beige-100 text-warm-beige-700 border-warm-beige-300'
-          }`}>
-            {item.new ? 'Nuevo' : 'Seminuevo'}
-          </span>
+          {(() => {
+            const cond = getItemCondition(item);
+            const badge = getConditionBadge(cond);
+            return (
+              <span className={`inline-flex items-center text-[9px] px-1.5 py-0.5 rounded-md uppercase tracking-wider flex-shrink-0 border ${badge.classes}`}>
+                {badge.label}
+              </span>
+            );
+          })()}
         </div>
 
         {/* Características Rápidas */}
@@ -252,7 +284,7 @@ export default function App() {
   const [categoria, setCategoria] = useState('');
   const [search, setSearch] = useState('');
   const [hideSold, setHideSold] = useState(true);
-  const [condicion, setCondicion] = useState(''); // '' (todos), 'nuevo', 'seminuevo'
+  const [condicion, setCondicion] = useState(''); // '' (todos), 'nuevo', 'como-nuevo', 'seminuevo'
   const [selectedItem, setSelectedItem] = useState(null);
   const [showInfoBanner, setShowInfoBanner] = useState(true);
   const [showMobileFilters, setShowMobileFilters] = useState(false);
@@ -325,9 +357,11 @@ export default function App() {
       if (marca && item.marca !== marca) return false;
       // Filtro Categoría
       if (categoria && item.categoria !== categoria) return false;
-      // Filtro de Estado (Nuevo / Seminuevo)
-      if (condicion === 'nuevo' && !item.new) return false;
-      if (condicion === 'seminuevo' && item.new) return false;
+      // Filtro de Estado (Nuevo / Como nuevo / Seminuevo)
+      if (condicion) {
+        const itemCond = getItemCondition(item);
+        if (itemCond !== condicion) return false;
+      }
       // Filtro Ocultar Vendidos
       if (hideSold && item.vendido) return false;
       // Filtro Búsqueda por texto (Nombre, Marca, Descripción, Categoría)
@@ -576,7 +610,7 @@ export default function App() {
                 {/* Separador vertical en escritorio */}
                 <div className="hidden sm:block w-px h-5 bg-warm-beige-200" />
 
-                {/* Control Segmentado para ver Nuevo / Seminuevo */}
+                {/* Control Segmentado para ver Estado: Todos / Nuevos / Como nuevos / Seminuevos */}
                 <div className="flex items-center bg-warm-beige-100/90 p-0.5 rounded-lg border border-warm-beige-200 shadow-2xs">
                   <button
                     onClick={() => setCondicion('')}
@@ -597,6 +631,16 @@ export default function App() {
                     }`}
                   >
                     Nuevos
+                  </button>
+                  <button
+                    onClick={() => setCondicion('como-nuevo')}
+                    className={`text-[9px] md:text-xs font-bold px-2 py-0.5 md:px-2.5 md:py-1 rounded-md transition-all cursor-pointer ${
+                      condicion === 'como-nuevo'
+                        ? 'bg-forest-green-600 text-white shadow-3xs'
+                        : 'text-stone-600 hover:text-stone-950'
+                    }`}
+                  >
+                    Como nuevos
                   </button>
                   <button
                     onClick={() => setCondicion('seminuevo')}
@@ -742,13 +786,15 @@ export default function App() {
                   <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-stone-900 leading-tight">
                     {selectedItem.nombre}
                   </h2>
-                  <span className={`inline-flex items-center text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider border ${
-                    selectedItem.new
-                      ? 'bg-[#e3ebe4] text-forest-green-700 border-forest-green-300'
-                      : 'bg-warm-beige-100 text-warm-beige-700 border-warm-beige-300'
-                  }`}>
-                    {selectedItem.new ? 'Nuevo' : 'Seminuevo'}
-                  </span>
+                  {(() => {
+                    const cond = getItemCondition(selectedItem);
+                    const badge = getConditionBadge(cond);
+                    return (
+                      <span className={`inline-flex items-center text-[10px] px-2 py-0.5 rounded-md uppercase tracking-wider border ${badge.classes}`}>
+                        {badge.label}
+                      </span>
+                    );
+                  })()}
                 </div>
 
                 {/* Precio */}

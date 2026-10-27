@@ -8,6 +8,7 @@ export const items = [
     categoria: "Tops",
     precio: 100,
     new: true,
+    condicion: "nuevo",
     descripcion: "Blusa estilo oriental china, estampado típico, con botones al frente y manga corta. Composición 100% Poliester",
     vendido: false,
     imagenes: [
@@ -25,6 +26,7 @@ export const items = [
     categoria: "Tops",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Blusa blanca, tela ligera. Botones al frente. Cuello semi-redondo.",
     vendido: false,
     imagenes: ["clothes/tops/2.blusa-blanca-dazy1.png", "clothes/tops/2.blusa-blanca-dazy2.png"]
@@ -38,6 +40,7 @@ export const items = [
     categoria: "Accesorios",
     precio: 50,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Gorro suavecito y caliente, con forma de perrito husky o lobo siberiano",
     vendido: false,
     imagenes: [
@@ -57,6 +60,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 150,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Vestido clásico negro, con bolsillos y manga 3/4. La tela tiene una caida muy suave y es cómodo. Hecho en Sri Lanka con tela importada. De largo, queda abajo de la rodilla.",
     vendido: false,
     imagenes: [
@@ -74,6 +78,7 @@ export const items = [
     categoria: "Pantalones",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Pantalón ancho color naranja quemada. MEDIDAS: Cintura: 84 cm,  Cadera: 116 cm Tiro: 34 cm Largo: 92 cm. Estira mucho y es muy fresco. Bolsillos funcionales",
     vendido: false,
     imagenes: [
@@ -92,6 +97,7 @@ export const items = [
     categoria: "Pantalones",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Pantalón mezclilla gruesa, tobillos tipo jogger con resorte. Corte tipo mom jeans. Tiro alto. Bolsillos muy amplios",
     vendido: false,
     imagenes: [
@@ -110,6 +116,7 @@ export const items = [
     categoria: "Shorts",
     precio: 60,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Short de mezclilla azul, es largo, pero queda arriba de la rodilla. Tiro alto. Muy comodo y tiene resorte en la parte de atrás para un mejor ajuste. Bolsillos muy amplios.",
     vendido: false,
     imagenes: [
@@ -128,6 +135,7 @@ export const items = [
     categoria: "Shorts",
     precio: 50,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Short mezclilla negro, es largo, queda arriba de la rodilla. Tiro alto. Comodo pero la tela casi no estira. Bolsillos muy amplios.",
     vendido: false,
     imagenes: [
@@ -145,6 +153,7 @@ export const items = [
     categoria: "Pantalones",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Pantalón de mezclilla color negro liso, corte tipo recto. Estilo tipo mom jeans. Bolsillos muy amplios.",
     vendido: false,
     imagenes: [
@@ -163,6 +172,7 @@ export const items = [
     categoria: "Pantalones",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Pantalon de mezclilla color azul claro, corte recto ligeramente entubado. Corte del pantalón tipo mom jeans, tiro alto. Bolsillos muy amplios.",
     vendido: false,
     imagenes: [
@@ -182,6 +192,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Falda corta de estampado tartan blanco y negro tipo colegiala, marca hot topic. No estira.",
     vendido: false,
     imagenes: [
@@ -200,6 +211,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Falda mezclilla corta color azul. Mezclilla rigida, estira muy poco. Flecos en el borde y bolsillos funcionales.",
     vendido: false,
     imagenes: [
@@ -218,6 +230,7 @@ export const items = [
     categoria: "Shorts",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Short de vestir corto con bolsillos marca Spirit. Color verde amarillo",
     vendido: false,
     imagenes: [
@@ -235,6 +248,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Falda corta azul mezclilla oscuro, con pequeñas deshilachadas para dar estilo y flecos cortos en el borde.",
     vendido: false,
     imagenes: [
@@ -253,6 +267,7 @@ export const items = [
     categoria: "Tops",
     precio: 70,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Blusa manga larga de rayas en blanco y negro, cuello de tortuga muy cómodo y suave.",
     vendido: false,
     imagenes: [
@@ -270,6 +285,7 @@ export const items = [
     categoria: "Tops",
     precio: 60,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Blusa ligera de rayas negro y tinto, mangas cómodas 3/4 con listón para amarrarse y caída súper agradable.",
     vendido: false,
     imagenes: [
@@ -287,6 +303,7 @@ export const items = [
     categoria: "Tops",
     precio: 100,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Hermoso chaleco tejido beige de Lefties. Largo y cuenta con cordones para ajustar.",
     vendido: false,
     imagenes: [
@@ -304,6 +321,7 @@ export const items = [
     categoria: "Tops",
     precio: 60,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Playera de cuello tipo Polo con rayas horizontales, fresca y cómoda. Cuenta con pequeño cierre para mejor ajuste en el cuello",
     vendido: false,
     imagenes: [
@@ -323,6 +341,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 100,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Vestido con cuello tipo vaquero, con estampado clásico",
     vendido: false,
     imagenes: [
@@ -342,6 +361,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 120,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Vestido de noche elegante con brillos y textura tipo pelo, perfecto para fiestas y eventos de gala. Ajuste cómodo.",
     vendido: false,
     imagenes: [
@@ -359,6 +379,7 @@ export const items = [
     categoria: "Tops",
     precio: 80,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Suéter tejido color café de tacto suave, estambre acrilico y botones combinados. Ideal para días frescos.",
     vendido: true,
     imagenes: [
@@ -376,6 +397,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 120,
     new: false,
+    condicion: "seminuevo",
     descripcion: "Vestido negro corto muy lindo con olanes de tela vaporosa en todo el vestido, ajuste cómodo y muy fresh.",
     vendido: false,
     imagenes: [
@@ -393,6 +415,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 120,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Vestido color verde bandera de Zara. Tela tipo plástico ligera e impermeable, composición 100% poliéster. Ideal para días lluviosos o looks vibrantes.",
     vendido: true,
     imagenes: [
@@ -412,6 +435,7 @@ export const items = [
     categoria: "Tops",
     precio: 60,
     new: true,
+    condicion: "nuevo",
     descripcion: "Kimono estilo japonés de composición 100% poliéster. Diseño oriental con caída suave y ligera, ideal para usarlo como capa sobre cualquier outfit.",
     vendido: false,
     imagenes: [
@@ -430,6 +454,7 @@ export const items = [
     categoria: "Conjuntos",
     precio: 160,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Conjunto de falda y blusa en tela vichy (cuadritos blanco y negro estilo picnic). La blusa cuenta con tirantes traseros ajustables. La falda tiene cierre y botones decorativos al frente.",
     vendido: false,
     imagenes: [
@@ -452,6 +477,7 @@ export const items = [
     categoria: "Faldas",
     precio: 100,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Falda larga de estampado floral con flores moradas y estética witchy. Cintura con resorte para mayor comodidad y ajuste. Tela ligera con hermosa caída.",
     vendido: false,
     imagenes: [
@@ -470,6 +496,7 @@ export const items = [
     categoria: "Tops",
     precio: 50,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Suéter color gris con desgaste intencional en la tela para un look casual y con estilo. Marca Forever 21, cómodo y muy llevadero.",
     vendido: false,
     imagenes: [
@@ -488,6 +515,7 @@ export const items = [
     categoria: "Tops",
     precio: 90,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Suéter largo tejido color verde jaspeado, composición 81% algodón y el resto acrílico. Increíblemente suave al tacto, estira bastante y tiene una caída larga muy favorecida.",
     vendido: false,
     imagenes: [
@@ -508,6 +536,7 @@ export const items = [
     categoria: "Tops",
     precio: 100,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Chamarra de mezclilla corta estilo cropped, largo a la cintura. Tiene un parche de lentejuelas de una ladybug (catarina) agregado, dándole un toque único y divertido.",
     vendido: true,
     imagenes: [
@@ -526,6 +555,7 @@ export const items = [
     categoria: "Tops",
     precio: 100,
     new: true,
+    condicion: "nuevo",
     descripcion: "Suéter negro navideño con estampado de gato y la frase \"Meowy Christmas\" al frente, decorado con motivos navideños. El estampado es solo en el frente.",
     vendido: false,
     imagenes: [
@@ -545,6 +575,7 @@ export const items = [
     categoria: "Tops",
     precio: 100,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Suéter rojo con estampado de Pikachu en versión navideña o de cumpleaños. Prácticamente nuevo, en excelente estado. Perfecto para fans de Pokémon.",
     vendido: false,
     imagenes: [
@@ -563,6 +594,7 @@ export const items = [
     categoria: "Tops",
     precio: 100,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Chaleco navideño con estampado bordado de renos y detalles brillosos. Marca White Stag, talla 16/18. Perfecto para lucir el espíritu navideño con estilo.",
     vendido: false,
     imagenes: [
@@ -581,6 +613,7 @@ export const items = [
     categoria: "Tops",
     precio: 70,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Blusa crop verde militar con estampado cottagecore de sapo. Simula llevar una blusa de tirantes negra por debajo, aunque es parte del mismo diseño. Talla 1XL.",
     vendido: false,
     imagenes: [
@@ -599,6 +632,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 120,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Vestido de terciopelo verde, perfecto para la temporada navideña. Largo abajo de la rodilla, con ajuste en cintura y cierre en la parte trasera. Elegante y muy favorecedor.",
     vendido: false,
     imagenes: [
@@ -617,6 +651,7 @@ export const items = [
     categoria: "Pantalones",
     precio: 80,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Pantalón negro de vestir en perfecto estado, ideal para oficina. Tela ligera que no necesita planchado y cae muy bien. Cómodo y elegante para el día a día.",
     vendido: false,
     imagenes: [
@@ -636,6 +671,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Falda larga tipo midi de terciopelo verde navideño con pliegues. Muy elegante y perfecta para fiestas decembrinas. Cintura cómoda y caída vistosa.",
     vendido: false,
     imagenes: [
@@ -654,6 +690,7 @@ export const items = [
     categoria: "Tops",
     precio: 80,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Blusa de estilo coreano con cuello Peter Pan adornado con encaje. Estampado floral en azul con amarillo, manga bombacha muy romántica y femenina. Con etiqueta, prácticamente nueva.",
     vendido: true,
     imagenes: [
@@ -674,6 +711,7 @@ export const items = [
     categoria: "Tops",
     precio: 80,
     new: true,
+    condicion: "nuevo",
     descripcion: "Blusa de estilo coreano con cuello Peter Pan y estampado multicolor en negro, rosa, azul, blanco y amarillo. Nueva con etiqueta, sin uso. Muy linda y femenina.",
     vendido: false,
     imagenes: [
@@ -693,6 +731,7 @@ export const items = [
     categoria: "Conjuntos",
     precio: 180,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Conjunto palazzo tipo overol formal de Massimo Dutti, color blanco hueso. Pantalón de pierna ancha y blusa manga larga de una sola pieza, con elegantes botones negros como detalle. Muy sofisticado.",
     vendido: true,
     imagenes: [
@@ -713,6 +752,7 @@ export const items = [
     categoria: "Tops",
     precio: 100,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Camisa de cuadros en tonos rosa y café, marca Rewind. Estilo casual y muy versátil, ideal para combinar con jeans o faldas.",
     vendido: true,
     imagenes: [
@@ -733,6 +773,7 @@ export const items = [
     categoria: "Pantalones",
     precio: 120,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Pantalón acampanado de tela ligera color azul con rayas verticales negras y blancas, marca Zara hecho en Turquía. Cordón para ajustar la cintura y bolsillos funcionales. Muy cómodo y estilizado.",
     vendido: true,
     imagenes: [
@@ -752,6 +793,7 @@ export const items = [
     categoria: "Faldas",
     precio: 80,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Falda larga color café oscuro de tela tipo pana, suave y ligera. Cintura con resorte y pequeña cinturilla decorativa de listones. Muy cómoda y con bonita caída.",
     vendido: false,
     imagenes: [
@@ -771,6 +813,7 @@ export const items = [
     categoria: "Shorts",
     precio: 50,
     new: true,
+    condicion: "nuevo",
     descripcion: "Short de traje de baño, jamás usado. Tela plástica de secado rápido con resorte en cintura. En perfecto estado.",
     vendido: false,
     imagenes: [
@@ -789,6 +832,7 @@ export const items = [
     categoria: "Tops",
     precio: 40,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Suéter rosa claro con estampado 'Born in the 90s'. Marca Forever 21, talla L. Tiene una pequeña mancha, se refleja en el precio.",
     vendido: false,
     imagenes: [
@@ -807,6 +851,7 @@ export const items = [
     categoria: "Tops",
     precio: 40,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Playera básica negra de manga larga y cuello redondo, marca Old Navy. Clásica y versátil, ideal para cualquier outfit del día a día.",
     vendido: true,
     imagenes: [
@@ -824,6 +869,7 @@ export const items = [
     categoria: "Tops",
     precio: 70,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Blusa de cuello tortuga en rojo y negro, manga larga y calientita. Marca Studio Works, hecha en Indonesia. Perfecta para días fríos con mucho estilo.",
     vendido: false,
     imagenes: [
@@ -841,6 +887,7 @@ export const items = [
     categoria: "Tops",
     precio: 50,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Playera negra lisa al frente con estampado oficial de Pink Floyd en la parte trasera. Licencia original, marca Romwe. Ideal para fans del rock clásico.",
     vendido: false,
     imagenes: [
@@ -858,6 +905,7 @@ export const items = [
     categoria: "Tops",
     precio: 50,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Blusa de terciopelo negro estilo witchy con escote en V y manga corta. Marca Knox Rose, muy elegante y con mucho carácter. Perfecta para looks oscuros y sofisticados.",
     vendido: false,
     imagenes: [
@@ -876,6 +924,7 @@ export const items = [
     categoria: "Accesorios",
     precio: 40,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Bralette color tinto marca Aerie con broche al frente. Talla L/G, cómodo y con un lindo detalle en el cierre. Ideal para usarse solo o como capa.",
     vendido: false,
     imagenes: [
@@ -894,6 +943,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 120,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Vestido blanco de tela tipo encaje con hermoso escote en V. Largo arriba de la rodilla y cuenta con forro interior. Elegante y muy femenino.",
     vendido: false,
     imagenes: [
@@ -913,6 +963,7 @@ export const items = [
     categoria: "Accesorios",
     precio: 250,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Sandalias Steve Madden talla 4, dan para talla 4.5. En buen estado, con hebillas plateadas elegantes. Perfectas para looks casuales o de vestir.",
     vendido: true,
     imagenes: [
@@ -930,6 +981,7 @@ export const items = [
     categoria: "Accesorios",
     precio: 30,
     new: true,
+    condicion: "nuevo",
     descripcion: "Calcetines navideños calientitos, nuevos. Unitalla, máximo para pie talla 7. Tienen huellitas de silicón en la planta para andar solo con ellos sin resbalar.",
     vendido: false,
     imagenes: [
@@ -947,6 +999,7 @@ export const items = [
     categoria: "Accesorios",
     precio: 250,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Botas color café con tacón y punta cuadrada al frente, marca H&M. Talla 38 EU equivalente a talla 24 MX. Elegantes y muy versátiles para cualquier outfit.",
     vendido: true,
     imagenes: [
@@ -967,6 +1020,7 @@ export const items = [
     categoria: "Faldas",
     precio: 150,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Mini falda tartán café con cierre en la parte posterior, de tela suave y calientita. Marca Forever 21 talla M, en excelente estado. MEDIDAS: Largo: 38 cm, Cintura: 37 cm.",
     vendido: false,
     imagenes: [
@@ -988,6 +1042,7 @@ export const items = [
     categoria: "Faldas",
     precio: 200,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Falda midi marca Ann Taylor con estampado de flores en azul marino, amarillo y toques moraditos. Talla 6 (S), usada una sola vez. MEDIDAS: Cintura: 37 cm, Largo: 63.5 cm.",
     vendido: false,
     imagenes: [
@@ -1008,6 +1063,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 200,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Vestido marca Loft talla 4 (da a una talla M, viene amplio) color azul marino con estampado diverso de flores amarillas. Manga larga, cuello con holán y listones para amarrar, cierre trasero. Llega a la rodilla. Usado una sola vez.",
     vendido: false,
     imagenes: [
@@ -1030,6 +1086,7 @@ export const items = [
     categoria: "Accesorios",
     precio: 170,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Sombrero café de tela suave tipo fedora / vaquero / pueblo mágico, con cintilla decorativa. Cuenta con la base para mantener forma, por lo que está en excelente estado. A estrenar, sin etiqueta. (En las fotos se ve un poco de pelo, pero te lo mando impecable).",
     vendido: false,
     imagenes: [
@@ -1049,6 +1106,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 400,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Vestido vintage de los años 80, corte princesa (V) con mangas abombadas y encaje frontal. Muy romántico. Tela ligera y fácil, podría servir para una boda civil o estilo vintage, también para fiestas que no sean bodas por el color. Excelente estado y ya tiene su tintorería. MEDIDAS: Cintura (donde está la V): 44 cm, Largo frente: 128 cm.",
     vendido: false,
     imagenes: [
@@ -1070,6 +1128,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 80,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Vestido blanco bordado con forro, manga corta y detalles de ojalillo (bordado inglés). Tiene algunos detalles que se ven en las fotos, por eso el precio, pero sigue bastante usable. Cuenta con cierre lateral para poderse poner porque la tela no estira. MEDIDAS: Cintura: 43 cm, Largo: 103 cm.",
     vendido: false,
     imagenes: [
@@ -1091,6 +1150,7 @@ export const items = [
     categoria: "Vestidos",
     precio: 1300,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Vestido de novia bohemio mandado a hacer en AliExpress, talla 14, usado una sola vez. Le falta tintorería por eso se ve sucio, pero está en perfecto estado. Manga acampanada 3/4 de encaje, cola larga de encaje con un botoncito para amarrar la cola. Cuenta con lazo para ajuste atrás y lateral abierto con lazos también. MEDIDAS: Busto: 100 cm, Cintura: 83 cm, pero da a mucho más por ser ajustable. La cadera está libre.",
     vendido: false,
     imagenes: [
@@ -1114,6 +1174,7 @@ export const items = [
     categoria: "Faldas",
     precio: 200,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Falda de cuadros en tonos café, amarillo y azul, con silueta asimétrica y paneles de volantes en capas que aportan movimiento y volumen. Presenta pretina estructurada y una abertura lateral con detalle de cinta negra, que añade un acento al diseño. En perfecto estado.",
     vendido: false,
     imagenes: [
@@ -1132,6 +1193,7 @@ export const items = [
     categoria: "Tops",
     precio: 220,
     new: true,
+    condicion: "como-nuevo",
     descripcion: "Linda blusa verde oscuro de tela transparente con estampado de florecitas, sin detalles. Cuello alto con holán, pecho con tela fruncida (smock) y mangas acampanadas con holanes. En perfecto estado.",
     vendido: false,
     imagenes: [
